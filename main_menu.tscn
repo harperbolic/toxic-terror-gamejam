@@ -1,0 +1,213 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3v734b1uur11"]
+
+[ext_resource type="Texture2D" uid="uid://d2pdlvhuwyqm0" path="res://_PLACEHOLDER/Noraneko_Background_Pack_1/Small_Apartment_Kitchen_Night.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://f5fcguj5vqni" path="res://scripts/UI/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="3_fu7sn"]
+[ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://audio_manager.gd" id="4_glbon"]
+[ext_resource type="AudioStream" uid="uid://c7v00a0npfx56" path="res://_PLACEHOLDER/DataBreach.wav" id="4_jix8l"]
+[ext_resource type="Script" uid="uid://db5h5fhaywxu1" path="res://options_menu.gd" id="4_nlkkf"]
+
+[sub_resource type="Theme" id="Theme_rhts7"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06t4h")
+expand_mode = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = 104.0
+offset_right = 85.5
+offset_bottom = 334.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="StartGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+
+[node name="Options" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="Credits" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "Credits"
+
+[node name="QuitGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_font_sizes/font_size = 30
+text = "Quit Game"
+
+[node name="Version" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = -125.0
+offset_right = 254.0
+offset_bottom = -63.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Version"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("3_fu7sn")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label2" type="Label" parent="Version"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Alpha 0.1"
+horizontal_alignment = 1
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -320.0
+offset_right = 197.0
+offset_bottom = -179.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Quem Não Deve
+Não Teme"
+horizontal_alignment = 1
+
+[node name="Options" type="Panel" parent="."]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -124.0
+offset_right = 400.0
+offset_bottom = 376.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_nlkkf")
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_right = 31.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="AudioManager" type="Control" parent="Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_glbon")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/AudioManager"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -154.0
+offset_top = 85.0
+offset_right = 154.0
+offset_bottom = 297.5
+grow_horizontal = 2
+theme_override_constants/separation = 15
+
+[node name="SFXControl" type="HSlider" parent="Options/AudioManager/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicControl" type="HSlider" parent="Options/AudioManager/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="CheckBox" type="CheckBox" parent="Options/AudioManager/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Fullscreen"
+
+[node name="OptionButton" type="OptionButton" parent="Options/AudioManager/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Options"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -72.0
+offset_right = 41.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Back
+"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(919, 844)
+stream = ExtResource("4_jix8l")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Buttons/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Buttons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Buttons/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="value_changed" from="Options/AudioManager/VBoxContainer/SFXControl" to="Options/AudioManager" method="_on_sfx_control_value_changed"]
+[connection signal="value_changed" from="Options/AudioManager/VBoxContainer/MusicControl" to="Options/AudioManager" method="_on_music_control_value_changed"]
+[connection signal="toggled" from="Options/AudioManager/VBoxContainer/CheckBox" to="Options" method="_on_check_box_toggled"]
+[connection signal="item_selected" from="Options/AudioManager/VBoxContainer/OptionButton" to="Options" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]

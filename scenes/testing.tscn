@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyomiv3s30pht"]
+
+[ext_resource type="PackedScene" uid="uid://bgc6dtrpgdxiy" path="res://scenes/game_elements/dialogue.tscn" id="1_ryjsw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="dialogue_ui" parent="." instance=ExtResource("1_ryjsw")]
