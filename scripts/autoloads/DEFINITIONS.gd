@@ -1,5 +1,7 @@
 extends Node
 
+const CONFIG_PATH : String = "user://config.json"	
+
 var resolutions = {
 	"3840 x 2160" : Vector2i(3840, 2160),
 	"2560 x 1440" : Vector2i(2560, 1440),
@@ -19,8 +21,15 @@ var settings_save = {
 	"mus_volume" : 0,
 	"fullscreen" : true,
 	"resolution" : "1920 x 1080",
-	"language" : "English"
+	"language" : "English",
+	"debug" : true
 }
 
 func _ready() -> void:
-	print ("Definitions Loaded")
+	load_save_setting()
+
+func load_save_setting() -> void:
+	if FileAccess.file_exists(CONFIG_PATH):
+		var access = FileAccess.open(CONFIG_PATH, FileAccess.READ)
+		settings_save = JSON.parse_string(access.get_as_text())
+		access.close()

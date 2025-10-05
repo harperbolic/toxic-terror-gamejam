@@ -1,15 +1,16 @@
 extends Panel
 
 @onready var scene_selector: MenuButton = $Container/SceneSelector
+@onready var popup = scene_selector.get_popup()
 
 func _ready() -> void:
 	add_scenes()
+	popup.id_pressed.connect(change_scene)
 
 func add_scenes():
 	for r in SCENE.scenes:
-		scene_selector.get_popup().add_item(r)
+		popup.add_item(r)
 
-#func _input(_event: InputEvent) -> void:
-#	if Input.is_action_just_pressed("mouse_left"):
-#		scene_id = scene_selector.get_popup().get_current_index()
-		
+func change_scene(id):
+	var scene_str : String = popup.get_item_text(id)
+	SCENE.load_scene(scene_str)

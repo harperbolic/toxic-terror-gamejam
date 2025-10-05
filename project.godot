@@ -12,20 +12,22 @@ config_version=5
 
 config/name="QNDNT"
 run/main_scene="uid://dwmxdapybjyvu"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://_PLACEHOLDER/icon.svg"
 
 [autoload]
 
 DEF="*res://scripts/autoloads/DEFINITIONS.gd"
-DEBUG="res://scripts/autoloads/DEBUG.gd"
+DEBUG="*res://scripts/autoloads/DEBUG.gd"
 SCENE="*res://scripts/autoloads/SCENE_MANAGER.gd"
+AUDIO="*res://scenes/game_elements/audio_manager.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=4
+window/size/initial_position_type=4
 window/stretch/mode="viewport"
 
 [input]
