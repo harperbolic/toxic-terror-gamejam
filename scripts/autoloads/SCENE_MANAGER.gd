@@ -4,7 +4,8 @@ var SM : String = "Scene Manager: "
 
 var scenes = {
 	"main_menu" : "res://scenes/main_menu.tscn",
-	"testing" : "res://scenes/testing.tscn"
+	"testing" : "res://scenes/testing.tscn",
+	"credits" : "res://scenes/credits.tscn"
 }
 
 @onready var scene = load(scenes["main_menu"]).instantiate()

@@ -56,7 +56,6 @@ text = "Options"
 layout_mode = 2
 theme = SubResource("Theme_rhts7")
 theme_override_font_sizes/font_size = 30
-disabled = true
 text = "Credits"
 
 [node name="QuitGame" type="Button" parent="Buttons"]

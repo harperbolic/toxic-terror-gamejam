@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyomiv3s30pht"]
+[gd_scene load_steps=3 format=3 uid="uid://dyomiv3s30pht"]
 
-[ext_resource type="PackedScene" uid="uid://bgc6dtrpgdxiy" path="res://scenes/game_elements/dialogue.tscn" id="1_ryjsw"]
+[ext_resource type="Script" uid="uid://cm2vote4vv20" path="res://scripts/testing.gd" id="1_pcu7d"]
+[ext_resource type="PackedScene" uid="uid://e4u4x2tuksgl" path="res://scenes/game_elements/audio_manager.tscn" id="2_pcu7d"]
 
-[node name="Node2D" type="Node"]
+[node name="GameController" type="Node"]
+script = ExtResource("1_pcu7d")
 
-[node name="dialogue_ui" parent="." instance=ExtResource("1_ryjsw")]
+[node name="AudioManager" parent="." instance=ExtResource("2_pcu7d")]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -15.5
+offset_right = 60.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "START DIALOG"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

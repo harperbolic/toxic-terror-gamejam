@@ -20,3 +20,15 @@ unique_name_in_owner = true
 [node name="click" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("2_ed3sa")
 bus = &"SFX"
+
+[node name="cellphone_ring" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="shift_start" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="client_ring" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="window_change" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="cellphone" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="pop_up" type="AudioStreamPlayer" parent="SFX"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl6irhqvu4gqn"]
+
+[ext_resource type="Script" uid="uid://denh53muimfn7" path="res://scripts/textbox.gd" id="1_47t7x"]
+[ext_resource type="Texture2D" uid="uid://bs8p3t473jrn7" path="res://assets/ui/dialog_box.PNG" id="2_7ql3h"]
+
+[node name="Textbox" type="MarginContainer"]
+offset_right = 697.0
+offset_bottom = 181.0
+script = ExtResource("1_47t7x")
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_7ql3h")
+patch_margin_left = 93
+patch_margin_top = 74
+patch_margin_right = 92
+patch_margin_bottom = 107
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 60
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "~ This is the default text ~
+If you see this something went wrong
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterDisplayTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]
