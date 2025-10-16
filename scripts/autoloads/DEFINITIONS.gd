@@ -1,11 +1,7 @@
 extends Node
 
 const CONFIG_PATH : String = "user://config.json"
-const save_path : String= "user://saves/"
-const save1 : String  = "0.json"
-const save2 : String  = "1.json"
-const save3 : String  = "2.json"
-const save4 : String  = "3.json"
+const SAVE_PATH : String= "user://saves/"
 const TEXT_PATH : String = "res://text"
 
 var resolutions = {
@@ -33,12 +29,15 @@ var settings_save = {
 	"debug" : true
 }
 
-var game_states = {
+var game_boilerplate : Dictionary = {
 	"level" : 0,
 	"reputation" : 2.8,
-	"itens_delivered" : 0,
-	"errors" : 0
+	"balance" : 0
 }
+
+var current_save : Dictionary
+
+var current_save_id : String
 
 func _ready() -> void:
 	load_save_setting()
@@ -47,4 +46,15 @@ func load_save_setting() -> void:
 	if FileAccess.file_exists(CONFIG_PATH):
 		var access = FileAccess.open(CONFIG_PATH, FileAccess.READ)
 		settings_save = JSON.parse_string(access.get_as_text())
+		access.close()
+
+func new_game(id : String) -> void:
+	var access = FileAccess.open(SAVE_PATH + id + ".json", FileAccess.WRITE)
+	access.store_string(JSON.stringify(data))
+	
+
+func load_save(id : String) -> void:
+	if FileAccess.file_exists(SAVE_PATH + id + ".json"):
+		var access = FileAccess.open(SAVE_PATH + id + ".json", FileAccess.READ)
+		# save_load = JSON.parse_string(access.get_as_text())
 		access.close()

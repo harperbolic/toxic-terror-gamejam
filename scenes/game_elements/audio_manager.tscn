@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://e4u4x2tuksgl"]
+[gd_scene load_steps=10 format=3 uid="uid://e4u4x2tuksgl"]
 
 [ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://scripts/autoloads/AUDIO_MANAGER.gd" id="1_c3o4n"]
 [ext_resource type="AudioStream" uid="uid://c7v00a0npfx56" path="res://_PLACEHOLDER/DataBreach.wav" id="1_kgib7"]
-[ext_resource type="AudioStream" uid="uid://oumnwl4od45l" path="res://_PLACEHOLDER/click.mp3" id="2_ed3sa"]
+[ext_resource type="AudioStream" uid="uid://oumnwl4od45l" path="res://assets/sfx/click.mp3" id="2_ed3sa"]
+[ext_resource type="AudioStream" uid="uid://2abmaihipxs3" path="res://assets/sfx/click_game.ogg" id="4_403ts"]
+[ext_resource type="AudioStream" uid="uid://putg8pgktn2l" path="res://assets/sfx/voice_clip_letter.ogg" id="4_qevod"]
+[ext_resource type="AudioStream" uid="uid://r6u8m2pj8eaf" path="res://assets/sfx/phone_ring.wav" id="4_tnqj2"]
+[ext_resource type="AudioStream" uid="uid://dw7w57omdbcxm" path="res://assets/sfx/voice_clip_letter_L.ogg" id="5_rqs6r"]
+[ext_resource type="AudioStream" uid="uid://rbq4ktiuk8gu" path="res://assets/sfx/click_confirm.ogg" id="5_uxed3"]
+[ext_resource type="AudioStream" uid="uid://cyw87p3vl8l8a" path="res://assets/sfx/click_refuse.ogg" id="6_kml6c"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_c3o4n")
@@ -21,14 +27,46 @@ unique_name_in_owner = true
 stream = ExtResource("2_ed3sa")
 bus = &"SFX"
 
+[node name="click_ui" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_403ts")
+bus = &"SFX"
+
+[node name="click_confirm" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_uxed3")
+bus = &"SFX"
+
+[node name="click_refuse" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_kml6c")
+bus = &"SFX"
+
 [node name="cellphone_ring" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_tnqj2")
+bus = &"SFX"
 
 [node name="shift_start" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
 
 [node name="client_ring" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
 
 [node name="window_change" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
 
 [node name="cellphone" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
 
 [node name="pop_up" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
+
+[node name="voice_letter" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_qevod")
+volume_db = 3.817
+bus = &"SFX"
+
+[node name="voice_letter_l" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_rqs6r")
+volume_db = 3.817
+bus = &"SFX"
+
+[node name="none" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"

@@ -1,12 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyomiv3s30pht"]
+[gd_scene load_steps=5 format=3 uid="uid://dyomiv3s30pht"]
 
 [ext_resource type="Script" uid="uid://cm2vote4vv20" path="res://scripts/testing.gd" id="1_pcu7d"]
-[ext_resource type="PackedScene" uid="uid://e4u4x2tuksgl" path="res://scenes/game_elements/audio_manager.tscn" id="2_pcu7d"]
+[ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_3dx25"]
+[ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="3_l6grw"]
+[ext_resource type="Script" uid="uid://c7pxnax0nuy4n" path="res://scripts/UI/cellphone.gd" id="4_3dx25"]
 
 [node name="GameController" type="Node"]
 script = ExtResource("1_pcu7d")
 
-[node name="AudioManager" parent="." instance=ExtResource("2_pcu7d")]
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3dx25")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00087739713
+texture = ExtResource("3_l6grw")
+
+[node name="Monitor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 459.0
+offset_right = 751.0
+offset_bottom = 823.0
+
+[node name="ColorRect2" type="ColorRect" parent="Monitor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -14,12 +48,94 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -60.0
-offset_top = -15.5
-offset_right = 60.0
-offset_bottom = 15.5
+offset_left = -633.0
+offset_top = -315.0
+offset_right = -513.0
+offset_bottom = -284.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "START DIALOG"
+
+[node name="Cellphone" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -542.0
+offset_top = 66.0
+offset_right = -72.0
+offset_bottom = 886.0
+grow_horizontal = 0
+script = ExtResource("4_3dx25")
+
+[node name="ColorRect" type="ColorRect" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Posts" type="VBoxContainer" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -73.5
+offset_right = 91.5
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Post" type="HBoxContainer" parent="Cellphone/Posts"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cellphone/Posts/Post"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Cellphone/Posts/Post/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+
+[node name="Label" type="Label" parent="Cellphone/Posts/Post/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "@username"
+
+[node name="Label2" type="Label" parent="Cellphone/Posts/Post/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "This is the tweet text, it says the worst things ever"
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cellphone/Posts"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Cellphone/Posts/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Cellphone/Posts/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+keep_pressed_outside = true
+text = "TERRIBLE"
+
+[node name="Button2" type="Button" parent="Cellphone/Posts/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "GREAT"
+
+[node name="Button3" type="Button" parent="Cellphone/Posts/VBoxContainer"]
+layout_mode = 2
+text = "HUMAN RESOURCES?"
+
+[node name="Overview" type="Control" parent="Cellphone"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

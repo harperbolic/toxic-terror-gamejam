@@ -1,4 +1,11 @@
 {
-	"001" : {"name" : "L", "expression" : null, "text" : "Hey babe! Where are you?"},
-	"002" : {"name" : "MC", "expression" : null, "text" : "Just got here"}
+	000 : {"name" : "L", "expression" : null, "text" : "Hey babe! Where are you?"},
+	001 : {"name" : "M", "expression" : null, "text" : "Just got here"},
+	002 : {"name" : "M", "expression" : null, "text" : "How are you, love?"},
+	003 : {"name" : "L", "expression" : null, "text" : "Welcome home! I’ve been waiting for you all day!"},
+	004 : {"name" : "M", "expression" : null, "text" : "So sorry, you know how busy I am."},
+	005 : {"name" : "L", "expression" : null, "text" : "I know, I know, you’re my favorite hard worker."},
+	006 : {"name" : "L", "expression" : null, "text" : "Which reminds me, there's something important I needed to talk to you about."},
+	007 : {"name" : "M", "expression" : null, "text" : "Did something happen?"}
+	008 : {"name" : "L", "expression" : null, "text" : "Come on, let me talk."} 
 }
