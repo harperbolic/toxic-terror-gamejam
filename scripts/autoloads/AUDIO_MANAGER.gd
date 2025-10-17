@@ -10,3 +10,7 @@ func play_sfx(id : String, wait : bool = false) -> void:
 func play_music(id : String) -> void:
 	var node = get_node("%Music/" + id)
 	node.play()
+
+func stop_music(id : String) -> void:
+	var node = get_node("%Music/" + id)
+	node.stop()

@@ -1,0 +1,11 @@
+{
+	"0" : {"name" : "L", "expression" : "none", "text" : "Oi, bebê! Onde cê tá?"},
+	"1" : {"name" : "M", "expression" : "none", "text" : "Acabei de chegar"},
+	"2" : {"name" : "M", "expression" : "none", "text" : "Como vai, amor?"},
+	"3" : {"name" : "L", "expression" : "none", "text" : "Fiquei te esperando o dia todo!"},
+	"4" : {"name" : "M", "expression" : "none", "text" : "Perdão, você sabe o quão ocupada sou."},
+	"5" : {"name" : "L", "expression" : "none", "text" : "Sei, sei, você é minha esforçada favorita."},
+	"6" : {"name" : "L", "expression" : "none", "text" : "Aliás, tem algo que  preciso contar pra você."},
+	"7" : {"name" : "M", "expression" : "none", "text" : "Aconteceu alguma coisa?"},
+	"8" : {"name" : "L", "expression" : "none", "text" : "Vai, fala."} 
+}

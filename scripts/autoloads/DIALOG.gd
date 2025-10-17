@@ -16,6 +16,8 @@ var can_advance_line = false
 
 var boxes : Array = [null, null, null, null, null]
 
+signal dialog_ended
+
 func start_dialog(lines: Dictionary):
 	if is_dialog_active:
 		return
@@ -43,10 +45,10 @@ func _show_text_box():
 	
 	text_box.finished_displaying.connect(_on_text_box_finished_displaying)
 	container.add_child(text_box)
-	text_box.display_text(dialog_lines[current_line_index].text, dialog_lines[current_line_index].name)
+	text_box.display_text(dialog_lines[str(current_line_index)].text, dialog_lines[str(current_line_index)].name)
 	can_advance_line = false
 	
-	portraits.change_portrait(dialog_lines[current_line_index].name, dialog_lines[current_line_index].expression)
+	portraits.change_portrait(dialog_lines[str(current_line_index)].name, dialog_lines[str(current_line_index)].expression)
 
 func _on_text_box_finished_displaying():
 	can_advance_line = true
@@ -69,6 +71,7 @@ func _unhandled_input(event) -> void:
 			portraits.queue_free()
 			is_dialog_active = false
 			current_line_index = 0
+			dialog_ended.emit()
 			return
 		
 		_show_text_box()

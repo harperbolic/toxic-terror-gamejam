@@ -1,7 +1,7 @@
 extends Node
 
 const CONFIG_PATH : String = "user://config.json"
-const SAVE_PATH : String= "user://saves/"
+const SAVE_PATH : String= "user://save.json"
 const TEXT_PATH : String = "res://text"
 
 var resolutions = {
@@ -18,29 +18,41 @@ var language = {
 	"Português" : "pt"
 }
 
-var selected_language = language.get("English")
+var selected_language = "en"
 
 var settings_save = {
 	"sfx_volume" : 0,
 	"mus_volume" : 0,
 	"fullscreen" : true,
 	"resolution" : "1920 x 1080",
-	"language" : "English",
+	"language" : "en",
 	"debug" : true
 }
 
 var game_boilerplate : Dictionary = {
 	"level" : 0,
-	"reputation" : 2.8,
+	"reputation" : 2.3,
 	"balance" : 0
 }
 
-var current_save : Dictionary
+var save : Dictionary
 
-var current_save_id : String
+# LOCALIZATION FILES
+var UI_text : Dictionary
+var Stage0 : Dictionary
 
 func _ready() -> void:
 	load_save_setting()
+	load_save()
+	
+	selected_language = settings_save.get("language")
+	
+	load_locale()
+
+func save_game() -> void:
+	var access = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	access.store_string(JSON.stringify(save))
+	access.close()
 
 func load_save_setting() -> void:
 	if FileAccess.file_exists(CONFIG_PATH):
@@ -48,13 +60,22 @@ func load_save_setting() -> void:
 		settings_save = JSON.parse_string(access.get_as_text())
 		access.close()
 
-func new_game(id : String) -> void:
-	var access = FileAccess.open(SAVE_PATH + id + ".json", FileAccess.WRITE)
-	access.store_string(JSON.stringify(data))
-	
-
-func load_save(id : String) -> void:
-	if FileAccess.file_exists(SAVE_PATH + id + ".json"):
-		var access = FileAccess.open(SAVE_PATH + id + ".json", FileAccess.READ)
-		# save_load = JSON.parse_string(access.get_as_text())
+func load_save() -> void:
+	if FileAccess.file_exists(SAVE_PATH):
+		var access = FileAccess.open(SAVE_PATH, FileAccess.READ)
+		save = JSON.parse_string(access.get_as_text())
 		access.close()
+
+func load_locale():
+	load_ui_locale()
+	load_stage0()
+
+func load_ui_locale():
+	var access = FileAccess.open("res://text/" + selected_language + "/UI.json", FileAccess.READ)
+	UI_text = JSON.parse_string(access.get_as_text())
+	access.close()
+
+func load_stage0():
+	var access = FileAccess.open("res://text/" + selected_language + "/Stage0.json", FileAccess.READ)
+	Stage0 = JSON.parse_string(access.get_as_text())
+	access.close()

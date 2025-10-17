@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://e4u4x2tuksgl"]
+[gd_scene load_steps=11 format=3 uid="uid://e4u4x2tuksgl"]
 
 [ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://scripts/autoloads/AUDIO_MANAGER.gd" id="1_c3o4n"]
 [ext_resource type="AudioStream" uid="uid://c7v00a0npfx56" path="res://_PLACEHOLDER/DataBreach.wav" id="1_kgib7"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dw7w57omdbcxm" path="res://assets/sfx/voice_clip_letter_L.ogg" id="5_rqs6r"]
 [ext_resource type="AudioStream" uid="uid://rbq4ktiuk8gu" path="res://assets/sfx/click_confirm.ogg" id="5_uxed3"]
 [ext_resource type="AudioStream" uid="uid://cyw87p3vl8l8a" path="res://assets/sfx/click_refuse.ogg" id="6_kml6c"]
+[ext_resource type="AudioStream" uid="uid://b5ljhslxdb2oj" path="res://_PLACEHOLDER/Bell toll scratch sound effect [4ShSySpyD_I].mp3" id="10_uxed3"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_c3o4n")
@@ -39,8 +40,9 @@ bus = &"SFX"
 stream = ExtResource("6_kml6c")
 bus = &"SFX"
 
-[node name="cellphone_ring" type="AudioStreamPlayer" parent="SFX"]
+[node name="phone_ring" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("4_tnqj2")
+volume_db = 3.817
 bus = &"SFX"
 
 [node name="shift_start" type="AudioStreamPlayer" parent="SFX"]
@@ -65,6 +67,11 @@ bus = &"SFX"
 
 [node name="voice_letter_l" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("5_rqs6r")
+volume_db = 3.817
+bus = &"SFX"
+
+[node name="bell" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("10_uxed3")
 volume_db = 3.817
 bus = &"SFX"
 

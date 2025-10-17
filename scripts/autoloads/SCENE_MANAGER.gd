@@ -5,6 +5,8 @@ var SM : String = "Scene Manager: "
 var scenes = {
 	"main_menu" : "res://scenes/main_menu.tscn",
 	"testing" : "res://scenes/testing.tscn",
+	"stage0" : "res://scenes/stages/stage0.tscn",
+	"stage1" : "res://scenes/stages/stage1.tscn",
 	"credits" : "res://scenes/credits.tscn"
 }
 

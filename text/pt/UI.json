@@ -1,0 +1,17 @@
+{
+	"game_title" : "Quem Não Deve Não Teme",
+	"new_game" : "Novo Jogo",
+	"continue" : "Continuar",
+	"options" : "Opções",
+	"credits" : "Créditos",
+	"quit_game" : "Sair do Jogo",
+	"sfx" : "Efeitos Sonoros",
+	"music" : "Música",
+	"language" : "Idioma",
+	"back" : "Voltar",
+	"fullscreen" : "Tela Cheia",
+	"approve_button" : "Aprovar",
+	"delete_button" : "Apagar",
+	"report_button" : "Denunciar",
+	"press_space" : "Aperte 'espaço' para avançar"
+}

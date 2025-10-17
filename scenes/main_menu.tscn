@@ -1,10 +1,70 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3v734b1uur11"]
+[gd_scene load_steps=8 format=3 uid="uid://b3v734b1uur11"]
 
 [ext_resource type="Script" uid="uid://f5fcguj5vqni" path="res://scripts/UI/main_menu.gd" id="1_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://d2pdlvhuwyqm0" path="res://_PLACEHOLDER/Noraneko_Background_Pack_1/Small_Apartment_Kitchen_Night.png" id="2_oa1go"]
 [ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="3_tbmy8"]
 
 [sub_resource type="Theme" id="Theme_rhts7"]
+
+[sub_resource type="Animation" id="Animation_bqqt6"]
+resource_name = "screen_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_wu84c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ln24"]
+_data = {
+&"RESET": SubResource("Animation_wu84c"),
+&"screen_fade": SubResource("Animation_bqqt6")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -44,7 +104,14 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme = SubResource("Theme_rhts7")
 theme_override_font_sizes/font_size = 30
-text = "Start Game"
+text = "New Game"
+
+[node name="StartGame2" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "Continue"
 
 [node name="Options" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -162,27 +229,108 @@ offset_bottom = 297.5
 grow_horizontal = 2
 theme_override_constants/separation = 15
 
-[node name="SFXControl" type="HSlider" parent="Options/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+
+[node name="sfx" type="Label" parent="Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Sound Effects"
+
+[node name="SFXControl" type="HSlider" parent="Options/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="MusicControl" type="HSlider" parent="Options/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Options/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+
+[node name="mus" type="Label" parent="Options/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Music"
+
+[node name="MusicControl" type="HSlider" parent="Options/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+min_value = 0.01
 max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="FullscreenToggle" type="CheckButton" parent="Options/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Options/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+alignment = 2
+
+[node name="language" type="Label" parent="Options/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="Options/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Português"
+popup/item_1/id = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+alignment = 2
+
+[node name="fullscreen" type="Label" parent="Options/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Fullscreen"
 
+[node name="FullscreenToggle" type="CheckButton" parent="Options/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect")
+libraries = {
+&"": SubResource("AnimationLibrary_8ln24")
+}
+
 [connection signal="pressed" from="Buttons/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Buttons/StartGame2" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Buttons/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Buttons/QuitGame" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="Options/VBoxContainer/SFXControl" to="." method="_on_sfx_control_value_changed"]
-[connection signal="value_changed" from="Options/VBoxContainer/MusicControl" to="." method="_on_music_control_value_changed"]
-[connection signal="toggled" from="Options/VBoxContainer/FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]
+[connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/SFXControl" to="." method="_on_sfx_control_value_changed"]
+[connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer2/MusicControl" to="." method="_on_music_control_value_changed"]
+[connection signal="item_selected" from="Options/VBoxContainer/HBoxContainer3/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="Options/VBoxContainer/HBoxContainer4/FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]

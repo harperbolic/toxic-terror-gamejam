@@ -121,11 +121,13 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="Cellphone/Posts/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 keep_pressed_outside = true
 text = "TERRIBLE"
 
 [node name="Button2" type="Button" parent="Cellphone/Posts/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "GREAT"
 
 [node name="Button3" type="Button" parent="Cellphone/Posts/VBoxContainer"]

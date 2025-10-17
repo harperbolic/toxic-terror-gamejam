@@ -1,6 +1,17 @@
 {
-	"001" : "Start Game",
-	"002" : "Options",
-	"003" : "Credits",
-	"004" : "Quit Game"
+	"game_title" : "Social Cues",
+	"new_game" : "New Game",
+	"continue" : "Continue",
+	"options" : "Options",
+	"credits" : "Credits",
+	"quit_game" : "Quit Game",
+	"sfx" : "Sound Effects",
+	"music" : "Music",
+	"language" : "Language",
+	"back" : "Back",
+	"fullscreen" : "Fullscreen",
+	"approve_button" : "Approve",
+	"delete_button" : "Delete",
+	"report_button" : "Report",
+	"press_space" : "Press 'space' to advance"
 }
