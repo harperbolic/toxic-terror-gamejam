@@ -13,5 +13,6 @@
 	"approve_button" : "Approve",
 	"delete_button" : "Delete",
 	"report_button" : "Report",
-	"press_space" : "Press 'space' to advance"
+	"press_space" : "Press 'space' to advance",
+	"day" : "DAY"
 }

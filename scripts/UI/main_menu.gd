@@ -77,7 +77,19 @@ func _on_start_game_pressed() -> void:
 	animation_player.play("screen_fade")
 	
 	await animation_player.animation_finished
+	
 	SCENE.load_scene("stage0")
+
+func _on_start_game_2_pressed() -> void:
+		AUDIO.play_sfx("click")
+		AUDIO.stop_music("menu_theme")
+		
+		animation_player.play("screen_fade")
+		
+		await animation_player.animation_finished
+		var level : int = DEF.save.get("level")
+		SCENE.load_scene("stage" + str(level))
+
 
 func _on_options_pressed() -> void:
 	options_panel.visible = true

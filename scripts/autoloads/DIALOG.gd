@@ -63,10 +63,14 @@ func _unhandled_input(event) -> void:
 		current_line_index += 1
 		if current_line_index >= dialog_lines.size():
 			container.queue_free()
-			boxes[4].queue_free()
-			boxes[3].queue_free()
-			boxes[2].queue_free()
-			boxes[1].queue_free()
+			if boxes[4] != null:
+				boxes[4].queue_free()
+			if boxes[3] != null:
+				boxes[3].queue_free()
+			if boxes[2] != null:
+				boxes[2].queue_free()
+			if boxes[1] != null:
+				boxes[1].queue_free()
 			boxes[0].queue_free()
 			portraits.queue_free()
 			is_dialog_active = false

@@ -51,7 +51,7 @@ func _display_letter():
 			voice = "voice_letter"
 	
 	match text[letter_index]:
-		"!", ".", ",", "?":
+		"!", ".", ",", "?", "…":
 			timer.start(punc_time)
 			voice = "none"
 		" ":

@@ -35,7 +35,11 @@ var game_boilerplate : Dictionary = {
 	"balance" : 0
 }
 
-var save : Dictionary
+var save : Dictionary = {
+	"level" : 0,
+	"reputation" : 2.3,
+	"balance" : 0
+}
 
 # LOCALIZATION FILES
 var UI_text : Dictionary

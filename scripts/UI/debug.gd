@@ -14,3 +14,7 @@ func add_scenes():
 func change_scene(id):
 	var scene_str : String = popup.get_item_text(id)
 	SCENE.load_scene(scene_str)
+
+func _on_button_pressed() -> void:
+	DEF.selected_language = "debug"
+	DEF.load_locale()
