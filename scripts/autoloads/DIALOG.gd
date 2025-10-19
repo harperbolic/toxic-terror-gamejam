@@ -32,6 +32,7 @@ func start_dialog(lines: Dictionary):
 func _show_portraits():
 	portraits = portrait_container.instantiate()
 	get_tree().root.add_child(portraits)
+	portraits.bg_fade_in()
 
 func _show_container():
 	container = dialog_container.instantiate()
@@ -63,15 +64,12 @@ func _unhandled_input(event) -> void:
 		current_line_index += 1
 		if current_line_index >= dialog_lines.size():
 			container.queue_free()
-			if boxes[4] != null:
-				boxes[4].queue_free()
-			if boxes[3] != null:
-				boxes[3].queue_free()
 			if boxes[2] != null:
 				boxes[2].queue_free()
 			if boxes[1] != null:
 				boxes[1].queue_free()
 			boxes[0].queue_free()
+			portraits.fade_out()
 			portraits.queue_free()
 			is_dialog_active = false
 			current_line_index = 0
@@ -81,9 +79,7 @@ func _unhandled_input(event) -> void:
 		_show_text_box()
 
 func clear_boxes():
-	if boxes[4] != null:
-		boxes[4].queue_free()
-	boxes[4] = boxes[3]
-	boxes[3] = boxes[2]
+	if boxes[2] != null:
+		boxes[2].queue_free()
 	boxes[2] = boxes[1]
 	boxes[1] = boxes[0]

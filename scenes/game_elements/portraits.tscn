@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=12 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
+[ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://chumlt60i014l" path="res://_PLACEHOLDER/kiryu_angry.png" id="3_vxrcs"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
 
@@ -55,6 +56,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5411765)]
+}
 
 [sub_resource type="Animation" id="Animation_r1bp4"]
 resource_name = "cli_fade_in"
@@ -65,7 +78,7 @@ tracks/0/path = NodePath("Cli:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.16666667),
+"times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-100, 0)]
@@ -110,15 +123,43 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_qi4lx"]
+resource_name = "bg_fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.627451)]
+}
+
+[sub_resource type="Animation" id="Animation_iklxa"]
+resource_name = "fade_out"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1bp4"]
 _data = {
 &"RESET": SubResource("Animation_vxrcs"),
+&"bg_fade_in": SubResource("Animation_qi4lx"),
 &"cli_fade_in": SubResource("Animation_r1bp4"),
+&"fade_out": SubResource("Animation_iklxa"),
 &"mc_fade_in": SubResource("Animation_fyxdl")
 }
 
 [node name="Portraits" type="Node"]
 script = ExtResource("1_fyxdl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5411765)
 
 [node name="Cli" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -140,9 +181,8 @@ offset_right = 2136.0
 offset_bottom = 1465.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ynxmj")
+texture = ExtResource("2_qi4lx")
 stretch_mode = 4
-flip_h = true
 
 [node name="L_angry" type="TextureRect" parent="Cli"]
 visible = false
@@ -177,7 +217,6 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="M_none" type="TextureRect" parent="MC"]
-visible = false
 layout_mode = 0
 offset_left = -140.0
 offset_top = 78.0

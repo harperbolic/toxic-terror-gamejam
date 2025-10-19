@@ -77,3 +77,6 @@ bus = &"SFX"
 
 [node name="none" type="AudioStreamPlayer" parent="SFX"]
 bus = &"SFX"
+
+[connection signal="finished" from="SFX/phone_ring" to="." method="_on_phone_ring_finished"]
+[connection signal="finished" from="SFX/bell" to="." method="_on_bell_finished"]

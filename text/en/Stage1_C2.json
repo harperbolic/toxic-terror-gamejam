@@ -1,0 +1,4 @@
+{
+	"0" : {"name" : "C", "expression" : "none", "text" : "When the client does come over, we check their stuff..."},
+	"1" : {"name" : "C", "expression" : "none", "text" : "And send them on their merry way..."},
+}

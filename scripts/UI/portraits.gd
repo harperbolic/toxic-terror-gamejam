@@ -46,3 +46,11 @@ func clear_portraits(id : String):
 	else:
 		for child in Cli.get_children():
 			child.visible = false
+
+func bg_fade_in():
+	animation_player.play("bg_fade_in")
+
+func fade_out():
+	animation_player.play_backwards("bg_fade_in")
+	animation_player.play_backwards("cli_fade_in")
+	animation_player.play_backwards("mc_fade_in")

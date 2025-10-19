@@ -14,5 +14,16 @@
 	"delete_button" : "Apagar",
 	"report_button" : "Denunciar",
 	"press_space" : "Aperte 'espaço' para avançar",
-	"day" : "DIA"
+	"day" : "DIA",
+	"id" : "ID:",
+	"age" : "Idade:",
+	"sex" : "Sexo:",
+	"mood" : "Humor:",
+	"illness" : "Ficha Médica:",
+	"record" : "Ficha Criminal:",
+	"neutral" : "Neutro",
+	"depressed" : "Deprimido",
+	"nervous" : "Nervoso",
+	"mad" : "Bravo",
+	"inconclusive" : "Inconclusivo"
 }

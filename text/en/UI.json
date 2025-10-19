@@ -14,5 +14,16 @@
 	"delete_button" : "Delete",
 	"report_button" : "Report",
 	"press_space" : "Press 'space' to advance",
-	"day" : "DAY"
+	"day" : "DAY",
+	"id" : "ID:",
+	"age" : "Age:",
+	"sex" : "Sex:",
+	"mood" : "Mood:",
+	"illness" : "Medical Record:",
+	"record" : "Criminal Record:",
+	"neutral" : "Neutral",
+	"depressed" : "Depressed",
+	"nervous" : "Nervous",
+	"mad" : "Mad",
+	"inconclusive" : "Inconclusive"
 }

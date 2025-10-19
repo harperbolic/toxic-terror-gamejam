@@ -7,7 +7,7 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.2).timeout
 	AUDIO.play_sfx("phone_ring")
-	await get_tree().create_timer(5.10).timeout
+	await AUDIO.sfx_finished
 	
 	DIALOG.start_dialog(DEF.Stage0)
 	
@@ -23,6 +23,11 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(3.0).timeout
 	
+	await get_tree().create_timer(5.0).timeout
+	
+	animation_player.play_backwards("day_letter")
+	await animation_player.animation_finished
+	
 	DEF.save_game()
-	#SCENE.load_scene("Stage1")
+	# SCENE.load_scene("Stage1")
 	
