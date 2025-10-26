@@ -5,7 +5,8 @@ extends Control
 @onready var health: Button = $MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer2/Health
 @onready var extra: Button = $MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer2/Extra
 @onready var instructions: Button = $MarginContainer/Menu/VBoxContainer/HBoxContainer2/Instructions
-@onready var end: Button = $MarginContainer/Menu/VBoxContainer/HBoxContainer2/End
+@onready var end: Button = $"../End"
+@onready var game_controller: Node = $".."
 
 func _ready() -> void:
 	food.text = DEF.UI_text.get("food")
@@ -14,3 +15,6 @@ func _ready() -> void:
 	extra.text = DEF.UI_text.get("extra")
 	instructions.text = DEF.UI_text.get("instructions")
 	end.text = DEF.UI_text.get("end_order")
+
+func _on_end_pressed() -> void:
+	game_controller.end_order()

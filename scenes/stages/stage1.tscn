@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://n1ny601f6g16"]
+[gd_scene load_steps=20 format=3 uid="uid://n1ny601f6g16"]
 
 [ext_resource type="Script" uid="uid://c0mcj7xdyn53b" path="res://scripts/stages/stage_1.gd" id="1_ace57"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_4fnny"]
@@ -36,7 +36,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Title:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,7 +48,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/path = NodePath("Title:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -81,6 +81,42 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(994, -26)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("End:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Title/DayLabel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Title:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_h25yc"]
 resource_name = "client_enter"
@@ -108,6 +144,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1200, 30), Vector2(994, -26)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("End:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_8x8df"]
@@ -137,6 +185,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(994, -26), Vector2(900, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("End:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_oiu06"]
 resource_name = "fade"
@@ -144,7 +204,7 @@ length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Title:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -156,7 +216,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/path = NodePath("Title:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -166,12 +226,53 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_i5f5j"]
+resource_name = "fade_title"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title/DayLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yh20h"]
 _data = {
 &"RESET": SubResource("Animation_utrvu"),
 &"client_enter": SubResource("Animation_h25yc"),
 &"client_exit": SubResource("Animation_8x8df"),
-&"fade": SubResource("Animation_oiu06")
+&"fade": SubResource("Animation_oiu06"),
+&"fade_title": SubResource("Animation_i5f5j")
 }
 
 [node name="GameController" type="Node"]
@@ -191,8 +292,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 994.0
 offset_top = -26.0
-offset_right = 1034.0007
-offset_bottom = 14.000008
+offset_right = 1034.0012
+offset_bottom = 14.0
 
 [node name="H" type="TextureRect" parent="Clients"]
 layout_mode = 1
@@ -231,6 +332,7 @@ rotation = -0.00087739713
 texture = ExtResource("4_212wl")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(2, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -284,6 +386,7 @@ rotation = 0.0024075368
 script = ExtResource("4_8x8df")
 
 [node name="ColorRect2" type="ColorRect" parent="Monitor"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -308,6 +411,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 
 [node name="Panel" type="ColorRect" parent="Monitor/MarginContainer/Menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -379,16 +483,10 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 text = "Instructions"
 
-[node name="End" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-text = "Finish Order"
-
 [node name="Items" type="Control" parent="Monitor/MarginContainer"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Title" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -396,10 +494,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="DayLabel" type="Label" parent="Title"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.5
+offset_top = -171.0
+offset_right = 358.5
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 250
+text = "DAY X"
+vertical_alignment = 1
+
+[node name="End" type="Button" parent="."]
+visible = false
+offset_left = 1332.0
+offset_top = 787.0
+offset_right = 1578.0
+offset_bottom = 850.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Finish Order"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_yh20h")
 }
 
-[connection signal="body_entered" from="Basket" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_shape_entered" from="Basket" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
+[connection signal="pressed" from="End" to="Monitor" method="_on_end_pressed"]

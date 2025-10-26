@@ -11,6 +11,7 @@ const ENERGY = preload("res://scenes/goods/energy.tscn")
 const BEER = preload("res://scenes/goods/beer.tscn")
 const CHOCOLATE = preload("res://scenes/goods/chocolate.tscn")
 
+@onready var day_letter: Label = $Title/DayLabel
 @onready var goods = $Goods
 
 signal client_served
@@ -19,10 +20,14 @@ signal wrong_order
 
 func _ready() -> void:
 	
-	print(CHAR.gen_char())
-	
+	day_letter.text = DEF.UI_text.get("day") + " " + str(int(DEF.save.get("level")))
 	
 	AUDIO.stop_all_music()
+	
+	# AUDIO.play_sfx("bell")
+	animation_player.play("fade_title")
+	await animation_player.animation_finished
+	
 	AUDIO.play_music("shift_theme")
 	AUDIO.play_sfx("shift_start")
 	
@@ -45,11 +50,20 @@ func _ready() -> void:
 	spawn_items()
 	
 	await client_served
-
-func new_client(ClientID = null) -> void:
-	DEF.current_cart.assign(DEF.cart_reset)
-	print(DEF.current_cart)
 	
+	DIALOG.start_dialog(DEF.Stage1_C3)
+	await DIALOG.dialog_ended
+	
+	client_exit()
+	
+	await get_tree().create_timer(1.5).timeout
+	
+	new_client("H")
+	await get_tree().create_timer(0.8).timeout
+	
+	DIALOG.start_dialog(DEF.Stage1_H1)
+
+func new_client(ClientID = null) -> void:	
 	if ClientID != null:
 		current_client = get_node("Clients/" + ClientID)
 	else:
@@ -61,7 +75,6 @@ func new_client(ClientID = null) -> void:
 	animation_player.play("client_enter")
 	
 	DEF.current_cart.assign(DEF.cart_reset)
-	print(DEF.current_cart)
 
 func client_exit() -> void:
 	if current_client != null:
@@ -111,5 +124,18 @@ func spawn_items() -> void:
 		goods.add_child(object)
 		x -= 1
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func end_order():
+	for n in goods.get_children():
+		n.queue_free()
+	
+	if DEF.current_cart == client.item:
+		right_order.emit()
+		print("right order")
+	else:
+		wrong_order.emit()
+		print("wrong order")
+	
+	client_served.emit()
+
+func _on_basket_body_entered(body: Node2D) -> void:
 	body.add()

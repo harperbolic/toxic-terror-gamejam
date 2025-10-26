@@ -7,7 +7,7 @@ extends Node
 
 var is_MC_on_screen = false
 var is_Cli_on_screen = false
-var current_cli = ""
+var current_cli = "null"
 var type
 
 var emotion_list = [
@@ -30,10 +30,14 @@ func change_portrait (id : String, emotion : String):
 			is_MC_on_screen = true
 	else:
 		type = "Cli"
+		
 		if !is_Cli_on_screen:
+			if current_cli != "null":
+				DIALOG.reset_boxes()
 			animation_player.play("cli_fade_in")
 			is_Cli_on_screen = true
 			current_cli = id
+
 	
 	var node = get_node(type + "/" + id + "_" + emotion)
 	node.visible = true

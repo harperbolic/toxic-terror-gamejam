@@ -10,6 +10,7 @@ var current_line_index = 0
 var text_box
 var container
 var portraits
+var current_client
 
 var is_dialog_active = false
 var can_advance_line = false
@@ -83,3 +84,9 @@ func clear_boxes():
 		boxes[2].queue_free()
 	boxes[2] = boxes[1]
 	boxes[1] = boxes[0]
+
+func reset_boxes():
+	if boxes[2] != null:
+		boxes[2].queue_free()
+	if boxes[1] != null:
+		boxes[1].queue_free()
