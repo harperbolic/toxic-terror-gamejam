@@ -1,0 +1,10 @@
+{
+	"0" : {"name" : "C", "expression" : "none", "text" : "É, então..."},
+	"1" : {"name" : "C", "expression" : "none", "text" : "Então. Não vou voltar. Você fica com o trampo."},
+	"2" : {"name" : "M", "expression" : "none", "text" : "Hein? Como assim?"},
+	"3" : {"name" : "C", "expression" : "none", "text" : "Você consegue se virar. Deixe o lugar limpo e cuide dos clientes. Não faça merda, viu?"},
+	"4" : {"name" : "M", "expression" : "none", "text" : "Mas..."},
+	"5" : {"name" : "C", "expression" : "none", "text" : "Boa sorte. Vai precisar."},
+	"6" : {"name" : "M", "expression" : "none", "text" : "Seu esquisitão."},
+	"7" : {"name" : "M", "expression" : "none", "text" : "... Tanto faz. Hora de ir pra casa."},
+}

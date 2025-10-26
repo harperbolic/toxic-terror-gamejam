@@ -26,8 +26,7 @@ extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-func _on_button_pressed() -> void:
-	animation_player.play("cellphone")
+var cellphone_active : bool = false
 
 func _ready() -> void:
 	# locale settings
@@ -45,11 +44,14 @@ func _ready() -> void:
 	mad.text = DEF.UI_text.get("mad")
 	inconclusive.text = DEF.UI_text.get("inconclusive")
 	criminal_record.text = DEF.UI_text.get("record")
+	
+	print (CHAR.gen_char())
 
-
-func _on_button_2_pressed() -> void:
-	animation_player.play_backwards("cellphone")
-
-
-func _on_button_3_pressed() -> void:
-	DIALOG.start_dialog(DEF.Stage0)
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("tab"):
+		if cellphone_active:
+			animation_player.play("cellphone")
+		else:
+			animation_player.play_backwards("cellphone")
+		
+		cellphone_active = !cellphone_active

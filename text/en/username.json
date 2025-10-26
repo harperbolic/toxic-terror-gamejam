@@ -14,7 +14,13 @@
 		"Exquisite",
 		"Incredible",
 		"Lasting",
-		"Poetic"],
+		"Poetic",
+		"Bright",
+		"Solid",
+		"Hot",
+		"Nursing",
+		"Mister",
+		"Singing"],
 	"input2" : [
 		"Play",
 		"Fish",
@@ -30,5 +36,12 @@
 		"Traction",
 		"Truck",
 		"Monarch",
-		"King"]
+		"King",
+		"Blade",
+		"Bug",
+		"Alien",
+		"Bill",
+		"Duck",
+		"Snake",
+		"BaldGuy"]
 }

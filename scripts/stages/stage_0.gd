@@ -4,6 +4,7 @@ extends Control
 @onready var label: Label = $DayLetter/Label
 
 func _ready() -> void:
+	AUDIO.stop_all_music()
 	
 	await get_tree().create_timer(1.2).timeout
 	AUDIO.play_sfx("phone_ring")
@@ -23,11 +24,9 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(3.0).timeout
 	
-	await get_tree().create_timer(5.0).timeout
-	
 	animation_player.play_backwards("day_letter")
 	await animation_player.animation_finished
 	
 	DEF.save_game()
-	# SCENE.load_scene("Stage1")
+	SCENE.load_scene("stage1")
 	

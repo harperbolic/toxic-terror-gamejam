@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnyvb8xnwc1h8"]
+
+[ext_resource type="Script" uid="uid://b5vcw4ncxw5v5" path="res://scripts/classes/good.gd" id="1_w10rr"]
+[ext_resource type="Texture2D" uid="uid://bct5meyc4qsb6" path="res://_PLACEHOLDER/miojo.png" id="2_w10rr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjnc2"]
+size = Vector2(647.303, 771.78424)
+
+[node name="GoodTemplate" type="CharacterBody2D"]
+scale = Vector2(0.16066664, 0.16066666)
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_w10rr")
+sound_id = 1
+item_key = "miojo"
+
+[node name="Milk" type="Sprite2D" parent="."]
+texture = ExtResource("2_w10rr")
+
+[node name="Button" type="Button" parent="Milk"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_right = 0.763
+anchor_bottom = 0.92200005
+offset_left = -323.6517
+offset_top = -385.8921
+offset_right = -347.1879
+offset_bottom = -428.92145
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jjnc2")
+
+[connection signal="button_down" from="Milk/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Milk/Button" to="." method="_on_button_button_up"]

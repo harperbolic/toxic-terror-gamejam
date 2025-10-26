@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=11 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
 [ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
-[ext_resource type="Texture2D" uid="uid://chumlt60i014l" path="res://_PLACEHOLDER/kiryu_angry.png" id="3_vxrcs"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
 
 [sub_resource type="Animation" id="Animation_vxrcs"]
@@ -69,6 +68,21 @@ tracks/4/keys = {
 "values": [Color(0, 0, 0, 0.5411765)]
 }
 
+[sub_resource type="Animation" id="Animation_qi4lx"]
+resource_name = "bg_fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.627451)]
+}
+
 [sub_resource type="Animation" id="Animation_r1bp4"]
 resource_name = "cli_fade_in"
 tracks/0/type = "value"
@@ -96,6 +110,9 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_iklxa"]
+resource_name = "fade_out"
+
 [sub_resource type="Animation" id="Animation_fyxdl"]
 resource_name = "mc_fade_in"
 tracks/0/type = "value"
@@ -122,24 +139,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_qi4lx"]
-resource_name = "bg_fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.627451)]
-}
-
-[sub_resource type="Animation" id="Animation_iklxa"]
-resource_name = "fade_out"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1bp4"]
 _data = {
@@ -184,8 +183,7 @@ grow_vertical = 2
 texture = ExtResource("2_qi4lx")
 stretch_mode = 4
 
-[node name="L_angry" type="TextureRect" parent="Cli"]
-visible = false
+[node name="C_none" type="TextureRect" parent="Cli"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -198,9 +196,24 @@ offset_right = 2136.0
 offset_bottom = 1465.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_vxrcs")
+texture = ExtResource("2_qi4lx")
 stretch_mode = 4
-flip_h = true
+
+[node name="H_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1236.0
+offset_top = 95.0
+offset_right = 2136.0
+offset_bottom = 1465.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qi4lx")
+stretch_mode = 4
 
 [node name="BG" type="TextureRect" parent="."]
 visible = false
@@ -217,36 +230,6 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="M_none" type="TextureRect" parent="MC"]
-layout_mode = 0
-offset_left = -140.0
-offset_top = 78.0
-offset_right = 760.0
-offset_bottom = 1350.0
-texture = ExtResource("1_ynxmj")
-stretch_mode = 4
-
-[node name="M_happy" type="TextureRect" parent="MC"]
-visible = false
-layout_mode = 0
-offset_left = -140.0
-offset_top = 78.0
-offset_right = 760.0
-offset_bottom = 1350.0
-texture = ExtResource("1_ynxmj")
-stretch_mode = 4
-
-[node name="M_angry" type="TextureRect" parent="MC"]
-visible = false
-layout_mode = 0
-offset_left = -140.0
-offset_top = 78.0
-offset_right = 760.0
-offset_bottom = 1350.0
-texture = ExtResource("3_vxrcs")
-stretch_mode = 4
-
-[node name="M_sad" type="TextureRect" parent="MC"]
-visible = false
 layout_mode = 0
 offset_left = -140.0
 offset_top = 78.0

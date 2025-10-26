@@ -1,0 +1,7 @@
+{
+	"0" : {"name" : "C", "expression" : "none", "text" : "Aí, você tem problema?"},
+	"1" : {"name" : "C", "expression" : "none", "text" : "Você deixou o cliente esperando muito tempo! Você veio de ressaca?"},
+	"2" : {"name" : "C", "expression" : "none", "text" : "Não bobeia, você tem que fazer as coisas de forma rápida e deixar o cliente feliz enquanto ele tem paciência."},
+	"3" : {"name" : "C", "expression" : "none", "text" : "O cliente sempre tem razão, ou alguma merda assim, né?"},
+	"4" : {"name" : "M", "expression" : "none", "text" : "..."},
+}

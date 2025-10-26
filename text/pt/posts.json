@@ -1,0 +1,206 @@
+{
+	"post1" : {
+		"head" : "Realmente quero muito comer um ",
+		"good_words" : [
+			"docinho",
+			"tiramisu",
+			"churrasco",
+			"fast food",
+			"hambúrguer",
+			"rocks",
+			"frango"
+		],
+		"bad_words" : [
+			"pussy",
+			"dog",
+			"bullets",
+			"assholes",
+			"people"
+		],
+		"tail" : " agora"
+	},
+	"post2" : {
+		"head" : "Queria estar ",
+		"good_words" : [
+			"brincando",
+			"conversando",
+			"caminhando",
+			"jogando aquele jogo",
+			"latindo",
+			"dormindo",
+			"te abraçando"
+		],
+		"bad_words" : [
+			"transando",
+			"roubando",
+			"me masturbando",
+			"morto"
+		],
+		"tail" : "."
+	},
+	"post3" : {
+		"head" : "",
+		"good_words" : [
+			"Arco-íris",
+			"Ligma",
+			"Boas atitudes",
+			"Cachorrinhos e gatinhos",
+			"Shows de rok",
+			"Eventos benificentes"
+		],
+		"bad_words" : [
+			"Assassinatos",
+			"Sequestros",
+			"Vandalismo",
+			"Golpes por telefone",
+			"Exibicionismo"
+		],
+		"tail" : " deviam voltar a rolar aqui."
+	},
+	"post4" : {
+		"head" : "Eu acho que XoxoShop aqui na esquina é ",
+		"good_words" : [
+			"bem bacana",
+			"encantadora",
+			"interessante",
+			"útil",
+			"ótima",
+			"incrível",
+			"excelente",
+			"muito conveniente"
+		],
+		"bad_words" : [
+			"bem merda",
+			"horrível",
+			"fedida",
+			"vergonhosa",
+			"dilapited",
+			"absolutamente estranha",
+			"administrada por uma fofura"
+		],
+		"tail" : "."
+	},
+	"post5" : {
+		"head" : "Que ótimo dia pra ",
+		"good_words" : [
+			"respirar ar puro",
+			"limpar a casa",
+			"visitar as crianças",
+			"passear",
+			"cozinhar doces",
+			"abraçar",
+			"jogar baralho",
+			"matar alguém (no Minecraft)",
+			"mascar chiclete"
+		],
+		"bad_words" : [
+			"parar de respirar",
+			"limpar a bunda",
+			"matar alguém",
+			"arruinar a vida deles",
+			"chutar pessoas",
+			"desperdiçar comida"
+		],
+		"tail" : ".",
+	},
+	"post6" : {
+		"head" : "Queria que minha vida ",
+		"good_words" : [
+			"fosse melhor",
+			"fosse menos estressante",
+			"evoluísse",
+			"ficasse assim pra sempre",
+			"inspirasse as pessoas",
+			"fizesse a diferença"
+		],
+		"bad_words" : [
+			"acabasse logo",
+			"fosse pior ainda",
+			"deixe todos desconfortáveis",
+			"parasse de ser boa",
+			"estressasse alguém",
+			"acabasse",
+		],
+		"tail" : "."
+	},
+	"post7" : {
+		"head" : "Você seria amigo de um ",
+		"good_words" : [
+			"pai de pet",
+			"jogador de jogo de luta",
+			"cara tranquilão",
+			"gótico",
+			"cinéfilo"
+		],
+		"bad_words" : [
+			"nazi",
+			"esquisitão",
+			"promíscuo",
+			"preguiçoso da porra",
+			"doido insano",
+			"cara inútil e desinteressante"
+		],
+		"tail" : " como eu?"
+	},
+	"post8" : {
+		"head" : "Eu acho que ",
+		"good_words" : [
+			"cachorros são fofinhos",
+			"gatos são elegantes",
+			"assassinato deve ser crime",
+			"as pessoas deviam ser boas umas com as outras",
+			"é hora da gelatina",
+			"fé nas malucas",
+			"basquete é maneiro",
+			"Max Steel é demais"
+		],
+		"bad_words" : [
+			"assassinato devia ser legalizado",
+			"cachorros são feios",
+			"gatos são sueprestimados",
+			"meu pinto tem 30 centímetros"
+		],
+		"tail" : "."
+	},
+	"post9" : {
+		"head" : "",
+		"good_words" : [
+			"Bolo",
+			"Torta de Limão com merengue",
+			"Ir ao zoológico",
+			"Fazer carinho no meu cachorro",
+			"Fazer carinho na minha namorada",
+			"Jogar Terraria"
+		],
+		"bad_words" : [
+			"Mentir",
+			"Trapacear",
+			"Assistir alguém sendo arremessado pela janela",
+			"Roubar remédios",
+			"Foder do jobs",
+			"Iniciar incêndios",
+			"Doxxing"
+		],
+		"tail" : " é apaixonante."
+	},
+	"post10" : {
+		"head" : "De verdade não aguento ",
+		"good_words" : [
+			"mirtilo",
+			"água em temperatura ambiente",
+			"caviar",
+			"vibe coding",
+			"anime dublado em português de Portugal",
+			"jogos gacha",
+		],
+		"bad_words" : [
+			"putas",
+			"aquele pássaro do caralho que eu odeio",
+			"mendigos",
+			"mulheres",
+			"my dick up",
+			"grávidas tentando pegar meu lugar no ônibus"
+		],
+		"tail" : "."
+	}
+}

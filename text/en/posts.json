@@ -1,0 +1,207 @@
+{
+	"post1" : {
+		"head" : "I really want to eat some ",
+		"good_words" : [
+			"apple pie",
+			"tiramisu",
+			"barbecue",
+			"fast food",
+			"hamburger",
+			"rocks",
+			"chicken thighs"
+		],
+		"bad_words" : [
+			"pussy",
+			"dog",
+			"bullets",
+			"assholes",
+			"people"
+		],
+		"tail" : " rn"
+	},
+	"post2" : {
+		"head" : "Wish I was ",
+		"good_words" : [
+			"frolicking",
+			"hanging out",
+			"taking a walk",
+			"playing that game",
+			"barking",
+			"sleeping",
+			"hugging you"
+		],
+		"bad_words" : [
+			"fucking",
+			"stealing",
+			"jerking",
+			"dead"
+		],
+		"tail" : "."
+	},
+	"post3" : {
+		"head" : "",
+		"good_words" : [
+			"Rainbows",
+			"Ligma",
+			"Nice attitudes",
+			"Puppies and kittens",
+			"Rock concerts",
+			"Charity events"
+		],
+		"bad_words" : [
+			"Muders",
+			"Kidnappings",
+			"Vandalism",
+			"Telephone scams",
+			"Exhibitionism"
+		],
+		"tail" : " should start happening again over here."
+	},
+	"post4" : {
+		"head" : "I think that XoxoShop near the corner is ",
+		"good_words" : [
+			"quite nice",
+			"charming",
+			"interesting",
+			"useful",
+			"good",
+			"incredible",
+			"superb",
+			"very convenient"
+		],
+		"bad_words" : [
+			"quite bad",
+			"terrible",
+			"stinky",
+			"cringe",
+			"dilapited",
+			"absurdly weird",
+			"manned by a cutie"
+		],
+		"tail" : "."
+	},
+	"post5" : {
+		"head" : "What a good day to ",
+		"good_words" : [
+			"breathe some fresh air",
+			"clean the house",
+			"visit the kids",
+			"have a vacation",
+			"bake some sweets",
+			"give hugs",
+			"play cards",
+			"kill someone (in Minecraft)",
+			"chew bubblegum"
+		],
+		"bad_words" : [
+			"stop breathing",
+			"wipe my ass",
+			"kill someone",
+			"ruin their life",
+			"kick some ass",
+			"waste food"
+		],
+		"tail" : ".",
+	},
+	"post6" : {
+		"head" : "I wish my life ",
+		"good_words" : [
+			"was better",
+			"was less stressful",
+			"would go on",
+			"stays like it is",
+			"inspires people",
+			"makes a difference"
+		],
+		"bad_words" : [
+			"would just end already",
+			"would be even more terrible",
+			"makes everyone uncomfortable",
+			"stops being good",
+			"stresses someone out",
+			"was over",
+		],
+		"tail" : "."
+	},
+	"post7" : {
+		"head" : "Would you be friends with a ",
+		"good_words" : [
+			"dog lover",
+			"cat lover",
+			"fighting game player",
+			"chill person",
+			"goth",
+			"cinephile"
+		],
+		"bad_words" : [
+			"nazi",
+			"weirdo",
+			"voyeur",
+			"lazy fuck",
+			"crazy bitch",
+			"someone useless and unimportant"
+		],
+		"tail" : " like me?"
+	},
+	"post8" : {
+		"head" : "I believe that ",
+		"good_words" : [
+			"dogs are cute",
+			"cats are elegant",
+			"murder should be a crime",
+			"people should be niver to eachother",
+			"peanut butter jelly time",
+			"faith in crazy girls",
+			"basketball is cool",
+			"Max Steel is awesome"
+		],
+		"bad_words" : [
+			"murder should be legal",
+			"dogs are ugly",
+			"cats are overrated",
+			"my dick is 12 inches"
+		],
+		"tail" : "."
+	},
+	"post9" : {
+		"head" : "",
+		"good_words" : [
+			"Cake",
+			"Lemon merinue pie",
+			"Going to the zoo",
+			"Petting my dog",
+			"Petting my girl",
+			"Playing terraria"
+		],
+		"bad_words" : [
+			"Lying",
+			"Cheating",
+			"Watching someone through their window",
+			"Stealing medicine",
+			"Fucking whores",
+			"Starting random fires",
+			"Doxxing"
+		],
+		"tail" : " is lovely."
+	},
+	"post10" : {
+		"head" : "Can't stand ",
+		"good_words" : [
+			"blueberries",
+			"lukewarm water",
+			"caviar",
+			"vibe coding",
+			"english voice actin in animes",
+			"gacha games",
+		],
+		"bad_words" : [
+			"bitches",
+			"that fucking bird i hate",
+			"homeless people",
+			"women",
+			"my dick up",
+			"pregnant women trying to get my seat in the bus"
+		],
+		"tail" : " fr"
+	}
+}

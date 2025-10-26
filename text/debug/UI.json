@@ -25,5 +25,11 @@
 	"depressed" : "Depressed",
 	"nervous" : "Nervous",
 	"mad" : "Mad",
-	"inconclusive" : "Inconclusive"
+	"inconclusive" : "Inconclusive",
+	"food" : "Food",
+	"drinks" : "Drinks",
+	"health" : "Health",
+	"extra" : "Extra",
+	"instructions" : "Instructions",
+	"end_order" : "Finish Order"
 }

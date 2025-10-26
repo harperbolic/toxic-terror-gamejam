@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://chuwykh4jfnvy"]
+
+[ext_resource type="Script" uid="uid://b5vcw4ncxw5v5" path="res://scripts/classes/good.gd" id="1_nyeqp"]
+[ext_resource type="Texture2D" uid="uid://l10g5etbhn06" path="res://_PLACEHOLDER/milk.png" id="2_gmpq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjnc2"]
+size = Vector2(591.2871, 1729.0667)
+
+[node name="GoodTemplate" type="CharacterBody2D"]
+scale = Vector2(0.16066664, 0.16066666)
+motion_mode = 1
+script = ExtResource("1_nyeqp")
+
+[node name="Milk" type="Sprite2D" parent="."]
+position = Vector2(6653.528, 1076.7635)
+texture = ExtResource("2_gmpq2")
+
+[node name="Button" type="Button" parent="Milk"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_right = 0.763
+anchor_bottom = 0.92200005
+offset_left = -304.9795
+offset_top = -883.81744
+offset_right = -578.292
+offset_bottom = -977.9305
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6662.864, 1069.9274)
+shape = SubResource("RectangleShape2D_jjnc2")
+
+[connection signal="button_down" from="Milk/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Milk/Button" to="." method="_on_button_button_up"]

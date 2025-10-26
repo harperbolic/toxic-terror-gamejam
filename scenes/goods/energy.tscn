@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://77e87tjh1ogm"]
+
+[ext_resource type="Script" uid="uid://b5vcw4ncxw5v5" path="res://scripts/classes/good.gd" id="1_5yifw"]
+[ext_resource type="Texture2D" uid="uid://bpcfj22wl4438" path="res://_PLACEHOLDER/energy_drink.png" id="2_5yifw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjnc2"]
+size = Vector2(441.909, 1163.9004)
+
+[node name="GoodTemplate" type="CharacterBody2D"]
+scale = Vector2(0.16066664, 0.16066666)
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_5yifw")
+item_key = "energy"
+
+[node name="Milk" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_5yifw")
+
+[node name="Button" type="Button" parent="Milk"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.22827
+offset_top = -390.0415
+offset_right = -515.02466
+offset_bottom = -510.21167
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jjnc2")
+
+[connection signal="button_down" from="Milk/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Milk/Button" to="." method="_on_button_button_up"]

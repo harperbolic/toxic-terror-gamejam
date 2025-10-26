@@ -1,6 +1,6 @@
 {
 	"0" : {"name" : "C", "expression" : "none", "text" : "Man, are you dense?"},
-	"1" : {"name" : "C", "expression" : "none", "text" : "You kept them waiting too long! Did you come with a hangover or something?."},
+	"1" : {"name" : "C", "expression" : "none", "text" : "You kept them waiting too long! Did you come with a hangover or something?"},
 	"2" : {"name" : "C", "expression" : "none", "text" : "Don’t fumble, you gotta do things in a timely manner and keep the client happy while he’s still patient."},
 	"3" : {"name" : "C", "expression" : "none", "text" : "Client’s always right or some bullshit, right?"},
 	"4" : {"name" : "M", "expression" : "none", "text" : "..."},

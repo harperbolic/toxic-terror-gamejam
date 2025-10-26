@@ -14,8 +14,8 @@
 	"12" : {"name" : "C", "expression" : "none", "text" : "..."},
 	"13" : {"name" : "M", "expression" : "none", "text" : "...?"},
 	"14" : {"name" : "C", "expression" : "none", "text" : "What?"},
-	"15" : {"name" : "C", "expression" : "none", "text" : "You were saying?"},
+	"15" : {"name" : "M", "expression" : "none", "text" : "You were saying?"},
 	"16" : {"name" : "C", "expression" : "none", "text" : "Just letting it sink in that you’re stupid for thinking that."},
 	"17" : {"name" : "C", "expression" : "none", "text" : "Anyways, I gotta help you with all the easy shit again, because I don't trust you 5 feet near anything here."},
-	"18" : {"name" : "C", "expression" : "none", "text" : "Basically, we have to stay planted at the register and wait for the clients to come over."},
+	"18" : {"name" : "C", "expression" : "none", "text" : "Basically, we have to stay planted at the register and wait for the clients to come over."}
 }

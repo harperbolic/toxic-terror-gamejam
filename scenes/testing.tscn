@@ -2,18 +2,73 @@
 
 [ext_resource type="Script" uid="uid://cm2vote4vv20" path="res://scripts/testing.gd" id="1_pcu7d"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_3dx25"]
+[ext_resource type="Texture2D" uid="uid://dxcng2abyc22q" path="res://_PLACEHOLDER/biker.png" id="3_j8asw"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="3_l6grw"]
 [ext_resource type="Script" uid="uid://c7pxnax0nuy4n" path="res://scripts/UI/cellphone.gd" id="4_3dx25"]
 [ext_resource type="Texture2D" uid="uid://dv0pbtodntu7y" path="res://assets/ui/cellphone_hand.png" id="5_8mr64"]
 [ext_resource type="Texture2D" uid="uid://cxydbx5ww5awq" path="res://assets/ui/UI_box_gray.png" id="5_nuoa6"]
 [ext_resource type="Texture2D" uid="uid://bc11teivttb4d" path="res://assets/ui/UI_box_highlight2.png" id="6_kri1i"]
 [ext_resource type="Texture2D" uid="uid://c8151d8uwekuj" path="res://assets/ui/UI_box_highlight.png" id="7_5qbqa"]
-[ext_resource type="Texture2D" uid="uid://l10g5etbhn06" path="res://_PLACEHOLDER/milk.png" id="8_gi1h7"]
-[ext_resource type="Script" uid="uid://b5vcw4ncxw5v5" path="res://scripts/classes/good.gd" id="8_jjnc2"]
-[ext_resource type="Script" uid="uid://bodyswj1g1ejs" path="res://scripts/rigid_body_2d.gd" id="10_j8asw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjnc2"]
-size = Vector2(591.2871, 1729.0667)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8asw"]
+size = Vector2(2690, 819.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mr64"]
+size = Vector2(621, 1439)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utrvu"]
+size = Vector2(480, 492)
+
+[sub_resource type="Animation" id="Animation_utrvu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1113, 188)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_8mr64"]
 resource_name = "cellphone"
@@ -67,57 +122,6 @@ tracks/3/keys = {
 "values": [true, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_utrvu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1113, 188)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yh20h"]
 _data = {
 &"RESET": SubResource("Animation_utrvu"),
@@ -127,12 +131,25 @@ _data = {
 [node name="GameController" type="Node"]
 script = ExtResource("1_pcu7d")
 
-[node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(0.16066664, 0.16066666)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(2, -5)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(6342.3203, 192.94604)
-polygon = PackedVector2Array(-6336.1, -522.82166, -6336.1, 5657.6763, -5184.648, 5639.0044, -5004.15, 2645.2283, -1630.7056, 2645.2283, -1692.9463, 5744.8135, 5620.3325, 5582.988, 5632.781, 796.68054, 5582.989, -429.46063, 7101.6606, -155.60168, 7219.9185, 8483.402, -8427.387, 8346.474, -7686.7227, 24.896255)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(980, 1349.75)
+shape = SubResource("RectangleShape2D_j8asw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2228, 469)
+shape = SubResource("RectangleShape2D_8mr64")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-305, 367.5)
+shape = SubResource("RectangleShape2D_8mr64")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(388, 1110)
+shape = SubResource("RectangleShape2D_utrvu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -146,10 +163,15 @@ texture = ExtResource("2_3dx25")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 994.0
+offset_top = -26.0
+offset_right = 1554.0
+offset_bottom = 2402.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.00087739713
-texture = ExtResource("3_l6grw")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_j8asw")
+stretch_mode = 4
 
 [node name="Monitor" type="Control" parent="."]
 layout_mode = 3
@@ -188,7 +210,10 @@ grow_vertical = 2
 rotation = -0.00087739713
 texture = ExtResource("3_l6grw")
 
+[node name="Goods" type="Node" parent="."]
+
 [node name="Cellphone" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -226,6 +251,7 @@ grow_vertical = 2
 color = Color(0.20871013, 0.20871016, 0.20871013, 1)
 
 [node name="Posts" type="VBoxContainer" parent="Cellphone"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -288,7 +314,6 @@ theme_override_font_sizes/font_size = 32
 text = "Report Post"
 
 [node name="Overview" type="Control" parent="Cellphone"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -504,6 +529,19 @@ theme_override_colors/font_color = Color(0.414, 0.54, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Inconclusive"
 
+[node name="Radiant" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.414, 0.54, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Inconclusive"
+
 [node name="Status" type="NinePatchRect" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 530)
 layout_mode = 2
@@ -577,63 +615,8 @@ theme_override_font_sizes/font_size = 30
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
 autowrap_mode = 2
 
-[node name="Milk" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1069, 173)
-scale = Vector2(0.16066664, 0.16066666)
-texture = ExtResource("8_gi1h7")
-script = ExtResource("8_jjnc2")
-
-[node name="Button" type="Button" parent="Milk"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_right = 0.763
-anchor_bottom = 0.92200005
-offset_left = -304.9795
-offset_top = -883.81744
-offset_right = -578.292
-offset_bottom = -977.9305
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RigidBody2D" type="RigidBody2D" parent="Milk"]
-position = Vector2(9.3359375, -6.8361816)
-script = ExtResource("10_j8asw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk"]
-position = Vector2(9.3359375, -6.8361816)
-shape = SubResource("RectangleShape2D_jjnc2")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Cellphone")
 libraries = {
 &"": SubResource("AnimationLibrary_yh20h")
 }
-
-[node name="Button" type="Button" parent="."]
-offset_left = 562.0
-offset_top = 142.0
-offset_right = 706.0
-offset_bottom = 173.0
-text = "PLAY ANIMATION"
-
-[node name="Button2" type="Button" parent="."]
-offset_left = 562.0
-offset_top = 186.0
-offset_right = 773.0
-offset_bottom = 217.0
-text = "PLAY ANIMATION RETURN"
-
-[node name="Button3" type="Button" parent="."]
-offset_left = 562.0
-offset_top = 234.0
-offset_right = 773.0
-offset_bottom = 265.0
-text = "PLAY DIALOG"
-
-[connection signal="body_entered" from="Area2D" to="Milk/RigidBody2D" method="_on_area_2d_body_entered"]
-[connection signal="button_down" from="Milk/Button" to="Milk" method="_on_button_button_down"]
-[connection signal="button_up" from="Milk/Button" to="Milk" method="_on_button_button_up"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

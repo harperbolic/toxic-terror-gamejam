@@ -32,6 +32,8 @@ var mus_bus : int
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
+	AUDIO.stop_all_music()
+	
 	# Hide options panel
 	options_panel.visible = false
 	
@@ -101,7 +103,9 @@ func _on_credits_pressed() -> void:
 	AUDIO.play_sfx("click")
 
 func _on_quit_game_pressed() -> void:
-	AUDIO.play_sfx("click", true)
+	AUDIO.play_sfx("click")
+	AUDIO.stop_all_music()
+	await AUDIO.sfx_finished
 	get_tree().quit()
 
 func _on_back_pressed() -> void:
