@@ -31,5 +31,7 @@
 	"health" : "Saúde",
 	"extra" : "Extra",
 	"instructions" : "Instruções",
-	"end_order" : "Entregar Pedido"
+	"end_order" : "Entregar",
+	"talk" : "Falar",
+	"report" : "Relatório"
 }

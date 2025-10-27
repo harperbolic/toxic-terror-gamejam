@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl6irhqvu4gqn"]
+[gd_scene load_steps=5 format=3 uid="uid://dl6irhqvu4gqn"]
 
 [ext_resource type="Script" uid="uid://denh53muimfn7" path="res://scripts/UI/textbox.gd" id="1_47t7x"]
 [ext_resource type="Texture2D" uid="uid://bs8p3t473jrn7" path="res://assets/ui/dialog_box.PNG" id="2_7ql3h"]
 [ext_resource type="Texture2D" uid="uid://ci0exkblk741" path="res://assets/ui/dialog_box_mc.png" id="3_7ql3h"]
+[ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="4_3u8ud"]
 
 [node name="Textbox" type="MarginContainer"]
 offset_right = 560.0
@@ -42,6 +43,7 @@ custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme = ExtResource("4_3u8ud")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 autowrap_mode = 2

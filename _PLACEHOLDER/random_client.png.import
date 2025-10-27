@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vmcutlvkwt51"
-path="res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"
+uid="uid://bhryfxr705a56"
+path="res://.godot/imported/random_client.png-85d1d8b48b3fb2f4eb0bb2c4700066cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/balcao.PNG"
-dest_files=["res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"]
+source_file="res://_PLACEHOLDER/random_client.png"
+dest_files=["res://.godot/imported/random_client.png-85d1d8b48b3fb2f4eb0bb2c4700066cf.ctex"]
 
 [params]
 

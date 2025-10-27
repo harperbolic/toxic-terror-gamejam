@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vmcutlvkwt51"
-path="res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"
+uid="uid://o25go8xdghp"
+path="res://.godot/imported/creep.png-769ff63b48f87263088e720b3d3b9b2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/balcao.PNG"
-dest_files=["res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"]
+source_file="res://assets/portraits/creep.png"
+dest_files=["res://.godot/imported/creep.png-769ff63b48f87263088e720b3d3b9b2b.ctex"]
 
 [params]
 

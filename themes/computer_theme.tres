@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://d0ms1pva8a0cu"]
+
+[ext_resource type="FontFile" uid="uid://d6los0m4gupr" path="res://assets/fonts/AlteHaasGroteskBold.ttf" id="1_i2lky"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uivm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2lky"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cwxs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2lky"]
+bg_color = Color(0.47843137, 0.47843137, 0.47843137, 1)
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61vf7"]
+
+[resource]
+default_font = ExtResource("1_i2lky")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_hover_color = Color(0.69, 0.69, 0.69, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_uivm2")
+Button/styles/focus = SubResource("StyleBoxEmpty_i2lky")
+Button/styles/hover = SubResource("StyleBoxEmpty_8cwxs")
+Button/styles/normal = SubResource("StyleBoxFlat_i2lky")
+Button/styles/pressed = SubResource("StyleBoxEmpty_61vf7")

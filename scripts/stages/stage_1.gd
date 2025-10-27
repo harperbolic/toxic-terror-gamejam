@@ -11,6 +11,10 @@ const ENERGY = preload("res://scenes/goods/energy.tscn")
 const BEER = preload("res://scenes/goods/beer.tscn")
 const CHOCOLATE = preload("res://scenes/goods/chocolate.tscn")
 
+@onready var end: Button = $ActionButton/End/button
+@onready var talk: Button = $ActionButton/Talk/button
+@onready var report: Button = $ActionButton/Report/button
+
 @onready var day_letter: Label = $Title/DayLabel
 @onready var goods = $Goods
 
@@ -20,22 +24,29 @@ signal wrong_order
 
 func _ready() -> void:
 	
-	day_letter.text = DEF.UI_text.get("day") + " " + str(int(DEF.save.get("level")))
+	# localization
+	# Action
+	end.text = DEF.UI_text.get("end_order")
+	talk.text = DEF.UI_text.get("talk")
+	report.text = DEF.UI_text.get("report")
 	
 	AUDIO.stop_all_music()
+	AUDIO.play_music("shift_theme")
+	
+	day_letter.text = DEF.UI_text.get("day") + " " + str(int(DEF.save.get("level")))
+	
+	
 	
 	# AUDIO.play_sfx("bell")
 	animation_player.play("fade_title")
 	await animation_player.animation_finished
 	
-	AUDIO.play_music("shift_theme")
 	AUDIO.play_sfx("shift_start")
 	
 	await get_tree().create_timer(1.0).timeout
 	
 	animation_player.play("fade")
 	await animation_player.animation_finished
-	await get_tree().create_timer(1.0).timeout
 	
 	DIALOG.start_dialog(DEF.Stage1_C1)
 	await DIALOG.dialog_ended
@@ -45,8 +56,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.8).timeout
 	
 	DIALOG.start_dialog(DEF.Stage1_C2)
-	await DIALOG.dialog_ended
-	
+	await DIALOG.dialog_ended	
 	spawn_items()
 	
 	await client_served
@@ -62,6 +72,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.8).timeout
 	
 	DIALOG.start_dialog(DEF.Stage1_H1)
+	await DIALOG.dialog_ended
 
 func new_client(ClientID = null) -> void:	
 	if ClientID != null:
@@ -79,6 +90,8 @@ func new_client(ClientID = null) -> void:
 func client_exit() -> void:
 	if current_client != null:
 		animation_player.play("client_exit")
+		await animation_player.animation_finished
+		current_client.visible = false
 	else:
 		return
 
@@ -139,3 +152,7 @@ func end_order():
 
 func _on_basket_body_entered(body: Node2D) -> void:
 	body.add()
+
+
+func _on_button_pressed() -> void:
+	end_order()

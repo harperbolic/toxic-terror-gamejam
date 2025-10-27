@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://oyxk8q66566q"]
+
+[ext_resource type="FontFile" uid="uid://d6los0m4gupr" path="res://assets/fonts/AlteHaasGroteskBold.ttf" id="1_uivm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uivm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sesm5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cwxs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjgu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61vf7"]
+
+[resource]
+default_font = ExtResource("1_uivm2")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_uivm2")
+Button/styles/focus = SubResource("StyleBoxEmpty_sesm5")
+Button/styles/hover = SubResource("StyleBoxEmpty_8cwxs")
+Button/styles/normal = SubResource("StyleBoxEmpty_rjgu6")
+Button/styles/pressed = SubResource("StyleBoxEmpty_61vf7")

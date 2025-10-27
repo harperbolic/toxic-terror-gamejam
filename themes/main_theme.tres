@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cvjn0pgb6c2yi"]
+
+[ext_resource type="FontFile" uid="uid://d6los0m4gupr" path="res://assets/fonts/AlteHaasGroteskBold.ttf" id="1_rjgu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjgu6"]
+
+[resource]
+default_font = ExtResource("1_rjgu6")
+Button/colors/font_color = Color(18.892002, 18.892002, 18.892002, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/styles/normal = SubResource("StyleBoxEmpty_rjgu6")

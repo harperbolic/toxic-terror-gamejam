@@ -1,11 +1,18 @@
-[gd_scene load_steps=20 format=3 uid="uid://n1ny601f6g16"]
+[gd_scene load_steps=30 format=3 uid="uid://n1ny601f6g16"]
 
 [ext_resource type="Script" uid="uid://c0mcj7xdyn53b" path="res://scripts/stages/stage_1.gd" id="1_ace57"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_4fnny"]
-[ext_resource type="Texture2D" uid="uid://dxcng2abyc22q" path="res://_PLACEHOLDER/biker.png" id="3_5jilv"]
+[ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_4v4xh"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="4_8x8df"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_212wl"]
+[ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="4_i5f5j"]
+[ext_resource type="Texture2D" uid="uid://bhryfxr705a56" path="res://_PLACEHOLDER/random_client.png" id="5_4v4xh"]
 [ext_resource type="Texture2D" uid="uid://bx3lcet4l63jd" path="res://_PLACEHOLDER/basket.png" id="5_h25yc"]
+[ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="6_y7b51"]
+[ext_resource type="Theme" uid="uid://d0ms1pva8a0cu" path="res://themes/computer_theme.tres" id="9_8qn6h"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="9_rsk2y"]
+[ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="9_y7b51"]
+[ext_resource type="Script" uid="uid://hegsqpfov2f2" path="res://scripts/film_grain.gd" id="10_k4pqf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oiu06"]
 distance = 582.0
@@ -30,6 +37,16 @@ size = Vector2(23, 291)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiu06"]
 size = Vector2(336.5, 60)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k4pqf"]
+noise_type = 5
+frequency = 0.0241
+domain_warp_enabled = true
+domain_warp_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k4pqf"]
+height = 260
+noise = SubResource("FastNoiseLite_k4pqf")
 
 [sub_resource type="Animation" id="Animation_utrvu"]
 length = 0.001
@@ -84,43 +101,142 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("End:visible")
+tracks/4/path = NodePath("Title/DayLabel:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Title/DayLabel:modulate")
+tracks/5/path = NodePath("Title:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Title:modulate")
+tracks/6/path = NodePath("ActionButton/End/Polygon2D2:polygon")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
+"values": [PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ActionButton/End:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ActionButton/End:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ActionButton/End:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ActionButton/Report:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ActionButton/Talk:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ActionButton/Report:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ActionButton/Talk:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_y7b51"]
+resource_name = "button_end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ActionButton/End/Polygon2D2:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [PackedVector2Array(239.47, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13), PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)]
 }
 
 [sub_resource type="Animation" id="Animation_h25yc"]
 resource_name = "client_enter"
-length = 0.3
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -143,19 +259,115 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1200, 30), Vector2(994, -26)]
+"values": [Vector2(1200, 30), Vector2(1150, -20)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("End:visible")
+tracks/2/path = NodePath("ActionButton/End:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.25, 0.4),
+"transitions": PackedFloat32Array(1, 6.6823506),
+"update": 0,
+"values": [Vector2(303, 59), Vector2(8, -1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/End:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ActionButton/Talk:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(330, 48), Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ActionButton/Talk:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ActionButton/Talk:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ActionButton/Report:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ActionButton/Report:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ActionButton/Report:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_8x8df"]
@@ -183,19 +395,43 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(994, -26), Vector2(900, 0)]
+"values": [Vector2(1150, -20), Vector2(1000, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("End:visible")
+tracks/2/path = NodePath("ActionButton/Talk:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true, false]
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/Report:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_oiu06"]
@@ -269,6 +505,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yh20h"]
 _data = {
 &"RESET": SubResource("Animation_utrvu"),
+&"button_end": SubResource("Animation_y7b51"),
 &"client_enter": SubResource("Animation_h25yc"),
 &"client_exit": SubResource("Animation_8x8df"),
 &"fade": SubResource("Animation_oiu06"),
@@ -292,20 +529,30 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 994.0
 offset_top = -26.0
-offset_right = 1034.0012
-offset_bottom = 14.0
+offset_right = 994.0
+offset_bottom = -26.0
 
 [node name="H" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_4v4xh")
+stretch_mode = 4
+
+[node name="B" type="TextureRect" parent="Clients"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 2440.0
-offset_bottom = 3468.0
+offset_right = 2480.0
+offset_bottom = 3508.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("3_5jilv")
+texture = ExtResource("4_i5f5j")
 stretch_mode = 4
 
 [node name="random" type="TextureRect" parent="Clients"]
@@ -314,12 +561,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 2440.0
-offset_bottom = 3468.0
+offset_right = 2480.0
+offset_bottom = 3508.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("3_5jilv")
+texture = ExtResource("5_4v4xh")
 stretch_mode = 4
 
 [node name="TextureRect3" type="TextureRect" parent="."]
@@ -385,106 +632,351 @@ offset_bottom = 823.0
 rotation = 0.0024075368
 script = ExtResource("4_8x8df")
 
-[node name="ColorRect2" type="ColorRect" parent="Monitor"]
-visible = false
+[node name="Panel" type="TextureRect" parent="Monitor"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.4, 0.36862746, 1)
+texture = SubResource("NoiseTexture2D_k4pqf")
+script = ExtResource("10_k4pqf")
 
-[node name="MarginContainer" type="MarginContainer" parent="Monitor"]
+[node name="Menu" type="Control" parent="Monitor"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
 
-[node name="Menu" type="Control" parent="Monitor/MarginContainer"]
-layout_mode = 2
+[node name="Foward" type="Button" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -92.2453
+offset_top = -58.131897
+offset_right = 6.1035156e-05
+offset_bottom = 57.87622
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("6_y7b51")
 
-[node name="Panel" type="ColorRect" parent="Monitor/MarginContainer/Menu"]
-visible = false
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Foward"]
+position = Vector2(-48.623367, -6.1127853)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(128.44537, 64.97778, 69.19226, 16.091064, 70.43787, 118.08832)
+
+[node name="Back" type="Button" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_vertical = 2
+theme = ExtResource("6_y7b51")
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Back"]
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(9.445374, 66.97778, 64.32004, 14.845581, 64.570435, 118.845276)
+
+[node name="Food" type="Control" parent="Monitor/Menu"]
+clip_children = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+theme = ExtResource("9_y7b51")
+script = ExtResource("9_rsk2y")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Monitor/MarginContainer/Menu"]
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Food"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(1, 0.73333335, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-43.55014, 47.191223, 30.57724, 100.01288, 146.92456, 77.73999, 174.58646, 103.6662, 233.39847, 25.524414, 94.32669, -4.140869)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Food"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(11.178131, 73.97327, 227.1847, 76.45325, 238.01367, 5.427002, 5.009613, 3.987976)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Food"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -244.5
-offset_top = -93.0
-offset_right = 244.5
-offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Foods"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Monitor/MarginContainer/Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 10
+[node name="Drink" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_y7b51")
+script = ExtResource("9_rsk2y")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 50
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Drink"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0.23529412, 1, 1)
+antialiased = true
+polygon = PackedVector2Array(-29.684998, -8.842285, 30.57724, 100.01288, 146.92456, 77.73999, 235.56216, 93.51935, 187.32394, -5.364807, 97.39166, 22.851807)
 
-[node name="Food" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Food"
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Drink"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-5.8218384, 74.01422, 240.18463, 76.421936, 238.01367, 5.427002, 11.007202, 2.9735107)
 
-[node name="Drinks" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
+[node name="Button" type="Button" parent="Monitor/Menu/Drink"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
 text = "Drinks"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 50
+[node name="Health" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_y7b51")
+script = ExtResource("9_rsk2y")
 
-[node name="Health" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Health"]
+position = Vector2(172.02654, 150.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(1, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(40.40387, 27.989075, -28.598328, 27.155151, 18.476166, 58.04187, 14.5460205, 87.05145, 114.490265, 63.81073, 151.55765, 91.72162, 248.41043, 30.488281, 128.37952, 17.77716, 91.2713, -27.133545)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Health"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-3.8242493, 73.0094, 236.17023, 70.43158, 238.01367, 5.427002, 5.009613, 3.987976)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Health"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
 text = "Health"
 
-[node name="Extra" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/VBoxContainer2/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
+[node name="Extra" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_y7b51")
+script = ExtResource("9_rsk2y")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Extra"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0.7647059, 0, 1, 1)
+antialiased = true
+polygon = PackedVector2Array(-43.55014, 47.191223, 59.509735, 71.94318, 29.57965, 101.01532, 129.51434, 73.7746, 174.58646, 103.6662, 174.51181, 72.66632, 225.51163, 72.54352, 181.47324, 56.649475, 219.34073, 1.5581665, 152.39389, 23.719421, 118.31213, -10.198608, 73.3797, 17.909607, -8.658569, 2.1070557, 30.435211, 41.01306)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Extra"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(11.178131, 73.97327, 222.18707, 77.46527, 215.01862, 7.4823, 19.009583, 3.9542847)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Extra"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
 text = "Extra"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Monitor/MarginContainer/Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 10
+[node name="Items" type="Control" parent="Monitor"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 531.0
+offset_bottom = 344.0
 
-[node name="Instructions" type="Button" parent="Monitor/MarginContainer/Menu/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
+[node name="ActionButton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="End" type="Control" parent="ActionButton"]
+visible = false
+anchors_preset = 0
+script = ExtResource("9_rsk2y")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/End"]
+position = Vector2(1127.4962, 214.93605)
+rotation = 0.13849132
+color = Color(0.2784314, 0, 0.8901961, 1)
+antialiased = true
+polygon = PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/End"]
+position = Vector2(1273.8184, 262.59198)
+rotation = 0.13849132
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/End"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1122.0
+offset_top = 184.0
+offset_right = 1363.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.13849132
 size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("6_y7b51")
 theme_override_font_sizes/font_size = 40
-text = "Instructions"
+text = "Finish Order"
 
-[node name="Items" type="Control" parent="Monitor/MarginContainer"]
-layout_mode = 2
+[node name="Talk" type="Control" parent="ActionButton"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+script = ExtResource("9_rsk2y")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/Talk"]
+position = Vector2(1110.6086, 333.4704)
+rotation = 0.041604795
+color = Color(0, 0.8862745, 0.4862745, 1)
+antialiased = true
+polygon = PackedVector2Array(253.0293, -11.365845, 208, 51, 110.48938, 21.91127, -6.91626, 33.781097, -33.338257, -12.983017, 146.06213, -38.624466)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/Talk"]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1257.2637, 367.62463)
+rotation = 0.041604795
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/Talk"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1098.3566
+offset_top = 304.00003
+offset_right = 1339.3566
+offset_bottom = 360.00003
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.041604795
+size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("6_y7b51")
+theme_override_font_sizes/font_size = 40
+text = "Talk"
+
+[node name="Report" type="Control" parent="ActionButton"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+script = ExtResource("9_rsk2y")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/Report"]
+position = Vector2(1092.1108, 445.42258)
+rotation = -0.009728301
+color = Color(0.8862745, 0, 0.011764706, 1)
+antialiased = true
+polygon = PackedVector2Array(256.20557, -39.75206, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/Report"]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1243.0664, 480.43585)
+rotation = -0.009728301
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/Report"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1081.0
+offset_top = 425.0
+offset_right = 1322.0
+offset_bottom = 481.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.009728301
+size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("6_y7b51")
+theme_override_font_sizes/font_size = 40
+text = "Report"
 
 [node name="Title" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -508,19 +1000,10 @@ offset_right = 358.5
 offset_bottom = 171.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("9_8qn6h")
 theme_override_font_sizes/font_size = 250
 text = "DAY X"
 vertical_alignment = 1
-
-[node name="End" type="Button" parent="."]
-visible = false
-offset_left = 1332.0
-offset_top = 787.0
-offset_right = 1578.0
-offset_bottom = 850.0
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-text = "Finish Order"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -528,4 +1011,5 @@ libraries = {
 }
 
 [connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
-[connection signal="pressed" from="End" to="Monitor" method="_on_end_pressed"]
+[connection signal="pressed" from="ActionButton/End/button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ActionButton/Report/button" to="Monitor" method="_on_end_pressed"]

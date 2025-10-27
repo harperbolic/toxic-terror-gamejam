@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm2vote4vv20" path="res://scripts/testing.gd" id="1_pcu7d"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_3dx25"]
-[ext_resource type="Texture2D" uid="uid://dxcng2abyc22q" path="res://_PLACEHOLDER/biker.png" id="3_j8asw"]
+[ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="3_jjnc2"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="3_l6grw"]
 [ext_resource type="Script" uid="uid://c7pxnax0nuy4n" path="res://scripts/UI/cellphone.gd" id="4_3dx25"]
 [ext_resource type="Texture2D" uid="uid://dv0pbtodntu7y" path="res://assets/ui/cellphone_hand.png" id="5_8mr64"]
@@ -170,7 +170,7 @@ offset_bottom = 2402.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("3_j8asw")
+texture = ExtResource("3_jjnc2")
 stretch_mode = 4
 
 [node name="Monitor" type="Control" parent="."]

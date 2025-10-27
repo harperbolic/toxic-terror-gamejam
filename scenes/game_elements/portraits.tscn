@@ -1,9 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=13 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
 [ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
+[ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
+
+[sub_resource type="Animation" id="Animation_15t4e"]
+resource_name = "CW_fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CW/C_none:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CW/C_none:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vxrcs"]
 length = 0.001
@@ -34,38 +62,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Cli:position")
+tracks/2/path = NodePath("Cli:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Cli:modulate")
+tracks/3/path = NodePath("ColorRect:color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(0, 0, 0, 0.5411765)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:color")
+tracks/4/path = NodePath("CW/C_none:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0.5411765)]
+"values": [Vector2(938, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qi4lx"]
@@ -88,26 +116,14 @@ resource_name = "cli_fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cli:position")
+tracks/0/path = NodePath("Cli:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-100, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cli:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_iklxa"]
@@ -142,6 +158,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1bp4"]
 _data = {
+&"CW_fade_in": SubResource("Animation_15t4e"),
 &"RESET": SubResource("Animation_vxrcs"),
 &"bg_fade_in": SubResource("Animation_qi4lx"),
 &"cli_fade_in": SubResource("Animation_r1bp4"),
@@ -153,6 +170,7 @@ _data = {
 script = ExtResource("1_fyxdl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -162,10 +180,13 @@ color = Color(0, 0, 0, 0.5411765)
 
 [node name="Cli" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 5
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1150.0
+offset_top = -20.0
+offset_right = 1150.0
+offset_bottom = -20.0
 
 [node name="L_none" type="TextureRect" parent="Cli"]
 layout_mode = 1
@@ -174,26 +195,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1236.0
-offset_top = 95.0
-offset_right = 2136.0
-offset_bottom = 1465.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_qi4lx")
-stretch_mode = 4
-
-[node name="C_none" type="TextureRect" parent="Cli"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1236.0
-offset_top = 95.0
-offset_right = 2136.0
-offset_bottom = 1465.0
+offset_right = 900.0
+offset_bottom = 1370.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_qi4lx")
@@ -206,17 +209,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1236.0
-offset_top = 95.0
-offset_right = 2136.0
-offset_bottom = 1465.0
+offset_right = 2480.001
+offset_bottom = 3508.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qi4lx")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_qi4lx")
+expand_mode = 3
 stretch_mode = 4
 
 [node name="BG" type="TextureRect" parent="."]
 visible = false
+z_index = 5
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -224,8 +228,39 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_r1bp4")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 5
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_r1bp4")
+
+[node name="CW" type="Control" parent="."]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1101.0
+offset_right = 1101.0
+
+[node name="C_none" type="TextureRect" parent="CW"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 938.0
+offset_right = 1838.0
+offset_bottom = 1370.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qi4lx")
+stretch_mode = 4
+
 [node name="MC" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 5
 layout_mode = 3
 anchors_preset = 0
 

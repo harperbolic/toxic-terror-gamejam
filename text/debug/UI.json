@@ -32,4 +32,6 @@
 	"extra" : "Extra",
 	"instructions" : "Instructions",
 	"end_order" : "Finish Order"
+	"talk" : "Talk",
+	"report" : "Report"
 }

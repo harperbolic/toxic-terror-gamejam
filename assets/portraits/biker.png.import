@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vmcutlvkwt51"
-path="res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"
+uid="uid://dn2qjb6t2tr12"
+path="res://.godot/imported/biker.png-e437777aac55ad993dd61833216c25aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/balcao.PNG"
-dest_files=["res://.godot/imported/balcao.PNG-253e1c6e2bc41913073f4ca98e035160.ctex"]
+source_file="res://assets/portraits/biker.png"
+dest_files=["res://.godot/imported/biker.png-e437777aac55ad993dd61833216c25aa.ctex"]
 
 [params]
 

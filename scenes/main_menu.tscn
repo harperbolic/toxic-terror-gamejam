@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://f5fcguj5vqni" path="res://scripts/UI/main_menu.gd" id="1_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://d2pdlvhuwyqm0" path="res://_PLACEHOLDER/Noraneko_Background_Pack_1/Small_Apartment_Kitchen_Night.png" id="2_oa1go"]
 [ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="3_tbmy8"]
-
-[sub_resource type="Theme" id="Theme_rhts7"]
+[ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="3_wu84c"]
 
 [sub_resource type="Animation" id="Animation_wu84c"]
 length = 0.001
@@ -103,14 +102,14 @@ theme_override_constants/separation = 10
 [node name="StartGame" type="Button" parent="Buttons"]
 layout_mode = 2
 focus_mode = 3
-theme = SubResource("Theme_rhts7")
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 text = "New Game"
 
 [node name="StartGame2" type="Button" parent="Buttons"]
 layout_mode = 2
 focus_mode = 3
-theme = SubResource("Theme_rhts7")
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 disabled = true
 text = "Continue"
@@ -118,21 +117,21 @@ text = "Continue"
 [node name="Options" type="Button" parent="Buttons"]
 layout_mode = 2
 focus_mode = 3
-theme = SubResource("Theme_rhts7")
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
 [node name="Credits" type="Button" parent="Buttons"]
 layout_mode = 2
 focus_mode = 3
-theme = SubResource("Theme_rhts7")
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 text = "Credits"
 
 [node name="QuitGame" type="Button" parent="Buttons"]
 layout_mode = 2
 focus_mode = 3
-theme = SubResource("Theme_rhts7")
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 text = "Quit Game"
 
@@ -156,6 +155,7 @@ stretch_mode = 4
 
 [node name="Label2" type="Label" parent="Version"]
 layout_mode = 2
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 text = "Alpha 0.1"
 horizontal_alignment = 1
@@ -173,6 +173,7 @@ offset_right = 197.0
 offset_bottom = -179.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 50
 text = "Quem Não Deve
 Não Teme"
@@ -202,6 +203,7 @@ offset_left = -31.0
 offset_right = 31.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 32
 text = "Options"
 
@@ -219,6 +221,7 @@ offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 32
 text = "Back
 "
@@ -244,6 +247,7 @@ theme_override_constants/separation = 40
 [node name="sfx" type="Label" parent="Options/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 text = "Sound Effects"
 
@@ -253,6 +257,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 max_value = 1.0
 step = 0.01
 value = 1.0
@@ -266,6 +271,7 @@ theme_override_constants/separation = 40
 [node name="mus" type="Label" parent="Options/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 text = "Music"
 
@@ -274,6 +280,7 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 min_value = 0.01
 max_value = 1.0
 step = 0.01
@@ -288,6 +295,7 @@ alignment = 2
 [node name="language" type="Label" parent="Options/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 text = "Language"
 
@@ -296,6 +304,7 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 alignment = 1
 selected = 0
 item_count = 2
@@ -313,6 +322,7 @@ alignment = 2
 [node name="fullscreen" type="Label" parent="Options/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 text = "Fullscreen"
 
@@ -320,6 +330,7 @@ text = "Fullscreen"
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 focus_mode = 3
+theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 20
 
 [node name="ColorRect" type="ColorRect" parent="."]

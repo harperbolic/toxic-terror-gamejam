@@ -1,4 +1,4 @@
 {
-	"0" : {"name" : "L", "expression" : "none", "text" : "Debug mode text 1"},
+	"0" : {"name" : "C", "expression" : "none", "text" : "Debug mode text 1"},
 	"1" : {"name" : "M", "expression" : "none", "text" : "Debug mode text 2"},
 }
