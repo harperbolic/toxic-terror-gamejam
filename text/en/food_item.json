@@ -1,0 +1,42 @@
+{
+	"0" : {
+		"id" : "HotLunch",
+		"name" : "Hot Lunch",
+		"description" : "At this hour, shouldn't it be called Hot Dinner?",
+	},
+	"1" : {
+		"id" : "Tostex",
+		"name" : "Grilled Cheese",
+		"description" : "No fancy british chefs meddling on this one!"
+	},
+	"2" : {
+		"id" : "Katsu",
+		"name" : "Katsu Sando",
+		"description" : "Sticking a deepfried chunk of pork inside a sandwich shouldn't work this well, but God this is delicious."
+	},
+	"3" : {
+		"id" : "Bauru",
+		"name" : "Bauru Sando",
+		"description" : "Finally, a place where it's made the CORRECT way."
+	},
+	"4" : {
+		"id" : "Choripan",
+		"name" : "Choripan",
+		"description" : "It's like a portable asado!"
+	},
+	"5" : {
+		"id" : "Sausage",
+		"name" : "Hot Dog",
+		"description" : "I read online that each sausage reduces your lifespan by 15 minutes... I should eat more."
+	},
+	"6" : {
+		"id" : "Ham",
+		"name" : "Ham Sando",
+		"description" : "Deli ham. God had no hand in the creation of this abhorrence. Do we even have a lower sodium variety...?"
+	},
+	"7" : {
+		"id" : "Director",
+		"name" : "Director's Noodles",
+		"description" : "Instant noodles are so convenient... shoving random foodstuffs into them is a lost art."
+	}
+}

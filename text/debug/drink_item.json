@@ -1,0 +1,42 @@
+{
+	"0" : {
+		"id" : "Orange",
+		"name" : "Orange Juice",
+		"description" : "Orange you glad I didn't say apple?",
+	},
+	"1" : {
+		"id" : "Maracuja",
+		"name" : "Passionfruit Juice",
+		"description" : "Mentally ill people believe this soothes nerves somehow."
+	},
+	"2" : {
+		"id" : "HotChocolate",
+		"name" : "Hot Chocolate",
+		"description" : "The baggie reads '0.5% real cocoa'. What a steal."
+	},
+	"3" : {
+		"id" : "BlackCoffee",
+		"name" : "Black Coffee",
+		"description" : "Actually extremely diluted to cut corners. Thanks for the tariffs I guess."
+	},
+	"4" : {
+		"id" : "Cappuccino",
+		"name" : "Cappuccino",
+		"description" : "Is this... actually milk? Ew."
+	},
+	"5" : {
+		"id" : "Afogatto",
+		"name" : "Afogatto",
+		"description" : "I have no idea why this is being sold here..."
+	},
+	"6" : {
+		"id" : "Espreesso",
+		"name" : "Espresso",
+		"description" : "I'm surprised people order breakfast-tier things at this hour."
+	},
+	"7" : {
+		"id" : "Pingado",
+		"name" : "Pingado Coffee",
+		"description" : "I can't pronounce this... I bet we pay ten times the price over here."
+	}
+}

@@ -4,6 +4,8 @@ extends Node
 
 var current_client : Node
 var client
+var H : Dictionary
+var O : Dictionary
 
 const MILK = preload("res://scenes/goods/milk.tscn")
 const MIOJO = preload("res://scenes/goods/miojo.tscn")
@@ -19,8 +21,7 @@ const CHOCOLATE = preload("res://scenes/goods/chocolate.tscn")
 @onready var goods = $Goods
 
 signal client_served
-signal right_order
-signal wrong_order
+var is_order_right
 
 func _ready() -> void:
 	
@@ -30,12 +31,20 @@ func _ready() -> void:
 	talk.text = DEF.UI_text.get("talk")
 	report.text = DEF.UI_text.get("report")
 	
+	# Create canon characters
+	H.assign(CHAR.H)
+	H.dialog.assign(DEF.Stage1_H1)
+	
+	O.assign(CHAR.client_template)
+	O.dialog.assign(DEF.Stage1_C2)
+	O.item["miojo"] = 2
+	O.item["milk"] = 1
+	print(O)
+	
 	AUDIO.stop_all_music()
 	AUDIO.play_music("shift_theme")
 	
 	day_letter.text = DEF.UI_text.get("day") + " " + str(int(DEF.save.get("level")))
-	
-	
 	
 	# AUDIO.play_sfx("bell")
 	animation_player.play("fade_title")
@@ -43,28 +52,27 @@ func _ready() -> void:
 	
 	AUDIO.play_sfx("shift_start")
 	
-	await get_tree().create_timer(1.0).timeout
-	
 	animation_player.play("fade")
 	await animation_player.animation_finished
 	
 	DIALOG.start_dialog(DEF.Stage1_C1)
 	await DIALOG.dialog_ended
 	
-	await get_tree().create_timer(0.8).timeout
-	new_client()
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(0.3).timeout
+	new_client("O")
+	await get_tree().create_timer(0.3).timeout
 	
 	DIALOG.start_dialog(DEF.Stage1_C2)
-	await DIALOG.dialog_ended	
-	spawn_items()
+	await DIALOG.dialog_ended
 	
 	await client_served
 	
-	DIALOG.start_dialog(DEF.Stage1_C3)
-	await DIALOG.dialog_ended
+	if is_order_right:
+		DIALOG.start_dialog(DEF.Stage1_C3)
+	else:
+		DIALOG.start_dialog(DEF.Stage1_C3_fail)
 	
-	client_exit()
+	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(1.5).timeout
 	
@@ -73,10 +81,59 @@ func _ready() -> void:
 	
 	DIALOG.start_dialog(DEF.Stage1_H1)
 	await DIALOG.dialog_ended
+	
+	await client_served
+	
+	if is_order_right:
+		DIALOG.start_dialog(DEF.Stage1_C4_success)
+	else:
+		DIALOG.start_dialog(DEF.Stage1_C4_fail)
+	await DIALOG.dialog_ended
+	
+	AUDIO.play_sfx("phone_ring")
+	DIALOG.start_dialog(DEF.Stage1_C_call)
+	await DIALOG.dialog_ended
+	
+	#Spawn client
+	await get_tree().create_timer(0.8).timeout
+	new_client()
+	await get_tree().create_timer(0.8).timeout
+	
+	DIALOG.start_dialog(client.dialog)
+	await DIALOG.dialog_ended
+	
+	await client_served
+	
+	#Spawn client
+	await get_tree().create_timer(0.8).timeout
+	new_client()
+	await get_tree().create_timer(0.8).timeout
+	
+	await client_served
+	
+	#Spawn client
+	await get_tree().create_timer(0.8).timeout
+	new_client()
+	await get_tree().create_timer(0.8).timeout
+	
+	await client_served
+	
+	DIALOG.start_dialog(DEF.Stage1_C_end)
+	await DIALOG.dialog_ended
+	animation_player.play_backwards("fade")
+	await animation_player.animation_finished
+	SCENE.load_scene("main_menu")
 
 func new_client(ClientID = null) -> void:	
+	DEF.reset_cart()
+	
 	if ClientID != null:
 		current_client = get_node("Clients/" + ClientID)
+		if ClientID == "H":
+			client = H
+		else:
+			client = O
+			print(client)
 	else:
 		current_client = get_node("Clients/random")
 		client = CHAR.gen_char()
@@ -85,7 +142,13 @@ func new_client(ClientID = null) -> void:
 	AUDIO.play_sfx("client_ring")
 	animation_player.play("client_enter")
 	
-	DEF.current_cart.assign(DEF.cart_reset)
+	await get_tree().create_timer(2.0).timeout
+	
+	spawn_items()
+	
+	await client_served
+	
+	animation_player.play("client_exit")
 
 func client_exit() -> void:
 	if current_client != null:
@@ -141,12 +204,22 @@ func end_order():
 	for n in goods.get_children():
 		n.queue_free()
 	
-	if DEF.current_cart == client.item:
-		right_order.emit()
+	if DEF.current_cart == client.item and DEF.drink == client.order.drinks and DEF.food == client.order.foods and DEF.health == client.order.meds and DEF.extra == client.order.extra :
+		is_order_right = true
 		print("right order")
 	else:
-		wrong_order.emit()
+		is_order_right = false
+		NOT.show_notification("order")
 		print("wrong order")
+		print(client)
+		print(DEF.current_cart)
+		print(DEF.drink)
+		print(DEF.food)
+		print(DEF.health)
+		print(DEF.extra)
+	
+	var money = 20
+	DEF.save["balance"] += money
 	
 	client_served.emit()
 
@@ -156,3 +229,7 @@ func _on_basket_body_entered(body: Node2D) -> void:
 
 func _on_button_pressed() -> void:
 	end_order()
+
+
+func _on_talk_pressed() -> void:
+	DIALOG.start_dialog(client.dialog)

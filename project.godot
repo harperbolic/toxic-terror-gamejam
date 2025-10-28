@@ -28,6 +28,7 @@ SCENE="*res://scripts/autoloads/SCENE_MANAGER.gd"
 AUDIO="*res://scenes/game_elements/audio_manager.tscn"
 DIALOG="*res://scripts/autoloads/DIALOG.gd"
 CHAR="*res://scripts/autoloads/CHARACTER_CREATOR.gd"
+NOT="*res://scripts/autoloads/NOTIFICATION.gd"
 
 [display]
 

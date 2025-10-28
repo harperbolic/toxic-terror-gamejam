@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://n1ny601f6g16"]
+[gd_scene load_steps=32 format=3 uid="uid://n1ny601f6g16"]
 
 [ext_resource type="Script" uid="uid://c0mcj7xdyn53b" path="res://scripts/stages/stage_1.gd" id="1_ace57"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_4fnny"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="9_rsk2y"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="9_y7b51"]
 [ext_resource type="Script" uid="uid://hegsqpfov2f2" path="res://scripts/film_grain.gd" id="10_k4pqf"]
+[ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="12_amlt1"]
+[ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="14_blxdk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oiu06"]
 distance = 582.0
@@ -569,6 +571,20 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("5_4v4xh")
 stretch_mode = 4
 
+[node name="O" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2480.0
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_4v4xh")
+stretch_mode = 4
+
 [node name="TextureRect3" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -643,50 +659,13 @@ texture = SubResource("NoiseTexture2D_k4pqf")
 script = ExtResource("10_k4pqf")
 
 [node name="Menu" type="Control" parent="Monitor"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Foward" type="Button" parent="Monitor/Menu"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -92.2453
-offset_top = -58.131897
-offset_right = 6.1035156e-05
-offset_bottom = 57.87622
-grow_horizontal = 0
-grow_vertical = 2
-theme = ExtResource("6_y7b51")
-
-[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Foward"]
-position = Vector2(-48.623367, -6.1127853)
-scale = Vector2(1.0000001, 1.0000001)
-color = Color(0, 0, 0, 1)
-antialiased = true
-polygon = PackedVector2Array(128.44537, 64.97778, 69.19226, 16.091064, 70.43787, 118.08832)
-
-[node name="Back" type="Button" parent="Monitor/Menu"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -64.0
-offset_right = 128.0
-offset_bottom = 64.0
-grow_vertical = 2
-theme = ExtResource("6_y7b51")
-
-[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Back"]
-color = Color(0, 0, 0, 1)
-antialiased = true
-polygon = PackedVector2Array(9.445374, 66.97778, 64.32004, 14.845581, 64.570435, 118.845276)
 
 [node name="Food" type="Control" parent="Monitor/Menu"]
 clip_children = 1
@@ -699,19 +678,19 @@ grow_vertical = 2
 theme = ExtResource("9_y7b51")
 script = ExtResource("9_rsk2y")
 
-[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Food"]
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Food"]
 position = Vector2(172, 139.50006)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(1, 0.73333335, 0, 1)
 antialiased = true
-polygon = PackedVector2Array(-43.55014, 47.191223, 30.57724, 100.01288, 146.92456, 77.73999, 174.58646, 103.6662, 233.39847, 25.524414, 94.32669, -4.140869)
+polygon = PackedVector2Array(-43.55014, 47.191223, 30.57724, 100.01288, 146.92456, 77.73999, 174.58646, 103.6662, 238.39609, 24.51239, 94.32669, -4.140869)
 
-[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Food"]
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Food"]
 position = Vector2(155.35347, 146.6264)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
 antialiased = true
-polygon = PackedVector2Array(11.178131, 73.97327, 227.1847, 76.45325, 238.01367, 5.427002, 5.009613, 3.987976)
+polygon = PackedVector2Array(4.178131, 73.99011, 236.18707, 77.43158, 242.0185, 7.4172974, -6.995178, 2.0168457)
 
 [node name="Button" type="Button" parent="Monitor/Menu/Food"]
 layout_mode = 1
@@ -722,6 +701,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_y7b51")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "Foods"
@@ -738,19 +718,19 @@ grow_vertical = 2
 theme = ExtResource("9_y7b51")
 script = ExtResource("9_rsk2y")
 
-[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Drink"]
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Drink"]
 position = Vector2(172, 139.50006)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0.23529412, 1, 1)
 antialiased = true
 polygon = PackedVector2Array(-29.684998, -8.842285, 30.57724, 100.01288, 146.92456, 77.73999, 235.56216, 93.51935, 187.32394, -5.364807, 97.39166, 22.851807)
 
-[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Drink"]
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Drink"]
 position = Vector2(155.35347, 146.6264)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
 antialiased = true
-polygon = PackedVector2Array(-5.8218384, 74.01422, 240.18463, 76.421936, 238.01367, 5.427002, 11.007202, 2.9735107)
+polygon = PackedVector2Array(-5.8218384, 74.01422, 240.18463, 76.421936, 238.01367, 5.427002, 3.009613, 3.9927979)
 
 [node name="Button" type="Button" parent="Monitor/Menu/Drink"]
 layout_mode = 1
@@ -761,6 +741,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_y7b51")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "Drinks"
@@ -777,14 +758,14 @@ grow_vertical = 2
 theme = ExtResource("9_y7b51")
 script = ExtResource("9_rsk2y")
 
-[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Health"]
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Health"]
 position = Vector2(172.02654, 150.50006)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(1, 0, 0, 1)
 antialiased = true
-polygon = PackedVector2Array(40.40387, 27.989075, -28.598328, 27.155151, 18.476166, 58.04187, 14.5460205, 87.05145, 114.490265, 63.81073, 151.55765, 91.72162, 248.41043, 30.488281, 128.37952, 17.77716, 91.2713, -27.133545)
+polygon = PackedVector2Array(-28.598328, 27.155151, 14.5460205, 87.05145, 113.47821, 58.81317, 151.55765, 91.72162, 248.41043, 30.488281, 93.2905, -19.138428)
 
-[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Health"]
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Health"]
 position = Vector2(155.35347, 146.6264)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
@@ -800,6 +781,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_y7b51")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "Health"
@@ -821,7 +803,7 @@ position = Vector2(172, 139.50006)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0.7647059, 0, 1, 1)
 antialiased = true
-polygon = PackedVector2Array(-43.55014, 47.191223, 59.509735, 71.94318, 29.57965, 101.01532, 129.51434, 73.7746, 174.58646, 103.6662, 174.51181, 72.66632, 225.51163, 72.54352, 181.47324, 56.649475, 219.34073, 1.5581665, 152.39389, 23.719421, 118.31213, -10.198608, 73.3797, 17.909607, -8.658569, 2.1070557, 30.435211, 41.01306)
+polygon = PackedVector2Array(-43.55014, 47.191223, 59.509735, 71.94318, 29.57965, 101.01532, 129.51434, 73.7746, 191.57675, 99.625244, 174.51181, 72.66632, 219.34073, 1.5581665, 152.39389, 23.719421, 118.31213, -10.198608, 54.40384, 27.955322)
 
 [node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Extra"]
 position = Vector2(155.35347, 146.6264)
@@ -839,16 +821,230 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("6_y7b51")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "Extra"
 
+[node name="Forward" type="TextureButton" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -83.5
+offset_bottom = 83.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("12_amlt1")
+
+[node name="Back" type="TextureButton" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -83.5
+offset_right = 83.000015
+offset_bottom = 83.5
+grow_vertical = 2
+texture_normal = ExtResource("12_amlt1")
+flip_h = true
+
 [node name="Items" type="Control" parent="Monitor"]
-anchors_preset = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 531.0
-offset_bottom = 344.0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Food" type="Control" parent="Monitor/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Items/Food"]
+position = Vector2(116.79825, 112.94873)
+scale = Vector2(1.0000002, 1.0000002)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-44.615448, -37.208984, -41.728607, -85.20639, 69.25418, -91.39661, 333.27017, -84.969604, 357.38327, -42.000977, 305.40994, -26.964966, 144.42245, -21.577393, 30.413208, -25.302856)
+
+[node name="Name" type="Label" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.43588
+offset_top = 26.63399
+offset_right = 123.56412
+offset_bottom = 84.63399
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 42
+text = "Dishe Name"
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Items/Food"]
+position = Vector2(116.79825, 112.94867)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-17.507202, 7.812561, 72.44437, -12.404053, 320.46527, -4.0010986, 308.73016, 106.027405, 256.83862, 151.15247, -8.15332, 154.79047)
+
+[node name="Description" type="Label" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -158.35025
+offset_top = 114.71831
+offset_right = 158.90262
+offset_bottom = 266.71832
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+autowrap_mode = 3
+
+[node name="Prepare" type="Control" parent="Monitor/Items/Food"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_y7b51")
+script = ExtResource("9_rsk2y")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Items/Food/Prepare"]
+position = Vector2(146.64722, 268.6477)
+scale = Vector2(1.0000001, 1.0000001)
+antialiased = true
+polygon = PackedVector2Array(26.170868, 70.937256, 211.1607, 66.49182, 205.90982, 16.114746, 31.021576, 8.925354)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Items/Food/Prepare"]
+position = Vector2(141.65927, 273.65973)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(26.170868, 70.937256, 211.1607, 66.49182, 205.90982, 16.114746, 31.021576, 8.925354)
+
+[node name="Button" type="Button" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.55887
+offset_top = 105.42267
+offset_right = 36.44113
+offset_bottom = 153.42267
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_y7b51")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Prepare"
+
+[node name="Forward" type="TextureButton" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -83.5
+offset_bottom = 83.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("12_amlt1")
+
+[node name="Back" type="TextureButton" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -83.50006
+offset_right = 83.0
+offset_bottom = 83.49994
+grow_vertical = 2
+texture_normal = ExtResource("12_amlt1")
+flip_h = true
+
+[node name="Exit" type="TextureButton" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.98065
+offset_top = 8.019196
+offset_right = -7.980652
+offset_bottom = 56.019196
+grow_horizontal = 0
+texture_normal = ExtResource("14_blxdk")
+
+[node name="Preparing" type="Control" parent="Monitor"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Monitor/Preparing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_rsk2y")
+change_color = true
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Preparing/Control"]
+position = Vector2(20.891613, 0.33507967)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0.77, 0, 0, 1)
+polygon = PackedVector2Array(-66.168335, -24.455383, -10.166077, -23.59021, 73.86981, -8.79248, 118.00928, 49.10144, 17.055328, 68.34454, -134.05014, 24.70819)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Preparing/Control"]
+position = Vector2(22.884386, -2.6697266)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-120.11279, -1.3253784, -60.15387, -18.469849, 80.86734, -9.809326, 125.970795, 33.082214, 77.03354, 59.200134, -110.98523, 51.65277)
+
+[node name="Waiting" type="Label" parent="Monitor/Preparing/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -31.5
+offset_right = 80.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_y7b51")
+theme_override_font_sizes/font_size = 45
+text = "Waiting"
+
+[node name="Timer" type="Timer" parent="Monitor/Preparing"]
+wait_time = 8.0
+one_shot = true
 
 [node name="ActionButton" type="Control" parent="."]
 layout_mode = 3
@@ -1011,5 +1207,16 @@ libraries = {
 }
 
 [connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
+[connection signal="pressed" from="Monitor/Menu/Food/Button" to="Monitor" method="_on_food_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Drink/Button" to="Monitor" method="_on_drink_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Health/Button" to="Monitor" method="_on_health_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Extra/Button" to="Monitor" method="_on_extra_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Forward" to="Monitor" method="_on_forward_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Back" to="Monitor" method="_on_back_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Button" to="Monitor" method="_on_prepare_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Forward" to="Monitor" method="_on_forward_item_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Back" to="Monitor" method="_on_back_item_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Exit" to="Monitor" method="_on_exit_pressed"]
+[connection signal="timeout" from="Monitor/Preparing/Timer" to="Monitor" method="_on_timer_timeout"]
 [connection signal="pressed" from="ActionButton/End/button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="ActionButton/Report/button" to="Monitor" method="_on_end_pressed"]
+[connection signal="pressed" from="ActionButton/Talk/button" to="." method="_on_talk_pressed"]

@@ -1,0 +1,8 @@
+{
+	"0" : {"name" : "C", "expression" : "none", "text" : "Can't you even pack some goods?"},
+	"1" : {"name" : "C", "expression" : "none", "text" : "Are you really that stupid, uh? My gramps can do this with his eyes closed."},
+	"2" : {"name" : "C", "expression" : "none", "text" : "Whatever, just do this over and over again until we close for the day."},
+	"3" : {"name" : "C", "expression" : "none", "text" : "You technically need to do more stuff, but there's clearly something wrong with you, so don’t worry ‘bout that stuff."},
+	"4" : {"name" : "C", "expression" : "none", "text" : "And by ‘that stuff’, I also mean the computer, so don’t touch that."},
+	"5" : {"name" : "M", "expression" : "none", "text" : "..."},
+}

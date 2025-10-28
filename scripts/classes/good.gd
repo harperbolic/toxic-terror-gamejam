@@ -48,3 +48,4 @@ func _on_button_button_up() -> void:
 func add() -> void:
 	movable = false
 	DEF.current_cart[item_key] += 1
+	print(DEF.current_cart[item_key])

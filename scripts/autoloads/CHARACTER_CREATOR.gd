@@ -18,12 +18,16 @@ var client_template : Dictionary = {
 	"mood" : "Mood",
 	"illness" : "Illness",
 	"record" : "Record",
-	"item" : [],
+	"item" : {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0},
 	"order" : {
-		"drinks" : null,
-		"foods" : null,
-		"meds" : null,
-		"extra" : null}
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var H : Dictionary = {
@@ -35,7 +39,17 @@ var H : Dictionary = {
 	"sex" : "M",
 	"mood" : "Normal",
 	"illness" : "",
-	"record" : "Driving under the influence"
+	"record" : "Driving under the influence",
+	"item" : {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0},
+	"order" : {
+		"drinks" : {"Orange": 1, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 1, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var T : Dictionary = {
@@ -117,6 +131,7 @@ func gen_char() -> Dictionary:
 	generated_char.post3 = gen_post()
 	
 	generated_char.order = gen_order()
+	generated_char.dialog = gen_dialog(generated_char.order)
 	generated_char.item = gen_items()
 	
 	char_generated.emit()
@@ -155,14 +170,14 @@ func gen_order() -> Dictionary:
 		"extra" : null
 	}
 	var drinks : Dictionary
-	drinks.assign(DEF.drinks_reset)
+	drinks.assign(DEF.drink_reset)
 	var foods : Dictionary
 	foods.assign(DEF.food_reset)
 	var meds : Dictionary
-	meds.assign(DEF.meds_reset)
+	meds.assign(DEF.health_reset)
 	var extra : Dictionary
 	extra.assign(DEF.extra_reset)
-		
+	
 	var number = randi_range(0, 100)
 	if number < 90:
 		drinks[drinks.keys().pick_random()] += 1
@@ -208,3 +223,39 @@ func gen_items() -> Dictionary:
 		i -= 1
 	
 	return item
+
+func gen_dialog(order : Dictionary) -> Dictionary:
+	var dialog : Dictionary = {"0" : {
+		"name" : "random",
+		"expression" : "none",
+		"text" : "Default dialog"
+	}}
+	var item_list : String = ""
+	for key in order.keys():
+		for keys in order[key].keys():
+			if order[key].get(keys) > 0:
+				for name_key in DEF.drink_item.keys():
+					if DEF.drink_item[name_key].get("id") == keys:
+						item_list = item_list + DEF.drink_item[name_key].get("name")
+						item_list += ", "
+				for name_key in DEF.food_item.keys():
+					if DEF.food_item[name_key].get("id") == keys:
+						item_list = item_list + DEF.food_item[name_key].get("name")
+						item_list += ", "
+				for name_key in DEF.health_item.keys():
+					if DEF.health_item[name_key].get("id") == keys:
+						item_list = item_list + DEF.health_item[name_key].get("name")
+						item_list += ", "
+				for name_key in DEF.extra_item.keys():
+					if DEF.extra_item[name_key].get("id") == keys:
+						item_list = item_list + DEF.extra_item[name_key].get("name")
+						item_list += ", "
+
+	var key = DEF.dialog.keys().pick_random()
+	var head = DEF.dialog.get(key).get("head")
+	var tail = DEF.dialog.get(key).get("tail")
+	item_list = item_list.left(item_list.length() - 2)
+
+	dialog["0"]["text"] = head + item_list + tail
+	
+	return dialog

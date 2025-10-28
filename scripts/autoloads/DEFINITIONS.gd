@@ -29,15 +29,13 @@ var settings_save = {
 	"debug" : true
 }
 
-var game_boilerplate : Dictionary = {
+const game_boilerplate : Dictionary = {
 	"level" : 0,
-	"reputation" : 2.3,
-	"balance" : 0
+	"balance" : 200
 }
 
 var save : Dictionary = {
 	"level" : 0,
-	"reputation" : 2.3,
 	"balance" : 0
 }
 
@@ -49,14 +47,22 @@ var Stage0 : Dictionary
 var Stage1_C1 : Dictionary
 var Stage1_C2 : Dictionary
 var Stage1_C3 : Dictionary
+var Stage1_C3_fail : Dictionary
 var Stage1_C4_fail : Dictionary
 var Stage1_C4_success : Dictionary
 var Stage1_C_call : Dictionary
+var Stage1_C_end : Dictionary
 var Stage1_H1 : Dictionary
+
+# items
+var food_item : Dictionary
+var drink_item : Dictionary
+var health_item : Dictionary
+var extra_item : Dictionary
 
 var access
 
-const cart_reset : Dictionary = {
+const cart_reset = {
 	"miojo" : 0,
 	"chocolate" : 0,
 	"beer" : 0,
@@ -64,7 +70,7 @@ const cart_reset : Dictionary = {
 	"energy" : 0
 }
 
-const drinks_reset : Dictionary = {
+const drink_reset : Dictionary = {
 	"Orange" : 0,
 	"Maracuja" : 0,
 	"HotChocolate" : 0,
@@ -82,10 +88,11 @@ const food_reset : Dictionary = {
 	"Bauru" : 0,
 	"Choripan" : 0,
 	"Sausage" : 0,
-	"Ham" : 0
+	"Ham" : 0,
+	"Director" : 0
 }
 
-const meds_reset : Dictionary = {
+const health_reset : Dictionary = {
 	"SleepingPills" : 0,
 	"Condom" : 0,
 	"Syrup" : 0,
@@ -99,9 +106,14 @@ const extra_reset : Dictionary = {
 }
 
 var current_cart : Dictionary
+var food : Dictionary
+var drink : Dictionary
+var health : Dictionary
+var extra : Dictionary
 var record : Dictionary
 var illness : Dictionary
 var posts : Dictionary
+var dialog : Dictionary
 
 func _ready() -> void:
 	load_save_setting()
@@ -130,11 +142,29 @@ func load_save() -> void:
 
 func load_locale():
 	load_ui_locale()
+	load_items_locale()
 	load_text_locale()
 
 func load_ui_locale():
 	access = FileAccess.open("res://text/" + selected_language + "/UI.json", FileAccess.READ)
 	UI_text = JSON.parse_string(access.get_as_text())
+	access.close()
+
+func load_items_locale():
+	access = FileAccess.open("res://text/" + selected_language + "/drink_item.json", FileAccess.READ)
+	drink_item = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	access = FileAccess.open("res://text/" + selected_language + "/food_item.json", FileAccess.READ)
+	food_item = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	access = FileAccess.open("res://text/" + selected_language + "/extra_item.json", FileAccess.READ)
+	extra_item = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	access = FileAccess.open("res://text/" + selected_language + "/health_item.json", FileAccess.READ)
+	health_item = JSON.parse_string(access.get_as_text())
 	access.close()
 
 func load_text_locale():
@@ -151,6 +181,11 @@ func load_text_locale():
 	# Posts
 	access = FileAccess.open("res://text/" + selected_language + "/posts.json", FileAccess.READ)
 	posts = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	# Random Dialog
+	access = FileAccess.open("res://text/" + selected_language + "/intro_dialog.json", FileAccess.READ)
+	dialog = JSON.parse_string(access.get_as_text())
 	access.close()
 	
 	# Load illness and record
@@ -171,6 +206,9 @@ func load_text_locale():
 	access = FileAccess.open("res://text/" + selected_language + "/Stage1_C3.json", FileAccess.READ)
 	Stage1_C3 = JSON.parse_string(access.get_as_text())
 	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage1_C3_fail.json", FileAccess.READ)
+	Stage1_C3_fail = JSON.parse_string(access.get_as_text())
+	access.close()
 	access = FileAccess.open("res://text/" + selected_language + "/Stage1_C4_fail.json", FileAccess.READ)
 	Stage1_C4_fail= JSON.parse_string(access.get_as_text())
 	access.close()
@@ -183,3 +221,13 @@ func load_text_locale():
 	access = FileAccess.open("res://text/" + selected_language + "/Stage1_H1.json", FileAccess.READ)
 	Stage1_H1 = JSON.parse_string(access.get_as_text())
 	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage1_C_end.json", FileAccess.READ)
+	Stage1_C_end = JSON.parse_string(access.get_as_text())
+	access.close()
+
+func reset_cart():
+	current_cart.assign(cart_reset)
+	food.assign(food_reset)
+	drink.assign(drink_reset)
+	health.assign(health_reset)
+	extra.assign(extra_reset)

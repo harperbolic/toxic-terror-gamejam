@@ -1,0 +1,14 @@
+{
+	"0" : {
+		"head" : "Good Night, can I have some ",
+		"tail" : "?"
+	},
+	"1" : {
+		"head" : "Hi, ",
+		"tail" : ", please?"
+	},
+	"2" : {
+		"head" : "",
+		"tail" : ", please?"
+	}
+}

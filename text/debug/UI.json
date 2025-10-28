@@ -26,12 +26,12 @@
 	"nervous" : "Nervous",
 	"mad" : "Mad",
 	"inconclusive" : "Inconclusive",
-	"food" : "Food",
-	"drinks" : "Drinks",
+	"food" : "Foods",
+	"drink" : "Drinks",
 	"health" : "Health",
 	"extra" : "Extra",
 	"instructions" : "Instructions",
-	"end_order" : "Finish Order"
+	"end_order" : "Finish Order",
 	"talk" : "Talk",
-	"report" : "Report"
+	"report" : "Investigate"
 }

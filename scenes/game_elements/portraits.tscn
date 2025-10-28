@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=14 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
 [ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_qi4lx"]
+[ext_resource type="Texture2D" uid="uid://bhryfxr705a56" path="res://_PLACEHOLDER/random_client.png" id="4_iklxa"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
 
 [sub_resource type="Animation" id="Animation_15t4e"]
@@ -215,6 +216,22 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_qi4lx")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="random_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2480.001
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_iklxa")
 expand_mode = 3
 stretch_mode = 4
 

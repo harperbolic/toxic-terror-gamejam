@@ -33,5 +33,11 @@
 	"instructions" : "Instructions",
 	"end_order" : "Finish Order",
 	"talk" : "Talk",
-	"report" : "Investigate"
+	"report" : "Investigate",
+	"waiting" : "Waiting",
+	"onus" : "-5 credits",
+	"order" : "Wrong order served",
+	"post" : "Dangerous post not removed",
+	"post_good" : "Harmless post removed",
+	"item" : "Forbidden item served"
 }
