@@ -146,7 +146,8 @@ var sex : Dictionary = {
 }
 
 func gen_char() -> Dictionary:
-	var generated_char : Dictionary = client_template
+	var generated_char : Dictionary
+	generated_char.assign(client_template)
 	
 	generated_char.username = gen_username()
 	generated_char.age = randi_range(20, 75)
@@ -223,12 +224,8 @@ func gen_order() -> Dictionary:
 		drinks[drinks.keys().pick_random()] += 1
 	if number > 95:
 		drinks[drinks.keys().pick_random()] += 1
-		drinks[drinks.keys().pick_random()] += 1
 	
-	number = randi_range(0, 100)
 	foods[foods.keys().pick_random()] += 1
-	if number > 80:
-		foods[foods.keys().pick_random()] += 1
 	
 	number = randi_range(0, 100)
 	if number > 70:

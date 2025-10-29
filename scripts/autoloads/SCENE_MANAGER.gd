@@ -13,6 +13,7 @@ var scenes = {
 	"stage4" : "res://scenes/stages/stage4.tscn",
 	"stage5" : "res://scenes/stages/stage5.tscn",
 	"stage6" : "res://scenes/stages/stage6.tscn",
+	"stage7" : "res://scenes/stages/stage7.tscn",
 	"credits" : "res://scenes/credits.tscn"
 }
 

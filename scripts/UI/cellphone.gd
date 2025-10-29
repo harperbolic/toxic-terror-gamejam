@@ -21,7 +21,7 @@ extends Control
 @onready var nervous: Label = $Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods/Nervous
 @onready var mad: Label = $Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods/Mad
 @onready var inconclusive: Label = $Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods/Inconclusive
-
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
 var counter = 1
 var post_max = 3
@@ -90,10 +90,12 @@ func next_post(post : int):
 
 func display_overview():
 	counter = 1
-	posts.visible = false
-	overview.visible = true
+	animation_player.play("cellphone")
+	#posts.visible = false
+	#overview.visible = true
 
 func _on_delete_pressed() -> void:
+	AUDIO.play_sfx("click")
 	match counter:
 		1:
 			DEF.posts_register["post1"] = true
@@ -108,6 +110,7 @@ func _on_delete_pressed() -> void:
 	next_post(counter)
 
 func _on_approve_pressed() -> void:
+	AUDIO.play_sfx("click")
 	match counter:
 		1:
 			DEF.posts_register["post1"] = false

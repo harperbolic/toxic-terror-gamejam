@@ -1,8 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=19 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
-[ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
-[ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="4_1o5ah"]
 [ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="4_15t4e"]
@@ -10,6 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
 [ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="7_jundg"]
 [ext_resource type="Texture2D" uid="uid://cjrpiku4xx60c" path="res://assets/portraits/coworker.png" id="9_jundg"]
+[ext_resource type="Texture2D" uid="uid://dt32o81t76r5y" path="res://assets/goods/mc.png" id="10_jundg"]
+
+[sub_resource type="Gradient" id="Gradient_jundg"]
+offsets = PackedFloat32Array(0, 0.24666667)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u4htw"]
+gradient = SubResource("Gradient_jundg")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Animation" id="Animation_15t4e"]
 resource_name = "CW_fade_in"
@@ -63,6 +71,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 0.5411765)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MC/M_none/PointLight2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_qi4lx"]
@@ -124,6 +144,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MC/M_none/PointLight2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1bp4"]
 _data = {
@@ -168,7 +200,6 @@ offset_right = 900.0
 offset_bottom = 1370.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qi4lx")
 stretch_mode = 4
 
 [node name="H_none" type="TextureRect" parent="Cli"]
@@ -301,6 +332,12 @@ expand_mode = 3
 stretch_mode = 4
 flip_h = true
 
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(1580, 40)
+scale = Vector2(17.906246, 16.453121)
+energy = 0.4
+texture = SubResource("GradientTexture2D_u4htw")
+
 [node name="MC" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
@@ -308,13 +345,21 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="M_none" type="TextureRect" parent="MC"]
-layout_mode = 0
-offset_left = -140.0
-offset_top = 78.0
-offset_right = 760.0
-offset_bottom = 1350.0
-texture = ExtResource("1_ynxmj")
+layout_mode = 1
+offset_left = -103.99999
+offset_top = -71.999985
+offset_right = 2376.001
+offset_bottom = 3436.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("10_jundg")
+expand_mode = 3
 stretch_mode = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="MC/M_none"]
+visible = false
+position = Vector2(1277.1428, 488.57123)
+scale = Vector2(51.160706, 47.00892)
+texture = SubResource("GradientTexture2D_u4htw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

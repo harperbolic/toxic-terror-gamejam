@@ -1,0 +1,22 @@
+{
+	"0" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"1" : {"name" : "L", "expression" : "none", "text" : "Are you home yet?"},
+	"2" : {"name" : "M", "expression" : "none", "text" : "Yep."},
+	"3" : {"name" : "L", "expression" : "none", "text" : "Glad you’re back!"},
+	"4" : {"name" : "L", "expression" : "none", "text" : "I was curious, are you still taking those online classes? You know, for that college?"},
+	"5" : {"name" : "M", "expression" : "none", "text" : "Physics, yeah."},
+	"6" : {"name" : "M", "expression" : "none", "text" : "Why?"},
+	"7" : {"name" : "L", "expression" : "none", "text" : "Well..."},
+	"8" : {"name" : "L", "expression" : "none", "text" : "Don’t you think that’s kind of a waste of time?"},
+	"9" : {"name" : "M", "expression" : "none", "text" : "?"},
+	"10" : {"name" : "L", "expression" : "none", "text" : "It’s just that none of my friends who went to college are actually doing very well these days."},
+	"11" : {"name" : "L", "expression" : "none", "text" : "They spent all that time studying and working hard, but it wasn’t worth it at the end."},
+	"12" : {"name" : "L", "expression" : "none", "text" : "They regretted all the time they could have spent working and making friends."},
+	"13" : {"name" : "L", "expression" : "none", "text" : "I think that sounds really bad."},
+	"14" : {"name" : "L", "expression" : "none", "text" : "Don’t you think?"},
+	"15" : {"name" : "L", "expression" : "none", "text" : "But you’re my babe!"},
+	"16" : {"name" : "L", "expression" : "none", "text" : "I’ll support you no matter what you choose to do, okay?"},
+	"17" : {"name" : "L", "expression" : "none", "text" : "I’m sure you know what you’re doing very well!"},
+	"18" : {"name" : "M", "expression" : "none", "text" : "...Right."},
+
+}

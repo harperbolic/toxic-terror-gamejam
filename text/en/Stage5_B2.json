@@ -1,0 +1,15 @@
+{
+	"0" : {"name" : "B", "expression" : "none", "text" : "Still interrogating people about who they are, or was I the special one?"},
+	"1" : {"name" : "M", "expression" : "none", "text" : "...Sorry."},
+	"2" : {"name" : "B", "expression" : "none", "text" : "I’m just messing with you."},
+	"3" : {"name" : "B", "expression" : "none", "text" : "..."},
+	"4" : {"name" : "B", "expression" : "none", "text" : " You really don’t look like you belong here."},
+	"5" : {"name" : "B", "expression" : "none", "text" : "Are you that strapped for cash?"},
+	"6" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"7" : {"name" : "B", "expression" : "none", "text" : "Far from me to judge, but this place is terrible."},
+	"8" : {"name" : "B", "expression" : "none", "text" : "I’d suggest you get out of here as soon as you can."},
+	"9" : {"name" : "B", "expression" : "none", "text" : "It’s better for your mental health, believe me."},
+	"10" : {"name" : "B", "expression" : "none", "text" : "When you do, maybe I’ll hit you up for a beer or two."},
+	"11" : {"name" : "B", "expression" : "none", "text" : "See you."},
+}
+	

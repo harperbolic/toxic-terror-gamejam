@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3v734b1uur11"]
+[gd_scene load_steps=10 format=3 uid="uid://b3v734b1uur11"]
 
 [ext_resource type="Script" uid="uid://f5fcguj5vqni" path="res://scripts/UI/main_menu.gd" id="1_rtw2f"]
-[ext_resource type="Texture2D" uid="uid://fkqt845hu2fn" path="res://assets/bg/wallflower_bg.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dg7w725nhkuxk" path="res://assets/logo/wfcoverlogoless.png" id="2_rtw2f"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="3_8ln24"]
-[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="3_tbmy8"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="3_wu84c"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="6_oa1go"]
+[ext_resource type="Texture2D" uid="uid://cmycv6qvy4sv2" path="res://assets/logo/wflogo.png" id="6_rtw2f"]
 
 [sub_resource type="Animation" id="Animation_wu84c"]
 length = 0.001
@@ -76,16 +77,19 @@ grow_vertical = 2
 script = ExtResource("1_rtw2f")
 
 [node name="Panel2" type="TextureRect" parent="."]
-modulate = Color(0.49, 0.49, 0.34790003, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -9.0
+offset_right = 329.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("2_8ln24")
+texture = ExtResource("2_rtw2f")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -140,21 +144,15 @@ text = "Quit Game"
 
 [node name="Version" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 74.0
-offset_top = -125.0
-offset_right = 254.0
-offset_bottom = -63.0
+offset_left = -180.0
+offset_top = -62.0
+grow_horizontal = 0
 grow_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="Version"]
-custom_minimum_size = Vector2(180, 0)
-layout_mode = 2
-texture = ExtResource("3_tbmy8")
-expand_mode = 5
-stretch_mode = 4
 
 [node name="Label2" type="Label" parent="Version"]
 layout_mode = 2
@@ -164,6 +162,7 @@ text = "Jam version 1.0"
 horizontal_alignment = 1
 
 [node name="GameTitle" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -182,7 +181,17 @@ theme_override_font_sizes/font_size = 50
 text = "WALLFLOWER"
 horizontal_alignment = 1
 
-[node name="Options" type="Panel" parent="."]
+[node name="GameLogo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 937.0
+offset_top = 148.0
+offset_right = 1813.0
+offset_bottom = 593.85376
+texture = ExtResource("6_rtw2f")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Options" type="Control" parent="."]
 custom_minimum_size = Vector2(800, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -190,12 +199,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -124.0
-offset_right = 400.0
-offset_bottom = 376.0
+offset_left = -46.0
+offset_top = -216.0
+offset_right = 754.0
+offset_bottom = 284.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Options"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(51, -4, 373, -38, 635, -23, 760, 19, 749, 485, 593, 519, 396, 510, 109, 495, 109, 404)
 
 [node name="Label" type="Label" parent="Options"]
 layout_mode = 1
@@ -210,21 +223,37 @@ theme = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 32
 text = "Options"
 
-[node name="Back" type="Button" parent="Options"]
+[node name="Back" type="Control" parent="Options"]
+anchors_preset = 0
+offset_left = 359.0
+offset_top = 428.0
+offset_right = 399.0
+offset_bottom = 468.0
+script = ExtResource("6_oa1go")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Options/Back"]
+color = Color(0.712692, 2.9359758e-06, 5.7756904e-07, 1)
+polygon = PackedVector2Array(-13, 41, 18, 2, 58, 14, 87, 4, 93, 42, 48, 57)
+
+[node name="Polygon2D" type="Polygon2D" parent="Options/Back"]
+polygon = PackedVector2Array(-21, 26, -2, 7, 67, 2, 89, 13, 85, 52, 21, 55)
+
+[node name="Back" type="Button" parent="Options/Back"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -41.0
-offset_top = -72.0
-offset_right = 41.0
-offset_bottom = -19.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 62.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 3
 theme = ExtResource("3_wu84c")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Back
 "
@@ -358,7 +387,7 @@ libraries = {
 [connection signal="pressed" from="Buttons/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Buttons/QuitGame" to="." method="_on_quit_game_pressed"]
-[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Back/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/SFXControl" to="." method="_on_sfx_control_value_changed"]
 [connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer2/MusicControl" to="." method="_on_music_control_value_changed"]
 [connection signal="item_selected" from="Options/VBoxContainer/HBoxContainer3/OptionButton" to="." method="_on_option_button_item_selected"]

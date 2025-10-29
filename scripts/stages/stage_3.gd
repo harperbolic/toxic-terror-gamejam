@@ -48,7 +48,7 @@ func _ready() -> void:
 	}
 	
 	S.assign(CHAR.S)
-	S.dialog.assign(DEF.Stage2_S2)
+	S.dialog.assign(DEF.Stage3_T2)
 	S.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	S.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
@@ -60,13 +60,26 @@ func _ready() -> void:
 	S.post2 = CHAR.gen_post()
 	S.post3 = CHAR.gen_post()
 	
+	B.assign(CHAR.B)
+	B.dialog.assign(DEF.Stage3_B1)
+	B.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
+	B.order = {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 1, "Gummy": 0}
+	}
+	B.post1 = CHAR.gen_post()
+	B.post2 = CHAR.gen_post()
+	B.post3 = CHAR.gen_post()
+	
 	T.assign(CHAR.T)
-	T.dialog.assign(DEF.Stage2_T1)
+	T.dialog.assign(DEF.Stage3_T2)
 	T.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 1, "energy": 0}
 	T.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
-		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 1, "Syrup": 0, "Razor": 0},
 		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
 	}
 	T.post1 = CHAR.gen_post()
@@ -94,33 +107,24 @@ func _ready() -> void:
 	# AUDIO.play_sfx("bell")
 	animation_player.play("fade_title")
 	await animation_player.animation_finished
+	$Title.visible = false
 	
 	AUDIO.play_sfx("shift_start")
-	
-	$Notice.visible = true
-	await $Notice.start_game
 	
 	await get_tree().create_timer(0.8).timeout
 	new_client()
 	await get_tree().create_timer(0.8).timeout
-	
 	await client_served
 	
 	await get_tree().create_timer(0.8).timeout
 	new_client("T")
 	await get_tree().create_timer(0.8).timeout
-	await client_served
 	
-	DIALOG.start_dialog(DEF.Stage2_T2)
+	DIALOG.start_dialog(DEF.Stage3_T1)
 	await DIALOG.dialog_ended
-	
-	await get_tree().create_timer(0.8).timeout
-	new_client("S")
-	await get_tree().create_timer(0.8).timeout
-	DIALOG.start_dialog(DEF.Stage2_S1)
-	await DIALOG.dialog_ended
-
 	await client_served
+	DIALOG.start_dialog(DEF.Stage3_T3)
+	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(0.8).timeout
 	new_client()
@@ -133,29 +137,17 @@ func _ready() -> void:
 	await client_served
 	
 	await get_tree().create_timer(0.8).timeout
-	new_client("R")
+	new_client("B")
 	await get_tree().create_timer(0.8).timeout
 	await client_served
-	
-	DIALOG.start_dialog(DEF.Stage2_R2)
-	await DIALOG.dialog_ended
-	
-	await get_tree().create_timer(0.8).timeout
-	new_client("H")
-	await get_tree().create_timer(0.8).timeout
-	await client_served
-	
-	DIALOG.start_dialog(DEF.Stage2_H2)
-	await DIALOG.dialog_ended
-	
-	DIALOG.start_dialog(DEF.Stage2_end)
+	DIALOG.start_dialog(DEF.Stage3_B2)
 	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	DEF.save["level"] = 3
+	DEF.save["level"] = 4
 	DEF.save_game()
-	SCENE.load_scene("stage3")
+	SCENE.load_scene("stage4")
 
 func new_client(ClientID = null) -> void:	
 	DEF.reset_cart()
@@ -172,6 +164,8 @@ func new_client(ClientID = null) -> void:
 			client = R
 		elif ClientID == "H":
 			client = H
+		elif ClientID == "B":
+			client = B
 		else:
 			print("ERROR: Invalid client id")
 			return
@@ -242,7 +236,7 @@ func spawn_items() -> void:
 		x -= 1
 
 func end_order():
-	var is_posts_right = false
+	var is_posts_right
 	
 	print(DEF.posts_register)
 	if client != H:

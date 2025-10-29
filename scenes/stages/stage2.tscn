@@ -1,9 +1,10 @@
-[gd_scene load_steps=38 format=3 uid="uid://bubu05su7lbfl"]
+[gd_scene load_steps=41 format=3 uid="uid://bubu05su7lbfl"]
 
 [ext_resource type="Script" uid="uid://bagasxrquw31l" path="res://scripts/stages/stage_2.gd" id="1_ttt8n"]
 [ext_resource type="Texture2D" uid="uid://fkqt845hu2fn" path="res://assets/bg/wallflower_bg.png" id="2_svuq3"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="3_dpv7a"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="4_cb3rg"]
+[ext_resource type="Script" uid="uid://bq010mt1imvuv" path="res://scripts/point_light_2d.gd" id="4_svuq3"]
 [ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="5_8tiod"]
 [ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="5_bqda7"]
 [ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="6_8tiod"]
@@ -22,6 +23,17 @@
 [ext_resource type="Texture2D" uid="uid://cto0y5nj4anhj" path="res://assets/ui/exit_white.png" id="17_cb3rg"]
 [ext_resource type="Script" uid="uid://c5oams2vrjoyq" path="res://scripts/stages/notice.gd" id="17_kgp51"]
 [ext_resource type="Animation" uid="uid://bqxbx7efalg8n" path="res://cellphone_animation.res" id="20_lkoe4"]
+
+[sub_resource type="Gradient" id="Gradient_6ela2"]
+offsets = PackedFloat32Array(0.52666664, 1)
+colors = PackedColorArray(0.21, 0.21, 0.21, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l4low"]
+gradient = SubResource("Gradient_6ela2")
+width = 1045
+height = 385
+fill = 1
+fill_from = Vector2(0.50934577, 0.47060212)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oiu06"]
 distance = 582.0
@@ -205,6 +217,18 @@ tracks/12/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Title/DayLabel:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_y7b51"]
 resource_name = "button_end"
@@ -357,138 +381,6 @@ tracks/10/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_8x8df"]
-resource_name = "client_exit"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Clients:modulate")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.03333333, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Clients:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1150, -20), Vector2(1000, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ActionButton/Talk:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ActionButton/End:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ActionButton/Report:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_oiu06"]
-resource_name = "fade"
-length = 1.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Title:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Title:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1, 1.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_i5f5j"]
-resource_name = "fade_title"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Title/DayLabel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.5, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Title:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Title:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_8tiod"]
 resource_name = "client_enter_H"
 length = 0.4
@@ -625,6 +517,150 @@ tracks/10/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_8x8df"]
+resource_name = "client_exit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clients:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clients:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1150, -20), Vector2(1000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ActionButton/Talk:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/Report:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_oiu06"]
+resource_name = "fade"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/DayLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_i5f5j"]
+resource_name = "fade_title"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title/DayLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yh20h"]
 _data = {
 &"RESET": SubResource("Animation_utrvu"),
@@ -657,6 +693,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_dpv7a")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(917, 257)
+color = Color(1, 0.99215686, 0.83137256, 1)
+texture = SubResource("GradientTexture2D_l4low")
+script = ExtResource("4_svuq3")
 
 [node name="Clients" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -788,20 +830,6 @@ shape = SubResource("RectangleShape2D_utrvu")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1687, 787)
 shape = SubResource("RectangleShape2D_h25yc")
-
-[node name="Basket" type="Area2D" parent="."]
-position = Vector2(1138, 1519)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket"]
-position = Vector2(707.125, -575)
-shape = SubResource("RectangleShape2D_oiu06")
-
-[node name="Sprite2D" type="Sprite2D" parent="Basket"]
-position = Vector2(679, -759.99994)
-scale = Vector2(0.71999514, 0.71999514)
-texture = ExtResource("10_8tiod")
 
 [node name="Monitor" type="Control" parent="."]
 layout_mode = 3
@@ -1330,6 +1358,20 @@ theme_override_font_sizes/font_size = 40
 text = "Report"
 
 [node name="Goods" type="Node" parent="."]
+
+[node name="Basket" type="Area2D" parent="."]
+position = Vector2(1138, 1519)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket"]
+position = Vector2(707.125, -575)
+shape = SubResource("RectangleShape2D_oiu06")
+
+[node name="Sprite2D" type="Sprite2D" parent="Basket"]
+position = Vector2(679, -759.99994)
+scale = Vector2(0.71999514, 0.71999514)
+texture = ExtResource("10_8tiod")
 
 [node name="Cellphone" type="Control" parent="."]
 visible = false
@@ -1884,7 +1926,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_yh20h")
 }
 
-[connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
 [connection signal="pressed" from="Monitor/Menu/Food/Button" to="Monitor" method="_on_food_pressed"]
 [connection signal="pressed" from="Monitor/Menu/Drink/Button" to="Monitor" method="_on_drink_pressed"]
 [connection signal="pressed" from="Monitor/Menu/Health/Button" to="Monitor" method="_on_health_pressed"]
@@ -1899,6 +1940,7 @@ libraries = {
 [connection signal="pressed" from="ActionButton/End/button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ActionButton/Talk/button" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="ActionButton/Report/button" to="." method="_on_report_pressed"]
+[connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
 [connection signal="pressed" from="Cellphone/Posts/HBoxContainer2/Delete/Button" to="Cellphone" method="_on_delete_pressed"]
 [connection signal="pressed" from="Cellphone/Posts/HBoxContainer2/Approve/Button" to="Cellphone" method="_on_approve_pressed"]
 [connection signal="pressed" from="Cellphone/Exit" to="." method="_on_cellphone_exit_pressed"]

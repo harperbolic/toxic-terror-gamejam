@@ -35,6 +35,12 @@ func _ready() -> void:
 	
 	O.assign(CHAR.client_template)
 	O.dialog.assign(DEF.Stage1_C2)
+	O.order = {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
+	}
 	O.item["miojo"] = 2
 	O.item["milk"] = 1
 	print(O)
@@ -49,9 +55,6 @@ func _ready() -> void:
 	await animation_player.animation_finished
 	
 	AUDIO.play_sfx("shift_start")
-	
-	animation_player.play("fade")
-	await animation_player.animation_finished
 	
 	DIALOG.start_dialog(DEF.Stage1_C1)
 	await DIALOG.dialog_ended
@@ -97,9 +100,6 @@ func _ready() -> void:
 	new_client()
 	await get_tree().create_timer(0.8).timeout
 	
-	DIALOG.start_dialog(client.dialog)
-	await DIALOG.dialog_ended
-	
 	await client_served
 	
 	#Spawn client
@@ -118,11 +118,12 @@ func _ready() -> void:
 	
 	DIALOG.start_dialog(DEF.Stage1_C_end)
 	await DIALOG.dialog_ended
-	animation_player.play_backwards("fade")
-	await animation_player.animation_finished
+	
+	await get_tree().create_timer(2.0).timeout
+	
 	DEF.save["level"] = 2
 	DEF.save_game()
-	SCENE.load_scene("Stage2")
+	SCENE.load_scene("stage2")
 
 func new_client(ClientID = null) -> void:	
 	DEF.reset_cart()
@@ -141,8 +142,6 @@ func new_client(ClientID = null) -> void:
 	current_client.visible = true
 	AUDIO.play_sfx("client_ring")
 	animation_player.play("client_enter")
-	
-	await get_tree().create_timer(2.0).timeout
 	
 	spawn_items()
 	

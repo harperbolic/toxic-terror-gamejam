@@ -1,0 +1,8 @@
+{
+	"0" : {"name" : "T", "expression" : "none", "text" : "Keep this as a tip. Don’t waste it all on cigs, yeah?"},
+	"1" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"2" : {"name" : "T", "expression" : "none", "text" : "..."},
+	"3" : {"name" : "T", "expression" : "none", "text" : "..."},
+	"4" : {"name" : "T", "expression" : "none", "text" : "It’s probably nothing. I should get going."},
+	"5" : {"name" : "T", "expression" : "none", "text" : "Bye now."},
+}

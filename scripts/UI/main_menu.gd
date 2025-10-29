@@ -10,6 +10,7 @@ extends Control
 
 #labels
 @onready var game_title: Label = $GameTitle
+@onready var game_logo: TextureRect = $GameLogo
 @onready var options_label: Label = $Options/Label
 @onready var sfx: Label = $Options/VBoxContainer/HBoxContainer/sfx
 @onready var mus: Label = $Options/VBoxContainer/HBoxContainer2/mus
@@ -17,8 +18,8 @@ extends Control
 @onready var fullscreen: Label = $Options/VBoxContainer/HBoxContainer4/fullscreen
 
 # Options Buttons
-@onready var options_panel: Panel = $Options
-@onready var back: Button = $Options/Back
+@onready var options_panel = $Options
+@onready var back: Button = $Options/Back/Back
 @onready var sfx_control: HSlider = $Options/VBoxContainer/HBoxContainer/SFXControl
 @onready var music_control: HSlider = $Options/VBoxContainer/HBoxContainer2/MusicControl
 @onready var language_button: OptionButton = $Options/VBoxContainer/HBoxContainer3/OptionButton
@@ -94,6 +95,7 @@ func _on_start_game_2_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
+	game_logo.visible = false
 	options_panel.visible = true
 	buttons.visible = false
 	AUDIO.play_sfx("click")
@@ -110,6 +112,7 @@ func _on_quit_game_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	buttons.visible = true
+	game_logo.visible = true
 	options_panel.visible = false
 	AUDIO.play_sfx("click")
 	save_settings()

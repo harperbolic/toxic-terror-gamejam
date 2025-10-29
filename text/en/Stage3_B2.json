@@ -1,0 +1,18 @@
+{
+	"0" : {"name" : "B", "expression" : "none", "text" : "You’re looking kind of restless there."},
+	"1" : {"name" : "B", "expression" : "none", "text" : "What’s up? Want to ask me something?"},
+	"2" : {"name" : "M", "expression" : "none", "text" : "...Who are you?"},
+	"3" : {"name" : "B", "expression" : "none", "text" : "That’s the question?"},
+	"4" : {"name" : "B", "expression" : "none", "text" : "Nothing much to say, honestly."},
+	"5" : {"name" : "B", "expression" : "none", "text" : "Divorced parents, finished highschool, left home, got a job as a mechanic, and here I am."},
+	"6" : {"name" : "B", "expression" : "none", "text" : "I got friends, I drink beer, I drive a beast of a bike with an engine that purrs like a lover."},
+	"7" : {"name" : "B", "expression" : "none", "text" : "What more could I want? “Nothing”’s what I say."},
+	"8" : {"name" : "B", "expression" : "none", "text" : "Now it’s me who gets to ask you something."},
+	"9" : {"name" : "B", "expression" : "none", "text" : "You keeping yourself safe out here? When I was driving around, I heard about some convenience stores near the city getting into trouble."},
+	"10" : {"name" : "B", "expression" : "none", "text" : "And you’re working in one right now."},
+	"11" : {"name" : "B", "expression" : "none", "text" : "Kind of mushy, but you look like a fine kid, different from the rabble, and I don’t want to see ya on the news."},
+	"12" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"13" : {"name" : "B", "expression" : "none", "text" : "I’ll take that as a “I’m very much fine by myself and I thank you kindly for taking the time to ask about it”, then."},
+	"14" : {"name" : "B", "expression" : "none", "text" : "Now, if you don’t mind, gotta hit the road."},
+	"15" : {"name" : "B", "expression" : "none", "text" : "Nice talking to you. Stay safe."},
+}

@@ -1,0 +1,16 @@
+{
+	"0" : {"name" : "S", "expression" : "none", "text" : "Hey."},
+	"1" : {"name" : "S", "expression" : "none", "text" : "What did she just buy?"},
+	"2" : {"name" : "S", "expression" : "none", "text" : "Was it chocolate? I saw you grabbing it under the counter."},
+	"3" : {"name" : "S", "expression" : "none", "text" : "She bought chocolate, didn’t she?"},
+	"4" : {"name" : "S", "expression" : "none", "text" : "*Heavy breathing"},
+	"5" : {"name" : "S", "expression" : "none", "text" : "My birthday is coming up..."},
+	"6" : {"name" : "S", "expression" : "none", "text" : "Maybe she remembered..."},
+	"7" : {"name" : "S", "expression" : "none", "text" : "What a good little sister she is, isn’t she?"},
+	"8" : {"name" : "S", "expression" : "none", "text" : "So thoughtful..."},
+	"9" : {"name" : "M", "expression" : "none", "text" : "...Actua—"},
+	"10" : {"name" : "S", "expression" : "none", "text" : "It’s decided!"},
+	"11" : {"name" : "S", "expression" : "none", "text" : "I’ll give her a very nice gift too."},
+	"12" : {"name" : "S", "expression" : "none", "text" : "Thanks, lady."},
+	"13" : {"name" : "S", "expression" : "none", "text" : "I’ll be back."},
+}

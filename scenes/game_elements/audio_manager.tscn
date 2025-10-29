@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://e4u4x2tuksgl"]
+[gd_scene load_steps=21 format=3 uid="uid://e4u4x2tuksgl"]
 
 [ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://scripts/autoloads/AUDIO_MANAGER.gd" id="1_c3o4n"]
 [ext_resource type="AudioStream" uid="uid://oumnwl4od45l" path="res://assets/sfx/click.mp3" id="2_ed3sa"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://b2ikiv875ys27" path="res://assets/sfx/bag_pick.wav" id="15_jjva6"]
 [ext_resource type="AudioStream" uid="uid://d1vi75hj5bnig" path="res://assets/sfx/bag_drop.wav" id="16_ddlfl"]
 [ext_resource type="AudioStream" uid="uid://qg65xlx545wf" path="res://assets/sfx/notification.wav" id="19_vikwd"]
+[ext_resource type="AudioStream" uid="uid://cv4g3klkr8gjk" path="res://assets/sfx/Stinger.wav" id="20_jjva6"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_c3o4n")
@@ -120,6 +121,11 @@ bus = &"SFX"
 
 [node name="notification" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("19_vikwd")
+bus = &"SFX"
+
+[node name="stinger" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("20_jjva6")
+volume_db = -10.0
 bus = &"SFX"
 
 [connection signal="finished" from="SFX/click" to="." method="_on_click_finished"]

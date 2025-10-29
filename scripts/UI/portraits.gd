@@ -54,12 +54,16 @@ func change_portrait (id : String, emotion : String):
 		$CW.visible = false
 		type = "Cli"
 		
+		if id == "S" and current_cli != "S":
+			AUDIO.play_sfx("stinger")
+		
 		if !is_Cli_on_screen:
 			if current_cli != "null":
 				DIALOG.reset_boxes()
 			animation_player.play("cli_fade_in")
 			is_Cli_on_screen = true
 			current_cli = id
+	
 	
 	var node = get_node(type + "/" + id + "_" + emotion)
 	node.visible = true
