@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=20 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_qi4lx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="4_15t4e"]
 [ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="4_aegip"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
+[ext_resource type="Texture2D" uid="uid://dkhl7ui204vxu" path="res://assets/portraits/hustler.png" id="6_jundg"]
 [ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="7_jundg"]
 [ext_resource type="Texture2D" uid="uid://cjrpiku4xx60c" path="res://assets/portraits/coworker.png" id="9_jundg"]
 [ext_resource type="Texture2D" uid="uid://dt32o81t76r5y" path="res://assets/goods/mc.png" id="10_jundg"]
@@ -278,7 +279,7 @@ offset_bottom = 3508.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_15t4e")
+texture = ExtResource("6_jundg")
 expand_mode = 3
 stretch_mode = 4
 

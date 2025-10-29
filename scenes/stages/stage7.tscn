@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="6_yl188"]
 [ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="7_782tm"]
 [ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="8_bnt52"]
-[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="9_wh5m5"]
+[ext_resource type="Texture2D" uid="uid://dkhl7ui204vxu" path="res://assets/portraits/hustler.png" id="9_1yt6c"]
 [ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="10_ussh5"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="11_eptew"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="12_r6jlm"]
@@ -726,7 +726,7 @@ layout_mode = 1
 offset_right = 2480.0
 offset_bottom = 3508.0
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("9_wh5m5")
+texture = ExtResource("9_1yt6c")
 stretch_mode = 4
 
 [node name="B" type="TextureRect" parent="Clients"]

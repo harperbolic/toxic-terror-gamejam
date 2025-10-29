@@ -14,6 +14,7 @@ var scenes = {
 	"stage5" : "res://scenes/stages/stage5.tscn",
 	"stage6" : "res://scenes/stages/stage6.tscn",
 	"stage7" : "res://scenes/stages/stage7.tscn",
+	"stage7_i" : "res://scenes/stages/stage7_i.tscn",
 	"credits" : "res://scenes/credits.tscn"
 }
 

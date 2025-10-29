@@ -141,9 +141,9 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	DEF.save["level"] = 6
+	DEF.save["level"] = 7
 	DEF.save_game()
-	SCENE.load_scene("stage6")
+	SCENE.load_scene("stage7")
 
 func new_client(ClientID = null) -> void:	
 	DEF.reset_cart()

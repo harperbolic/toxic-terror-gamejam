@@ -48,12 +48,12 @@ func _ready() -> void:
 	}
 	
 	S.assign(CHAR.S)
-	S.dialog.assign(DEF.Stage3_T2)
+	S.dialog.assign(DEF.Stage7_S1)
 	S.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	S.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
-		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"meds" : {"SleepingPills": 1, "Condom": 0, "Syrup": 0, "Razor": 0},
 		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
 	}
 	S.post1 = CHAR.gen_post()
@@ -74,12 +74,12 @@ func _ready() -> void:
 	B.post3 = CHAR.gen_post()
 	
 	T.assign(CHAR.T)
-	T.dialog.assign(DEF.Stage4_T1)
+	T.dialog.assign(DEF.Stage7_T1)
 	T.item = {"miojo": 0, "chocolate": 1, "beer": 0, "milk": 0, "energy": 0}
 	T.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
-		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 1, "Syrup": 0, "Razor": 0},
 		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
 	}
 	T.post1 = CHAR.gen_post()
@@ -87,7 +87,7 @@ func _ready() -> void:
 	T.post3 = CHAR.gen_post()
 	
 	R.assign(CHAR.R)
-	R.dialog.assign(DEF.Stage2_R1)
+	R.dialog.assign(DEF.Stage7_R1)
 	R.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	R.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 1, "Espresso": 0, "Pingado": 0},
@@ -113,37 +113,35 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	DIALOG.start_dialog(DEF.Stage6_B1)
+	await get_tree().create_timer(0.8).timeout
+	new_client("T")
+	await get_tree().create_timer(0.8).timeout
+	await client_served
+	
+	DIALOG.start_dialog(DEF.Stage7_T2)
 	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(0.8).timeout
-	new_client()
+	new_client("S")
 	await get_tree().create_timer(0.8).timeout
 	await client_served
 	
-	await get_tree().create_timer(0.8).timeout
-	new_client()
-	await get_tree().create_timer(0.8).timeout
-	await client_served
+	DIALOG.start_dialog(DEF.Stage7_S2)
+	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(0.8).timeout
 	new_client("R")
 	await get_tree().create_timer(0.8).timeout
 	await client_served
 	
-	DIALOG.start_dialog(DEF.Stage6_B2)
+	DIALOG.start_dialog(DEF.Stage7_R2)
 	await DIALOG.dialog_ended
-	
-	await get_tree().create_timer(0.8).timeout
-	new_client()
-	await get_tree().create_timer(0.8).timeout
-	await client_served
 	
 	await get_tree().create_timer(2.0).timeout
 	
 	DEF.save["level"] = 6
 	DEF.save_game()
-	SCENE.load_scene("stage6")
+	SCENE.load_scene("stage7_i")
 
 func new_client(ClientID = null) -> void:	
 	DEF.reset_cart()

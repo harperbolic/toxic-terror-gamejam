@@ -21,9 +21,6 @@ func stop_all_music() -> void:
 		audio_node = child
 		audio_node.stop()
 
-func _on_bell_finished() -> void:
-	sfx_finished.emit()
-
 func _on_phone_ring_finished() -> void:
 	sfx_finished.emit()
 

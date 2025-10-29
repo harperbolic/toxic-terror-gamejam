@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://e4u4x2tuksgl"]
+[gd_scene load_steps=20 format=3 uid="uid://e4u4x2tuksgl"]
 
 [ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://scripts/autoloads/AUDIO_MANAGER.gd" id="1_c3o4n"]
 [ext_resource type="AudioStream" uid="uid://oumnwl4od45l" path="res://assets/sfx/click.mp3" id="2_ed3sa"]
@@ -11,7 +11,6 @@
 [ext_resource type="AudioStream" uid="uid://rbq4ktiuk8gu" path="res://assets/sfx/click_confirm.ogg" id="5_uxed3"]
 [ext_resource type="AudioStream" uid="uid://cyw87p3vl8l8a" path="res://assets/sfx/click_refuse.ogg" id="6_kml6c"]
 [ext_resource type="AudioStream" uid="uid://bhvd3yn03vq1t" path="res://assets/sfx/DoorBeep.wav" id="9_jkqk2"]
-[ext_resource type="AudioStream" uid="uid://b5ljhslxdb2oj" path="res://_PLACEHOLDER/Bell toll scratch sound effect [4ShSySpyD_I].mp3" id="10_uxed3"]
 [ext_resource type="AudioStream" uid="uid://4hwk0pa73lpk" path="res://assets/sfx/bottle_pick.wav" id="11_dvhyk"]
 [ext_resource type="AudioStream" uid="uid://xviu2qjw8v6o" path="res://assets/sfx/bottle_drop.wav" id="12_hrh0j"]
 [ext_resource type="AudioStream" uid="uid://chm4cisnbeyd4" path="res://assets/sfx/box_pick.wav" id="13_jkqk2"]
@@ -87,11 +86,6 @@ stream = ExtResource("5_rqs6r")
 volume_db = 3.817
 bus = &"SFX"
 
-[node name="bell" type="AudioStreamPlayer" parent="SFX"]
-stream = ExtResource("10_uxed3")
-volume_db = 3.817
-bus = &"SFX"
-
 [node name="none" type="AudioStreamPlayer" parent="SFX"]
 bus = &"SFX"
 
@@ -131,4 +125,3 @@ bus = &"SFX"
 [connection signal="finished" from="SFX/click" to="." method="_on_click_finished"]
 [connection signal="finished" from="SFX/phone_ring" to="." method="_on_phone_ring_finished"]
 [connection signal="finished" from="SFX/client_ring" to="." method="_on_client_ring_finished"]
-[connection signal="finished" from="SFX/bell" to="." method="_on_bell_finished"]

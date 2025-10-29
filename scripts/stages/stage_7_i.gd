@@ -7,10 +7,10 @@ func _ready() -> void:
 	AUDIO.play_sfx("phone_ring")
 	await AUDIO.sfx_finished
 	
-	DIALOG.start_dialog(DEF.Stage0)
+	DIALOG.start_dialog(DEF.Stage7_inter)
 	
 	await DIALOG.dialog_ended
 	
-	DEF.save["level"] = 1
-	DEF.save_game()
-	SCENE.load_scene("stage1")
+	await get_tree().create_timer(2.0).timeout
+	
+	SCENE.load_scene("credits")

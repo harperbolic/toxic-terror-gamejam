@@ -98,6 +98,15 @@ var Stage6_inter : Dictionary
 var Stage6_R1 : Dictionary
 var Stage6_R2 : Dictionary
 
+# Stage 7 files
+var Stage7_S1 : Dictionary
+var Stage7_S2 : Dictionary
+var Stage7_inter : Dictionary
+var Stage7_R1 : Dictionary
+var Stage7_R2 : Dictionary
+var Stage7_T1 : Dictionary
+var Stage7_T2 : Dictionary
+
 # items
 var food_item : Dictionary
 var drink_item : Dictionary
@@ -381,6 +390,29 @@ func load_text_locale():
 	access.close()
 	access = FileAccess.open("res://text/" + selected_language + "/Stage6_R2.json", FileAccess.READ)
 	Stage6_R2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	#Stage 7
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_T1.json", FileAccess.READ)
+	Stage7_T1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_T2.json", FileAccess.READ)
+	Stage7_T2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_S1.json", FileAccess.READ)
+	Stage7_S1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_S2.json", FileAccess.READ)
+	Stage7_S2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_R1.json", FileAccess.READ)
+	Stage7_R1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_R2.json", FileAccess.READ)
+	Stage7_R2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage7_inter.json", FileAccess.READ)
+	Stage7_inter = JSON.parse_string(access.get_as_text())
 	access.close()
 
 func reset_cart():
