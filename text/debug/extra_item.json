@@ -1,0 +1,22 @@
+{
+	"0" : {
+		"id" : "SleepingPills",
+		"name" : "Sleeping Pills",
+		"description" : "I can't remember the last time I've had a good night's sleep, honestly.",
+	},
+	"1" : {
+		"id" : "Condom",
+		"name" : "Condom",
+		"description" : "I  wish she'd use this more often..."
+	},
+	"2" : {
+		"id" : "Syrup",
+		"name" : "Cough Syrup",
+		"description" : "Despite my sore throat, I actually prefer my voice gravelly, so no thanks."
+	},
+	"3" : {
+		"id" : "Razor",
+		"name" : "Razor",
+		"description" : "I miss being a teenager on discord."
+	}
+}

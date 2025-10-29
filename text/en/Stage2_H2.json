@@ -1,0 +1,17 @@
+{
+	"0" : {"name" : "H", "expression" : "none", "text" : "Say, young lady, are you alright?"},
+	"1" : {"name" : "H", "expression" : "none", "text" : "You don’t look very well to me."},
+	"2" : {"name" : "H", "expression" : "none", "text" : "Of course, it’s not my place to say anything, but I think you shouldn’t force yourself too much."},
+	"3" : {"name" : "H", "expression" : "none", "text" : "Rest well, eat something healthy and take a deep breath."},
+	"4" : {"name" : "H", "expression" : "none", "text" : "Or… If nothing seems to fix it, no one’s gonna judge you if you indulge a little."},
+	"5" : {"name" : "H", "expression" : "none", "text" : "You know, a bit of candy, puppy videos, catchy music…"},
+	"6" : {"name" : "H", "expression" : "none", "text" : "Cigarettes."},
+	"7" : {"name" : "H", "expression" : "none", "text" : "Moderately, of course."},
+	"8" : {"name" : "H", "expression" : "none", "text" : "But I won’t bother you too much, it’s your life to live as you wish."},
+	"9" : {"name" : "H", "expression" : "none", "text" : "Take care of yourself, dear."},
+	"10" : {"name" : "M", "expression" : "none", "text" : "…Thanks."},
+	"11" : {"name" : "H", "expression" : "none", "text" : "Anytime!"},
+	"12" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"13" : {"name" : "H", "expression" : "none", "text" : "No need to thank me, of course!"},
+	"14" : {"name" : "H", "expression" : "none", "text" : "Bye bye now!"}
+}

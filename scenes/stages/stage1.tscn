@@ -1,18 +1,18 @@
-[gd_scene load_steps=32 format=3 uid="uid://n1ny601f6g16"]
+[gd_scene load_steps=30 format=3 uid="uid://n1ny601f6g16"]
 
 [ext_resource type="Script" uid="uid://c0mcj7xdyn53b" path="res://scripts/stages/stage_1.gd" id="1_ace57"]
 [ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="2_4fnny"]
+[ext_resource type="Texture2D" uid="uid://fkqt845hu2fn" path="res://assets/bg/wallflower_bg.png" id="2_ohosn"]
+[ext_resource type="Texture2D" uid="uid://b635vn51agk6r" path="res://themes/noise_text.tres" id="2_rptx6"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_4v4xh"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="4_8x8df"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_212wl"]
-[ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="4_i5f5j"]
-[ext_resource type="Texture2D" uid="uid://bhryfxr705a56" path="res://_PLACEHOLDER/random_client.png" id="5_4v4xh"]
-[ext_resource type="Texture2D" uid="uid://bx3lcet4l63jd" path="res://_PLACEHOLDER/basket.png" id="5_h25yc"]
+[ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="5_blxdk"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="6_y7b51"]
+[ext_resource type="Texture2D" uid="uid://cnx44hagygswo" path="res://assets/goods/plasticbag.png" id="8_blxdk"]
 [ext_resource type="Theme" uid="uid://d0ms1pva8a0cu" path="res://themes/computer_theme.tres" id="9_8qn6h"]
 [ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="9_rsk2y"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="9_y7b51"]
-[ext_resource type="Script" uid="uid://hegsqpfov2f2" path="res://scripts/film_grain.gd" id="10_k4pqf"]
 [ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="12_amlt1"]
 [ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="14_blxdk"]
 
@@ -35,20 +35,10 @@ distance = 302.0
 size = Vector2(480, 492)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h25yc"]
-size = Vector2(23, 291)
+size = Vector2(23, 313.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiu06"]
-size = Vector2(336.5, 60)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_k4pqf"]
-noise_type = 5
-frequency = 0.0241
-domain_warp_enabled = true
-domain_warp_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k4pqf"]
-height = 260
-noise = SubResource("FastNoiseLite_k4pqf")
+size = Vector2(282.25, 60)
 
 [sub_resource type="Animation" id="Animation_utrvu"]
 length = 0.001
@@ -175,7 +165,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("ActionButton/Report:position")
+tracks/10/path = NodePath("ActionButton/Talk:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -187,34 +177,10 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("ActionButton/Talk:position")
+tracks/11/path = NodePath("ActionButton/Talk:visible")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("ActionButton/Report:visible")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("ActionButton/Talk:visible")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -335,42 +301,6 @@ tracks/7/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("ActionButton/Report:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("ActionButton/Report:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(298, 0), Vector2(0, 0)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("ActionButton/Report:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0.35, 0.4),
-"transitions": PackedFloat32Array(1, 11.712671),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_8x8df"]
 resource_name = "client_exit"
@@ -418,18 +348,6 @@ tracks/3/path = NodePath("ActionButton/End:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ActionButton/Report:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0.2),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -517,6 +435,16 @@ _data = {
 [node name="GameController" type="Node"]
 script = ExtResource("1_ace57")
 
+[node name="Panel2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_ohosn")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -543,56 +471,73 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_4v4xh")
 stretch_mode = 4
 
-[node name="B" type="TextureRect" parent="Clients"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 2480.0
-offset_bottom = 3508.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_i5f5j")
-stretch_mode = 4
-
 [node name="random" type="TextureRect" parent="Clients"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_right = 2480.0
 offset_bottom = 3508.0
-grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("5_4v4xh")
+texture = ExtResource("5_blxdk")
 stretch_mode = 4
 
 [node name="O" type="TextureRect" parent="Clients"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_right = 2480.0
 offset_bottom = 3508.0
-grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("5_4v4xh")
+texture = ExtResource("5_blxdk")
 stretch_mode = 4
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 459.00003
+offset_right = 240.0
+offset_bottom = 499.00003
+
+[node name="Panel" type="TextureRect" parent="Control"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -2.0000305
+offset_right = 529.0
+offset_bottom = 329.99997
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rptx6")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -459.00003
+offset_right = 1680.0
+offset_bottom = 581.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.00087739713
 texture = ExtResource("4_212wl")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureRect3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -992.4148
+offset_top = -40.0
+offset_right = 982.6372
+offset_bottom = 72.10779
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false
@@ -619,10 +564,8 @@ position = Vector2(388, 1110)
 shape = SubResource("RectangleShape2D_utrvu")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1615, 892.5)
+position = Vector2(1680, 827.75)
 shape = SubResource("RectangleShape2D_h25yc")
-
-[node name="Goods" type="Node" parent="."]
 
 [node name="Basket" type="Area2D" parent="."]
 position = Vector2(1136, 1517)
@@ -630,13 +573,13 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Basket"]
-position = Vector2(679, -575)
+position = Vector2(706.125, -575)
 shape = SubResource("RectangleShape2D_oiu06")
 
 [node name="Sprite2D" type="Sprite2D" parent="Basket"]
-position = Vector2(677, -705.9999)
+position = Vector2(685, -765.99994)
 scale = Vector2(0.71999514, 0.71999514)
-texture = ExtResource("5_h25yc")
+texture = ExtResource("8_blxdk")
 
 [node name="Monitor" type="Control" parent="."]
 layout_mode = 3
@@ -647,16 +590,6 @@ offset_right = 751.0
 offset_bottom = 823.0
 rotation = 0.0024075368
 script = ExtResource("4_8x8df")
-
-[node name="Panel" type="TextureRect" parent="Monitor"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("NoiseTexture2D_k4pqf")
-script = ExtResource("10_k4pqf")
 
 [node name="Menu" type="Control" parent="Monitor"]
 visible = false
@@ -1043,7 +976,7 @@ theme_override_font_sizes/font_size = 45
 text = "Waiting"
 
 [node name="Timer" type="Timer" parent="Monitor/Preparing"]
-wait_time = 8.0
+wait_time = 4.0
 one_shot = true
 
 [node name="ActionButton" type="Control" parent="."]
@@ -1132,47 +1065,7 @@ theme = ExtResource("6_y7b51")
 theme_override_font_sizes/font_size = 40
 text = "Talk"
 
-[node name="Report" type="Control" parent="ActionButton"]
-visible = false
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 0
-script = ExtResource("9_rsk2y")
-
-[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/Report"]
-position = Vector2(1092.1108, 445.42258)
-rotation = -0.009728301
-color = Color(0.8862745, 0, 0.011764706, 1)
-antialiased = true
-polygon = PackedVector2Array(256.20557, -39.75206, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)
-
-[node name="Polygon2D" type="Polygon2D" parent="ActionButton/Report"]
-self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(1243.0664, 480.43585)
-rotation = -0.009728301
-color = Color(0, 0, 0, 1)
-antialiased = true
-polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
-uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
-
-[node name="button" type="Button" parent="ActionButton/Report"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1081.0
-offset_top = 425.0
-offset_right = 1322.0
-offset_bottom = 481.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.009728301
-size_flags_horizontal = 4
-focus_mode = 3
-theme = ExtResource("6_y7b51")
-theme_override_font_sizes/font_size = 40
-text = "Report"
+[node name="Goods" type="Node" parent="."]
 
 [node name="Title" type="ColorRect" parent="."]
 anchors_preset = 15

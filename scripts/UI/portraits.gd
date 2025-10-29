@@ -60,11 +60,9 @@ func change_portrait (id : String, emotion : String):
 			animation_player.play("cli_fade_in")
 			is_Cli_on_screen = true
 			current_cli = id
-
 	
 	var node = get_node(type + "/" + id + "_" + emotion)
 	node.visible = true
-	
 
 func clear_portraits(id : String):
 	if id == "M":

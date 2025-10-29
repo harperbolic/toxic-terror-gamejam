@@ -1,0 +1,14 @@
+{
+	"0" : {"name" : "H", "expression" : "none", "text" : "Hello again, young lady!"},
+	"1" : {"name" : "H", "expression" : "none", "text" : "Fine night today, huh? Very refreshing."},
+	"2" : {"name" : "M", "expression" : "none", "text" : "...You’re here again."},
+	"3" : {"name" : "H", "expression" : "none", "text" : "Ah, you noticed!"},
+	"4" : {"name" : "H", "expression" : "none", "text" : "Actually, don’t tell anyone, but I got a bonus at the shelter job!"},
+	"5" : {"name" : "H", "expression" : "none", "text" : "They told me it’s because of my good behavior and for always working hard…"},
+	"6" : {"name" : "H", "expression" : "none", "text" : "Hohoho! What world do we live in! You get a bonus for being a decent human being! How silly!"},
+	"7" : {"name" : "H", "expression" : "none", "text" : "But I’m not gonna complain! I’ll get me some more lunch!"},
+	"8" : {"name" : "M", "expression" : "none", "text" : "..."},
+	"9" : {"name" : "H", "expression" : "none", "text" : "Yep, a fine night indeed."},
+	"10" : {"name" : "H", "expression" : "none", "text" : "Makes me wish for a mug of hot chocolate and some apple pie in front of the family TV..."},
+	"11" : {"name" : "H", "expression" : "none", "text" : "But I can only afford this, so I'll have to make do! Hoho!"}
+}

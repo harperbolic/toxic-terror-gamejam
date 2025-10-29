@@ -50,7 +50,7 @@
 		],
 		"bad_words" : [
 			"Muders",
-			"Kinappings",
+			"Kidnappings",
 			"Vandalism",
 			"Telephone scams",
 			"Exhibitionism"
@@ -58,7 +58,7 @@
 		"tail" : " should start happening again over here."
 	},
 	"post4" : {
-		"head" : "I think that XoxoShop near the corner is ",
+		"head" : "I think that Xoxo Shop near the corner is ",
 		"good_words" : [
 			"quite nice",
 			"charming",
@@ -149,7 +149,7 @@
 			"dogs are cute",
 			"cats are elegant",
 			"murder should be a crime",
-			"people should be niver to eachother",
+			"people should be nicer to eachother",
 			"peanut butter jelly time",
 			"faith in crazy girls",
 			"basketball is cool",
@@ -167,7 +167,7 @@
 		"head" : "",
 		"good_words" : [
 			"Cake",
-			"Lemon merinue pie",
+			"Lemon meringue pie",
 			"Going to the zoo",
 			"Petting my dog",
 			"Petting my girl",
@@ -176,7 +176,7 @@
 		"bad_words" : [
 			"Lying",
 			"Cheating",
-			"Watching someone through their window",
+			"Watching people die",
 			"Stealing medicine",
 			"Fucking whores",
 			"Starting random fires",
@@ -190,8 +190,8 @@
 			"blueberries",
 			"lukewarm water",
 			"caviar",
-			"bad coding",
-			"english voice actin in animes",
+			"vibe coding",
+			"english voice acting in animes",
 			"gacha games",
 		],
 		"bad_words" : [
@@ -200,7 +200,7 @@
 			"homeless people",
 			"women",
 			"my dick up",
-			"pregnant women trying to get my seat in the bus"
+			"pregnant women"
 		],
 		"tail" : " fr"
 	}

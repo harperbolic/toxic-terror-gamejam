@@ -5,27 +5,32 @@
 
 [node name="Notification" type="Node"]
 script = ExtResource("1_el5u2")
+has_label = true
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
-position = Vector2(105, 313)
+position = Vector2(936.19995, 63.399986)
+scale = Vector2(1.2399997, 1.2399997)
 color = Color(0.84263474, 3.5616756e-06, 4.813075e-07, 1)
-polygon = PackedVector2Array(-55, 1, 361, -35, 438, 37, 277, 69, 176, 43, 28, 76)
+polygon = PackedVector2Array(-55, 1, 361, -35, 438, 37, 303.06464, 91.61294, 175.64526, 61.774223, 24.032288, 101.29037)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(105, 313)
+position = Vector2(936.19995, 63.399986)
+scale = Vector2(1.2399997, 1.2399997)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-30, 48, -24, -14, 352, -24, 438, 10, 414, 57, 34, 57)
+polygon = PackedVector2Array(-30, 48, -24, -14, 352, -24, 438, 10, 417.5808, 69.03229, 32.90326, 85.96778)
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -860.0
-offset_top = 306.0
-offset_right = -464.0
-offset_bottom = 345.0
+offset_left = -47.0
+offset_top = 71.0
+offset_right = 395.74194
+offset_bottom = 113.74194
 grow_horizontal = 2
+scale = Vector2(1.2399997, 1.2399997)
 theme = ExtResource("1_ajjdd")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 23
 text = "Default Notification Label"
+vertical_alignment = 1
 autowrap_mode = 3

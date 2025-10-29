@@ -15,7 +15,6 @@ const CHOCOLATE = preload("res://scenes/goods/chocolate.tscn")
 
 @onready var end: Button = $ActionButton/End/button
 @onready var talk: Button = $ActionButton/Talk/button
-@onready var report: Button = $ActionButton/Report/button
 
 @onready var day_letter: Label = $Title/DayLabel
 @onready var goods = $Goods
@@ -29,7 +28,6 @@ func _ready() -> void:
 	# Action
 	end.text = DEF.UI_text.get("end_order")
 	talk.text = DEF.UI_text.get("talk")
-	report.text = DEF.UI_text.get("report")
 	
 	# Create canon characters
 	H.assign(CHAR.H)
@@ -58,9 +56,9 @@ func _ready() -> void:
 	DIALOG.start_dialog(DEF.Stage1_C1)
 	await DIALOG.dialog_ended
 	
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.8).timeout
 	new_client("O")
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.8).timeout
 	
 	DIALOG.start_dialog(DEF.Stage1_C2)
 	await DIALOG.dialog_ended
@@ -122,7 +120,9 @@ func _ready() -> void:
 	await DIALOG.dialog_ended
 	animation_player.play_backwards("fade")
 	await animation_player.animation_finished
-	SCENE.load_scene("main_menu")
+	DEF.save["level"] = 2
+	DEF.save_game()
+	SCENE.load_scene("Stage2")
 
 func new_client(ClientID = null) -> void:	
 	DEF.reset_cart()
@@ -149,14 +149,8 @@ func new_client(ClientID = null) -> void:
 	await client_served
 	
 	animation_player.play("client_exit")
-
-func client_exit() -> void:
-	if current_client != null:
-		animation_player.play("client_exit")
-		await animation_player.animation_finished
-		current_client.visible = false
-	else:
-		return
+	await animation_player.animation_finished
+	current_client.visible = false
 
 func spawn_items() -> void:
 	var position = Vector2(700, 800)

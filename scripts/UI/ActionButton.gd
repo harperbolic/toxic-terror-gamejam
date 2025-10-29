@@ -1,8 +1,9 @@
 extends Node
 
+@export var has_label : bool = false
+
 @onready var color_poly: Polygon2D = $Polygon2D2
 @onready var black_poly: Polygon2D = $Polygon2D
-@onready var label: Label = $Label
 
 @export var change_color = false
 var modulate_color = 0
@@ -29,4 +30,6 @@ func change_poly():
 	black_poly.skew = number
 
 func change_label_text(text : String):
-	label.text = text
+	if has_label:
+		var label: Label = $Label
+		label.text = text

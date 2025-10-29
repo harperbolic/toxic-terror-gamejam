@@ -1,5 +1,5 @@
 {
-	"game_title" : "Social Cues",
+	"game_title" : "WALLFLOWER",
 	"new_game" : "New Game",
 	"continue" : "Continue",
 	"options" : "Options",
@@ -36,8 +36,9 @@
 	"report" : "Investigate",
 	"waiting" : "Waiting",
 	"onus" : "-5 credits",
-	"order" : "Wrong order served",
-	"post" : "Dangerous post not removed",
-	"post_good" : "Harmless post removed",
-	"item" : "Forbidden item served"
+	"order" : "Wrong order served (-5$)",
+	"post" : "Wrong posts removed/approved (-5$)",
+	"both" : "Wrong order and posts (-10$)",
+	"item" : "Forbidden item served",
+	"not_found" : "Not found"
 }

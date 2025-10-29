@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bct5meyc4qsb6"
-path="res://.godot/imported/miojo.png-eededb01774d028429b018b5573956f8.ctex"
+uid="uid://d1xy4ypc8s5lc"
+path="res://.godot/imported/energy.png-ee45e6acb7d9c289e96d3634da289860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_PLACEHOLDER/miojo.png"
-dest_files=["res://.godot/imported/miojo.png-eededb01774d028429b018b5573956f8.ctex"]
+source_file="res://assets/goods/energy.png"
+dest_files=["res://.godot/imported/energy.png-ee45e6acb7d9c289e96d3634da289860.ctex"]
 
 [params]
 

@@ -10,14 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Panopticon"
-config/version="0.1"
+config/name="WALLFLOWER"
+config/version="1.0-jam"
 run/main_scene="uid://3gdamcfhrpjw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="uid://bdo4tox8ndrxd"
 config/windows_native_icon="res://assets/icon.ico"
 
 [autoload]

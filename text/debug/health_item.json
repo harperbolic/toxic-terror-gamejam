@@ -1,0 +1,17 @@
+{
+	"0" : {
+		"id" : "Camera",
+		"name" : "Disposable Camera",
+		"description" : "Sounds redundant given everyone has a phone nowadays. Also I don't wanna capture my misery in image form.",
+	},
+	"1" : {
+		"id" : "Cigarette",
+		"name" : "Cigarette Pack",
+		"description" : "I could go for a smoke! I could really go for a smoke... fuck. I need a smoke."
+	},
+	"2" : {
+		"id" : "Gummy",
+		"name" : "Gummy",
+		"description" : "I used to eat these when I was a little girl. Except they had 500% more vitamins. Worst hospital trip ever."
+	}
+}

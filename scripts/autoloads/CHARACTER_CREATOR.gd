@@ -61,7 +61,17 @@ var T : Dictionary = {
 	"sex" : "F",
 	"mood" : 0,
 	"illness" : "",
-	"record" : ""
+	"record" : "",
+	"item" : {"miojo": 0, "chocolate": 1, "beer": 0, "milk": 0, "energy": 0},
+	"order" : {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 1, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var S : Dictionary = {
@@ -73,7 +83,17 @@ var S : Dictionary = {
 	"sex" : "M",
 	"mood" : 3,
 	"illness" : "",
-	"record" : ""
+	"record" : "",
+	"item" : {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0},
+	"order" : {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 1, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 1, "Cigarette": 0, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var B : Dictionary = {
@@ -85,7 +105,17 @@ var B : Dictionary = {
 	"sex" : "F",
 	"mood" : "Depressed",
 	"illness" : "",
-	"record" : ""
+	"record" : "",
+	"item" : {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0},
+	"order" : {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 1, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var R : Dictionary = {
@@ -97,7 +127,17 @@ var R : Dictionary = {
 	"sex" : "M",
 	"mood" : "Mad",
 	"illness" : "",
-	"record" : ""
+	"record" : "",
+	"item" : {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0},
+	"order" : {
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 1, "Cappuccino": 1, "Afogatto": 1, "Espresso": 0, "Pingado": 0},
+		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
+		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
+	},
+	"dialog" : {
+		"0" : "Default dialog"
+	}
 }
 
 var sex : Dictionary = {
@@ -116,7 +156,7 @@ func gen_char() -> Dictionary:
 	
 	var number = randi_range(0, 100)
 	if number > 0:
-		generated_char.illness = DEF.illness.keys().pick_random()
+		generated_char.illness = DEF.illness.get(DEF.illness.keys().pick_random())
 	else:
 		generated_char.illness = null
 

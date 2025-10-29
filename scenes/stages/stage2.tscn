@@ -1,0 +1,1905 @@
+[gd_scene load_steps=38 format=3 uid="uid://bubu05su7lbfl"]
+
+[ext_resource type="Script" uid="uid://bagasxrquw31l" path="res://scripts/stages/stage_2.gd" id="1_ttt8n"]
+[ext_resource type="Texture2D" uid="uid://fkqt845hu2fn" path="res://assets/bg/wallflower_bg.png" id="2_svuq3"]
+[ext_resource type="Texture2D" uid="uid://vmcutlvkwt51" path="res://assets/bg/balcao.PNG" id="3_dpv7a"]
+[ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="4_cb3rg"]
+[ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="5_8tiod"]
+[ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="5_bqda7"]
+[ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="6_8tiod"]
+[ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="7_bqda7"]
+[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="8_8tiod"]
+[ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="9_svuq3"]
+[ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="10_6ela2"]
+[ext_resource type="Texture2D" uid="uid://cnx44hagygswo" path="res://assets/goods/plasticbag.png" id="10_8tiod"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="11_l4low"]
+[ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="12_cuo0w"]
+[ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="13_jnmru"]
+[ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="14_5wfwf"]
+[ext_resource type="Theme" uid="uid://d0ms1pva8a0cu" path="res://themes/computer_theme.tres" id="15_ctm2a"]
+[ext_resource type="Script" uid="uid://c7pxnax0nuy4n" path="res://scripts/UI/cellphone.gd" id="15_lkoe4"]
+[ext_resource type="Texture2D" uid="uid://dv0pbtodntu7y" path="res://assets/ui/cellphone_hand.png" id="16_bqda7"]
+[ext_resource type="Texture2D" uid="uid://cto0y5nj4anhj" path="res://assets/ui/exit_white.png" id="17_cb3rg"]
+[ext_resource type="Script" uid="uid://c5oams2vrjoyq" path="res://scripts/stages/notice.gd" id="17_kgp51"]
+[ext_resource type="Animation" uid="uid://bqxbx7efalg8n" path="res://cellphone_animation.res" id="20_lkoe4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oiu06"]
+distance = 582.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i5f5j"]
+normal = Vector2(0, 1)
+distance = -1517.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h25yc"]
+normal = Vector2(-1, 0)
+distance = 311.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8x8df"]
+normal = Vector2(1, 0)
+distance = 302.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utrvu"]
+size = Vector2(480, 492)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h25yc"]
+size = Vector2(23, 380.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiu06"]
+size = Vector2(280.25, 60)
+
+[sub_resource type="Animation" id="Animation_utrvu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clients:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Clients:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(994, -26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Title/DayLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Title:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ActionButton/End/Polygon2D2:polygon")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ActionButton/End:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ActionButton/End:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ActionButton/End:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ActionButton/Report:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ActionButton/Talk:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ActionButton/Talk:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_y7b51"]
+resource_name = "button_end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ActionButton/End/Polygon2D2:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [PackedVector2Array(239.47, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13), PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)]
+}
+
+[sub_resource type="Animation" id="Animation_h25yc"]
+resource_name = "client_enter"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clients:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clients:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 30), Vector2(1150, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ActionButton/End:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.25, 0.4),
+"transitions": PackedFloat32Array(1, 6.6823506),
+"update": 0,
+"values": [Vector2(303, 59), Vector2(8, -1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/End:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ActionButton/Talk:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(330, 48), Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ActionButton/Talk:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ActionButton/Talk:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ActionButton/Report:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ActionButton/Report:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ActionButton/Report:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8x8df"]
+resource_name = "client_exit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clients:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clients:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1150, -20), Vector2(1000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ActionButton/Talk:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/Report:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_oiu06"]
+resource_name = "fade"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_i5f5j"]
+resource_name = "fade_title"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title/DayLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8tiod"]
+resource_name = "client_enter_H"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clients:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clients:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1200, 30), Vector2(1150, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ActionButton/End:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ActionButton/End:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.25, 0.4),
+"transitions": PackedFloat32Array(1, 6.6823506),
+"update": 0,
+"values": [Vector2(303, 59), Vector2(8, -1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ActionButton/End:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ActionButton/Talk:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(330, 48), Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ActionButton/Talk:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ActionButton/Talk:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ActionButton/Report:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ActionButton/Report:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ActionButton/Report:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.35, 0.4),
+"transitions": PackedFloat32Array(1, 11.712671),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yh20h"]
+_data = {
+&"RESET": SubResource("Animation_utrvu"),
+&"button_end": SubResource("Animation_y7b51"),
+&"cellphone": ExtResource("20_lkoe4"),
+&"client_enter": SubResource("Animation_h25yc"),
+&"client_enter_H": SubResource("Animation_8tiod"),
+&"client_exit": SubResource("Animation_8x8df"),
+&"fade": SubResource("Animation_oiu06"),
+&"fade_title": SubResource("Animation_i5f5j")
+}
+
+[node name="GameController" type="Node"]
+script = ExtResource("1_ttt8n")
+
+[node name="Panel2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_svuq3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dpv7a")
+
+[node name="Clients" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 994.0
+offset_top = -26.0
+offset_right = 994.0
+offset_bottom = -26.0
+
+[node name="random" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_8tiod")
+stretch_mode = 4
+
+[node name="H" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_cb3rg")
+stretch_mode = 4
+
+[node name="T" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_8tiod")
+stretch_mode = 4
+
+[node name="S" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_bqda7")
+stretch_mode = 4
+
+[node name="R" type="TextureRect" parent="Clients"]
+visible = false
+layout_mode = 1
+offset_right = 2480.0
+offset_bottom = 3508.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("8_8tiod")
+stretch_mode = 4
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 459.00003
+offset_right = 240.0
+offset_bottom = 499.00003
+
+[node name="Panel" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1268.0
+offset_top = -537.0
+offset_right = 612.0
+offset_bottom = 503.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_svuq3")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -459.00003
+offset_right = 1680.0
+offset_bottom = 581.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00087739713
+texture = ExtResource("7_bqda7")
+
+[node name="ColorRect" type="ColorRect" parent="Control/TextureRect3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -992.4148
+offset_top = -40.0
+offset_right = 982.6372
+offset_bottom = 72.10779
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1134, 1522)
+shape = SubResource("WorldBoundaryShape2D_oiu06")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1134, 1522)
+shape = SubResource("WorldBoundaryShape2D_i5f5j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2228, 68)
+shape = SubResource("WorldBoundaryShape2D_h25yc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-305, 35.875)
+shape = SubResource("WorldBoundaryShape2D_8x8df")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(388, 1110)
+shape = SubResource("RectangleShape2D_utrvu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1687, 787)
+shape = SubResource("RectangleShape2D_h25yc")
+
+[node name="Basket" type="Area2D" parent="."]
+position = Vector2(1138, 1519)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket"]
+position = Vector2(707.125, -575)
+shape = SubResource("RectangleShape2D_oiu06")
+
+[node name="Sprite2D" type="Sprite2D" parent="Basket"]
+position = Vector2(679, -759.99994)
+scale = Vector2(0.71999514, 0.71999514)
+texture = ExtResource("10_8tiod")
+
+[node name="Monitor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 459.0
+offset_right = 751.0
+offset_bottom = 823.0
+rotation = 0.0024075368
+script = ExtResource("9_svuq3")
+
+[node name="Menu" type="Control" parent="Monitor"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Food" type="Control" parent="Monitor/Menu"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_6ela2")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Food"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(1, 0.73333335, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-43.55014, 47.191223, 30.57724, 100.01288, 146.92456, 77.73999, 174.58646, 103.6662, 238.39609, 24.51239, 94.32669, -4.140869)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Food"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(4.178131, 73.99011, 236.18707, 77.43158, 242.0185, 7.4172974, -6.995178, 2.0168457)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Food"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Foods"
+
+[node name="Drink" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_6ela2")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Drink"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0.23529412, 1, 1)
+antialiased = true
+polygon = PackedVector2Array(-29.684998, -8.842285, 30.57724, 100.01288, 146.92456, 77.73999, 235.56216, 93.51935, 187.32394, -5.364807, 97.39166, 22.851807)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Drink"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-5.8218384, 74.01422, 240.18463, 76.421936, 238.01367, 5.427002, 3.009613, 3.9927979)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Drink"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Drinks"
+
+[node name="Health" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_6ela2")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Health"]
+position = Vector2(172.02654, 150.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(1, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-28.598328, 27.155151, 14.5460205, 87.05145, 113.47821, 58.81317, 151.55765, 91.72162, 248.41043, 30.488281, 93.2905, -19.138428)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Health"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-3.8242493, 73.0094, 236.17023, 70.43158, 238.01367, 5.427002, 5.009613, 3.987976)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Health"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Health"
+
+[node name="Extra" type="Control" parent="Monitor/Menu"]
+visible = false
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_6ela2")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Menu/Extra"]
+position = Vector2(172, 139.50006)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0.7647059, 0, 1, 1)
+antialiased = true
+polygon = PackedVector2Array(-43.55014, 47.191223, 59.509735, 71.94318, 29.57965, 101.01532, 129.51434, 73.7746, 191.57675, 99.625244, 174.51181, 72.66632, 219.34073, 1.5581665, 152.39389, 23.719421, 118.31213, -10.198608, 54.40384, 27.955322)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Menu/Extra"]
+position = Vector2(155.35347, 146.6264)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(11.178131, 73.97327, 222.18707, 77.46527, 215.01862, 7.4823, 19.009583, 3.9542847)
+
+[node name="Button" type="Button" parent="Monitor/Menu/Extra"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Extra"
+
+[node name="Forward" type="TextureButton" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -83.5
+offset_bottom = 83.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("13_jnmru")
+
+[node name="Back" type="TextureButton" parent="Monitor/Menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -83.5
+offset_right = 83.000015
+offset_bottom = 83.5
+grow_vertical = 2
+texture_normal = ExtResource("13_jnmru")
+flip_h = true
+
+[node name="Items" type="Control" parent="Monitor"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Food" type="Control" parent="Monitor/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Items/Food"]
+position = Vector2(116.79825, 112.94873)
+scale = Vector2(1.0000002, 1.0000002)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-44.615448, -37.208984, -41.728607, -85.20639, 69.25418, -91.39661, 333.27017, -84.969604, 357.38327, -42.000977, 305.40994, -26.964966, 144.42245, -21.577393, 30.413208, -25.302856)
+
+[node name="Name" type="Label" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.43588
+offset_top = 26.63399
+offset_right = 123.56412
+offset_bottom = 84.63399
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 42
+text = "Dishe Name"
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Items/Food"]
+position = Vector2(116.79825, 112.94867)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-17.507202, 7.812561, 72.44437, -12.404053, 320.46527, -4.0010986, 308.73016, 106.027405, 256.83862, 151.15247, -8.15332, 154.79047)
+
+[node name="Description" type="Label" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -158.35025
+offset_top = 114.71831
+offset_right = 158.90262
+offset_bottom = 266.71832
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+autowrap_mode = 3
+
+[node name="Prepare" type="Control" parent="Monitor/Items/Food"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_6ela2")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Items/Food/Prepare"]
+position = Vector2(146.64722, 268.6477)
+scale = Vector2(1.0000001, 1.0000001)
+antialiased = true
+polygon = PackedVector2Array(26.170868, 70.937256, 211.1607, 66.49182, 205.90982, 16.114746, 31.021576, 8.925354)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Items/Food/Prepare"]
+position = Vector2(141.65927, 273.65973)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(26.170868, 70.937256, 211.1607, 66.49182, 205.90982, 16.114746, 31.021576, 8.925354)
+
+[node name="Button" type="Button" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.55887
+offset_top = 105.42267
+offset_right = 36.44113
+offset_bottom = 153.42267
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Prepare"
+
+[node name="Forward" type="TextureButton" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -83.5
+offset_bottom = 83.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("13_jnmru")
+
+[node name="Back" type="TextureButton" parent="Monitor/Items/Food/Prepare"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -83.50006
+offset_right = 83.0
+offset_bottom = 83.49994
+grow_vertical = 2
+texture_normal = ExtResource("13_jnmru")
+flip_h = true
+
+[node name="Exit" type="TextureButton" parent="Monitor/Items/Food"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.98065
+offset_top = 8.019196
+offset_right = -7.980652
+offset_bottom = 56.019196
+grow_horizontal = 0
+texture_normal = ExtResource("14_5wfwf")
+
+[node name="Preparing" type="Control" parent="Monitor"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Monitor/Preparing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_l4low")
+change_color = true
+
+[node name="Polygon2D2" type="Polygon2D" parent="Monitor/Preparing/Control"]
+position = Vector2(20.891613, 0.33507967)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0.77, 0, 0, 1)
+polygon = PackedVector2Array(-66.168335, -24.455383, -10.166077, -23.59021, 73.86981, -8.79248, 118.00928, 49.10144, 17.055328, 68.34454, -134.05014, 24.70819)
+
+[node name="Polygon2D" type="Polygon2D" parent="Monitor/Preparing/Control"]
+position = Vector2(22.884386, -2.6697266)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-120.11279, -1.3253784, -60.15387, -18.469849, 80.86734, -9.809326, 125.970795, 33.082214, 77.03354, 59.200134, -110.98523, 51.65277)
+
+[node name="Waiting" type="Label" parent="Monitor/Preparing/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -31.5
+offset_right = 80.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 45
+text = "Waiting"
+
+[node name="Timer" type="Timer" parent="Monitor/Preparing"]
+wait_time = 4.0
+one_shot = true
+
+[node name="ActionButton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="End" type="Control" parent="ActionButton"]
+visible = false
+anchors_preset = 0
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/End"]
+position = Vector2(1127.4962, 214.93605)
+rotation = 0.13849132
+color = Color(0.2784314, 0, 0.8901961, 1)
+antialiased = true
+polygon = PackedVector2Array(243, -35, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/End"]
+position = Vector2(1273.8184, 262.59198)
+rotation = 0.13849132
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/End"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1122.0
+offset_top = 184.0
+offset_right = 1363.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.13849132
+size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 40
+text = "Finish Order"
+
+[node name="Talk" type="Control" parent="ActionButton"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/Talk"]
+position = Vector2(1110.6086, 333.4704)
+rotation = 0.041604795
+color = Color(0, 0.8862745, 0.4862745, 1)
+antialiased = true
+polygon = PackedVector2Array(253.0293, -11.365845, 208, 51, 110.48938, 21.91127, -6.91626, 33.781097, -33.338257, -12.983017, 146.06213, -38.624466)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/Talk"]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1257.2637, 367.62463)
+rotation = 0.041604795
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/Talk"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1098.3566
+offset_top = 304.00003
+offset_right = 1339.3566
+offset_bottom = 360.00003
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.041604795
+size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 40
+text = "Talk"
+
+[node name="Report" type="Control" parent="ActionButton"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="ActionButton/Report"]
+position = Vector2(1092.1108, 445.42258)
+rotation = -0.009728301
+color = Color(0.8862745, 0, 0.011764706, 1)
+antialiased = true
+polygon = PackedVector2Array(256.20557, -39.75206, 208, 51, 108, 31, 2, 43, -27, -9, 164, -13)
+
+[node name="Polygon2D" type="Polygon2D" parent="ActionButton/Report"]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(1243.0664, 480.43585)
+rotation = -0.009728301
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-158, -55, 91, -61, 83, 4, -176, -1)
+uv = PackedVector2Array(-170.5, -85, 5.5, -100, 97.5, 16, -170.5, 26, -220.5, -27)
+
+[node name="button" type="Button" parent="ActionButton/Report"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1081.0
+offset_top = 425.0
+offset_right = 1322.0
+offset_bottom = 481.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.009728301
+size_flags_horizontal = 4
+focus_mode = 3
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 40
+text = "Report"
+
+[node name="Goods" type="Node" parent="."]
+
+[node name="Cellphone" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -807.0
+offset_top = 188.0
+offset_right = -336.95752
+offset_bottom = 877.0
+grow_horizontal = 0
+script = ExtResource("15_lkoe4")
+
+[node name="TextureRect" type="TextureRect" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -374.0
+offset_right = 580.0
+offset_bottom = 502.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_bqda7")
+flip_h = true
+
+[node name="ColorRect2" type="ColorRect" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 8.95752
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel2" type="TextureRect" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_svuq3")
+expand_mode = 4
+
+[node name="Posts" type="VBoxContainer" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -235.0
+offset_right = 200.0
+offset_bottom = 235.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_constants/separation = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Cellphone/Posts"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cellphone/Posts/HBoxContainer"]
+layout_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Posts/HBoxContainer/VBoxContainer"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-14.021118, 49.008575, 37.97888, -11.991425, 284.97876, -30.5, 390.97876, -2.5, 411.97888, 52.008575, 413.97888, 290.00858, 365.97876, 401.5, 236.97876, 411.5, 9.97876, 392.5, -13.021118, 279.00858)
+
+[node name="MarginContainer" type="MarginContainer" parent="Cellphone/Posts/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+
+[node name="username" type="Label" parent="Cellphone/Posts/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "@username"
+
+[node name="tweet" type="Label" parent="Cellphone/Posts/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "This is the tweet text, it says the worst things ever"
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="Node2D" parent="Cellphone/Posts"]
+position = Vector2(199.97876, 470.5)
+
+[node name="Delete" type="Control" parent="Cellphone/Posts/HBoxContainer2"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+theme = ExtResource("12_cuo0w")
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Cellphone/Posts/HBoxContainer2/Delete"]
+color = Color(0.72156864, 0, 0, 1)
+polygon = PackedVector2Array(17.978882, 4.5, 171.97888, -21.5, 177.97888, 51.5, 100.97888, 64.5, 2.9788818, 36.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Posts/HBoxContainer2/Delete"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(15.978882, 18.5, 45.97888, -15.5, 166.97888, -12.5, 178.97888, 23.5, 166.97888, 59.5, 23.978882, 58.5)
+
+[node name="Button" type="Button" parent="Cellphone/Posts/HBoxContainer2/Delete"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 200.0
+offset_bottom = 39.0
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+keep_pressed_outside = true
+text = "Delete"
+
+[node name="Approve" type="Control" parent="Cellphone/Posts/HBoxContainer2"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 10
+script = ExtResource("11_l4low")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Cellphone/Posts/HBoxContainer2/Approve"]
+position = Vector2(-199, -3)
+color = Color(0, 0.7019608, 0.40784314, 1)
+polygon = PackedVector2Array(26.978882, -5.5, 114.97888, -17.5, 192.97888, 1.5, 154.97888, 70.5, 7.978882, 58.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Posts/HBoxContainer2/Approve"]
+position = Vector2(-199, -3)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(15.978882, 18.5, 45.97888, -15.5, 162.97888, -3.5, 193.97888, 21.5, 174.97888, 64.5, 23.978882, 58.5)
+
+[node name="Button" type="Button" parent="Cellphone/Posts/HBoxContainer2/Approve"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -196.0
+offset_bottom = 39.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 32
+keep_pressed_outside = true
+text = "Approve"
+
+[node name="Overview" type="Control" parent="Cellphone"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Cellphone/Overview"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Cellphone/Overview/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("12_cuo0w")
+
+[node name="MarginContainer" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control"]
+layout_mode = 0
+offset_right = 470.0
+offset_bottom = 324.0
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Info" type="Control" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("12_cuo0w")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(8, 13, 2, 157, 223, 163, 444, 149, 441, 14, 343, 4)
+
+[node name="MarginContainer" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="ID" type="HBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Name" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/ID"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "ID:"
+
+[node name="Name2" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/ID"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "@DefaultID"
+
+[node name="Age" type="HBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Age" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/Age"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "Age:"
+
+[node name="Age2" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/Age"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "67"
+
+[node name="Sex" type="HBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Sex" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/Sex"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "Sex:"
+
+[node name="Sex2" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Info/MarginContainer/VBoxContainer/Sex"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "M"
+
+[node name="Mood" type="Control" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood"]
+color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+polygon = PackedVector2Array(1, 27, -4, -22, 258, -31, 442, -28, 448, 5, 436, 31, 315, 39, 76, 31)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 30
+
+[node name="Mood" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mood:"
+
+[node name="Moods" type="Control" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Neutral" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -110.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 30
+text = "Neutral"
+
+[node name="Depressed" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.23000002, 0.43533313, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Depressed
+"
+
+[node name="Nervous" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -122.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.98, 0.58800006, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Nervous"
+
+[node name="Mad" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.26999998, 0.26999998, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mad"
+
+[node name="Inconclusive" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Mood/MarginContainer2/Mood/HBoxContainer/Moods"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.414, 0.54, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Inconclusive"
+
+[node name="Status" type="Control" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 530)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 13, 186, -2, 434, 37, 449, 230, 416, 337, 422, 380, 274, 401, 119, 392, 15, 397, -3, 273, 10, 80)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 818.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 30
+
+[node name="Status" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Illness" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Illness" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/Illness"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "Illness:"
+
+[node name="MarginContainer" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/Illness"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Illness2" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/Illness/MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur"
+autowrap_mode = 2
+
+[node name="CriminalRecord" type="VBoxContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="CriminalRecord" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/CriminalRecord"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 30
+text = "Criminal Record:"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/CriminalRecord"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="CriminalRecord2" type="Label" parent="Cellphone/Overview/HBoxContainer/Control/MarginContainer/VBoxContainer/Status/MarginContainer3/Status/CriminalRecord/MarginContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+autowrap_mode = 2
+
+[node name="Exit" type="TextureButton" parent="Cellphone"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -57.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 56.0
+grow_horizontal = 0
+texture_normal = ExtResource("14_5wfwf")
+
+[node name="Notice" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("17_kgp51")
+
+[node name="Polygon2D" type="Polygon2D" parent="Notice"]
+position = Vector2(-430.77118, -88.81348)
+scale = Vector2(1.3589342, 1.3589342)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(617, 231, 879, 175, 1380.4937, 223.70473, 1422.4384, 481.99542, 1384.9089, 766.04156, 849, 813, 603, 726, 622, 578, 590, 333)
+
+[node name="Title" type="Label" parent="Notice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 805.2288
+offset_top = 244.18652
+offset_right = 1052.2288
+offset_bottom = 298.18652
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 45
+text = "Staff Memo"
+
+[node name="Description" type="Label" parent="Notice"]
+layout_mode = 0
+offset_left = 471.22882
+offset_top = 344.18652
+offset_right = 1439.2288
+offset_bottom = 971.1865
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 30
+text = "We are thrilled to announce that Xoxo Shop is now part of the “BuySafe” program, joining companies such as PayBuddy and CollectiveHealth.
+
+Which means that you, as the face of our company, is now responsible for maintaining the safety and integrity of our clients.
+
+As your first contact with our new system, we've provided you with a login that can access data from our partners and from Why, the social network. You can see your client's info, recent posts and approve or remove them. Try it out!
+
+Xoxo Shop,
+Doing everything for you"
+autowrap_mode = 3
+
+[node name="Description2" type="Label" parent="Notice"]
+layout_mode = 0
+offset_left = 910.2288
+offset_top = 861.1865
+offset_right = 1428.2288
+offset_bottom = 908.1865
+theme = ExtResource("12_cuo0w")
+theme_override_font_sizes/font_size = 20
+text = "*Deleting posts with harmful content is not optional"
+autowrap_mode = 3
+
+[node name="Exit" type="TextureButton" parent="Notice"]
+layout_mode = 1
+offset_left = 1346.2288
+offset_top = 227.18652
+offset_right = 1395.2288
+offset_bottom = 275.18652
+texture_normal = ExtResource("17_cb3rg")
+
+[node name="Title" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DayLabel" type="Label" parent="Title"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.5
+offset_top = -171.0
+offset_right = 358.5
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_ctm2a")
+theme_override_font_sizes/font_size = 250
+text = "DAY X"
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yh20h")
+}
+
+[connection signal="body_entered" from="Basket" to="." method="_on_basket_body_entered"]
+[connection signal="pressed" from="Monitor/Menu/Food/Button" to="Monitor" method="_on_food_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Drink/Button" to="Monitor" method="_on_drink_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Health/Button" to="Monitor" method="_on_health_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Extra/Button" to="Monitor" method="_on_extra_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Forward" to="Monitor" method="_on_forward_pressed"]
+[connection signal="pressed" from="Monitor/Menu/Back" to="Monitor" method="_on_back_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Button" to="Monitor" method="_on_prepare_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Forward" to="Monitor" method="_on_forward_item_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Prepare/Back" to="Monitor" method="_on_back_item_pressed"]
+[connection signal="pressed" from="Monitor/Items/Food/Exit" to="Monitor" method="_on_exit_pressed"]
+[connection signal="timeout" from="Monitor/Preparing/Timer" to="Monitor" method="_on_timer_timeout"]
+[connection signal="pressed" from="ActionButton/End/button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ActionButton/Talk/button" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="ActionButton/Report/button" to="." method="_on_report_pressed"]
+[connection signal="pressed" from="Cellphone/Posts/HBoxContainer2/Delete/Button" to="Cellphone" method="_on_delete_pressed"]
+[connection signal="pressed" from="Cellphone/Posts/HBoxContainer2/Approve/Button" to="Cellphone" method="_on_approve_pressed"]
+[connection signal="pressed" from="Cellphone/Exit" to="." method="_on_cellphone_exit_pressed"]
+[connection signal="pressed" from="Notice/Exit" to="Notice" method="_on_exit_pressed"]

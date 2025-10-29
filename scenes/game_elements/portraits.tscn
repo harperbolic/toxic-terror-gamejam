@@ -1,38 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://degoo8cxrkwdc"]
+[gd_scene load_steps=18 format=3 uid="uid://degoo8cxrkwdc"]
 
 [ext_resource type="Script" uid="uid://c7n1a3bu88yyw" path="res://scripts/UI/portraits.gd" id="1_fyxdl"]
 [ext_resource type="Texture2D" uid="uid://c1fhy5uhu8eo3" path="res://_PLACEHOLDER/kiryu.png" id="1_ynxmj"]
 [ext_resource type="Texture2D" uid="uid://c4tpob0g0q8fx" path="res://_PLACEHOLDER/majima.webp" id="2_qi4lx"]
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="3_qi4lx"]
-[ext_resource type="Texture2D" uid="uid://bhryfxr705a56" path="res://_PLACEHOLDER/random_client.png" id="4_iklxa"]
+[ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="4_1o5ah"]
+[ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="4_15t4e"]
+[ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="4_aegip"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="4_r1bp4"]
+[ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="7_jundg"]
+[ext_resource type="Texture2D" uid="uid://cjrpiku4xx60c" path="res://assets/portraits/coworker.png" id="9_jundg"]
 
 [sub_resource type="Animation" id="Animation_15t4e"]
 resource_name = "CW_fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CW/C_none:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(100, 0), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CW/C_none:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_vxrcs"]
 length = 0.001
@@ -83,18 +63,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 0.5411765)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CW/C_none:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(938, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_qi4lx"]
@@ -219,6 +187,70 @@ texture = ExtResource("3_qi4lx")
 expand_mode = 3
 stretch_mode = 4
 
+[node name="T_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2480.001
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_1o5ah")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="S_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2480.001
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_aegip")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="B_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2480.001
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_15t4e")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="R_none" type="TextureRect" parent="Cli"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2480.001
+offset_bottom = 3508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_15t4e")
+expand_mode = 3
+stretch_mode = 4
+
 [node name="random_none" type="TextureRect" parent="Cli"]
 layout_mode = 1
 anchors_preset = 8
@@ -231,28 +263,19 @@ offset_bottom = 3508.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_iklxa")
+texture = ExtResource("7_jundg")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="BG" type="TextureRect" parent="."]
-visible = false
-z_index = 5
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_r1bp4")
-
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.5, 0.5, 0.5, 1)
+modulate = Color(0.46, 0.46, 0.46, 1)
 z_index = 5
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_r1bp4")
 
 [node name="CW" type="Control" parent="."]
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -260,20 +283,23 @@ offset_left = 1101.0
 offset_right = 1101.0
 
 [node name="C_none" type="TextureRect" parent="CW"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 938.0
-offset_right = 1838.0
-offset_bottom = 1370.0
+offset_left = 49.0
+offset_top = -20.0
+offset_right = 2529.001
+offset_bottom = 3488.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qi4lx")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_jundg")
+expand_mode = 3
 stretch_mode = 4
+flip_h = true
 
 [node name="MC" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)

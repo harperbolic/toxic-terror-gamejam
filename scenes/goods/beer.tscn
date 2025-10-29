@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://45dmpjxcmbmt"]
 
 [ext_resource type="Script" uid="uid://b5vcw4ncxw5v5" path="res://scripts/classes/good.gd" id="1_os77q"]
-[ext_resource type="Texture2D" uid="uid://chxe8ula6cp3y" path="res://_PLACEHOLDER/beer.png" id="2_os77q"]
+[ext_resource type="Texture2D" uid="uid://d4bbu1uo8qxnw" path="res://assets/goods/beer.png" id="2_os77q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjnc2"]
-size = Vector2(647.303, 771.78424)
+size = Vector2(255.18677, 802.9046)
 
 [node name="GoodTemplate" type="CharacterBody2D"]
 scale = Vector2(0.16066664, 0.16066666)
@@ -14,7 +14,7 @@ script = ExtResource("1_os77q")
 item_key = "beer"
 
 [node name="Milk" type="Sprite2D" parent="."]
-scale = Vector2(0.27089325, 0.27089325)
+scale = Vector2(2.9042666, 2.9042666)
 texture = ExtResource("2_os77q")
 
 [node name="Button" type="Button" parent="Milk"]
@@ -22,14 +22,17 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1332.6145
-offset_top = -1539.3972
-offset_right = -1332.6145
-offset_bottom = -1538.0923
+offset_left = -98.55268
+offset_top = -254.5944
+offset_right = -210.29819
+offset_bottom = -340.87378
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.784235, 15.560181)
+scale = Vector2(1.9161055, 1.9161055)
 shape = SubResource("RectangleShape2D_jjnc2")
 
 [connection signal="button_down" from="Milk/Button" to="." method="_on_button_button_down"]

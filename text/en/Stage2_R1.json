@@ -1,0 +1,152 @@
+{
+	"0": {
+		"name": "R",
+		"expression": "none",
+		"text": "..."
+	},
+	"1": {
+		"name": "R",
+		"expression": "none",
+		"text": "Say, girl."
+	},
+	"2": {
+		"name": "M",
+		"expression": "none",
+		"text": "...?"
+	},
+	"3": {
+		"name": "R",
+		"expression": "none",
+		"text": "Would this be a poorly disguised brothel or something of the sort?"
+	},
+	"4": {
+		"name": "M",
+		"expression": "none",
+		"text": "…This is a convenience store, sir."
+	},
+	"5": {
+		"name": "R",
+		"expression": "none",
+		"text": "Oh really now?"
+	},
+	"6": {
+		"name": "R",
+		"expression": "none",
+		"text": "With that hole in the ceiling and the cliched getup you’re wearing, I figured this was a mere facade."
+	},
+	"7": {
+		"name": "R",
+		"expression": "none",
+		"text": "How interesting then, a “convenience store”..."
+	},
+	"8": {
+		"name": "R",
+		"expression": "none",
+		"text": "What is it that you are doing here, exactly?"
+	},
+	"9": {
+		"name": "M",
+		"expression": "none",
+		"text": "…I work here."
+	},
+	"10": {
+		"name": "R",
+		"expression": "none",
+		"text": "Non, non, not that."
+	},
+	"11": {
+		"name": "R",
+		"expression": "none",
+		"text": "Why are you wasting your time in this place?"
+	},
+	"12": {
+		"name": "R",
+		"expression": "none",
+		"text": "Don’t you have any other prospects in your life?"
+	},
+	"13": {
+		"name": "R",
+		"expression": "none",
+		"text": "Would you say that you are at your lowest right now?"
+	},
+	"14": {
+		"name": "M",
+		"expression": "none",
+		"text": "Why do you…"
+	},
+	"15": {
+		"name": "M",
+		"expression": "none",
+		"text": "I don’t appreciate…"
+	},
+	"16": {
+		"name": "R",
+		"expression": "none",
+		"text": "Well, no matter that. I think you are, very much."
+	},
+	"17": {
+		"name": "R",
+		"expression": "none",
+		"text": "You can’t change anything, can’t control anything."
+	},
+	"18": {
+		"name": "R",
+		"expression": "none",
+		"text": "Your life is at the hands of others entirely."
+	},
+	"19": {
+		"name": "R",
+		"expression": "none",
+		"text": "That… is incredible."
+	},
+	"20": {
+		"name": "R",
+		"expression": "none",
+		"text": "That feeling of helplessness, of living on while surrendering yourself without any consent… So delightful!"
+	},
+	"21": {
+		"name": "R",
+		"expression": "none",
+		"text": "What a poor lamb you are, oh so poor."
+	},
+	"22": {
+		"name": "R",
+		"expression": "none",
+		"text": "I delight myself in that very much."
+	},
+	"23": {
+		"name": "M",
+		"expression": "none",
+		"text": "…Can I help you with anything in the store?"
+	},
+	"24": {
+		"name": "R",
+		"expression": "none",
+		"text": "Why, yes…"
+	},
+	"25": {
+		"name": "R",
+		"expression": "none",
+		"text": "Make me coffee."
+	},
+	"26": {
+		"name": "M",
+		"expression": "none",
+		"text": "..."
+	},
+	"27": {
+		"name": "R",
+		"expression": "none",
+		"text": "Of course, not any ordinary coffee…"
+	},
+	"28": {
+		"name": "R",
+		"expression": "none",
+		"text": "Something to quench the thirst, something to keep me awake all night and then some, and leave me time to think and imagine vividly."
+	},
+	"29": {
+		"name": "R",
+		"expression": "none",
+		"text": "You can do that for me, can’t you? Maybe an Affogato?."
+	}
+}

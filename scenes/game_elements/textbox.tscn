@@ -12,6 +12,7 @@ size_flags_horizontal = 4
 script = ExtResource("1_47t7x")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(0.5019608, 0.3254902, 0.3254902, 1)
 layout_mode = 2
 texture = ExtResource("2_7ql3h")
 patch_margin_left = 26
@@ -20,6 +21,7 @@ patch_margin_right = 50
 patch_margin_bottom = 29
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
+modulate = Color(0.61960787, 0.3019608, 0.2901961, 1)
 layout_mode = 2
 texture = ExtResource("3_7ql3h")
 patch_margin_left = 58
@@ -44,7 +46,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("4_3u8ud")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
 autowrap_mode = 2
 visible_characters = 0

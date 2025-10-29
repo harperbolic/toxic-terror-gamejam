@@ -54,13 +54,35 @@ var Stage1_C_call : Dictionary
 var Stage1_C_end : Dictionary
 var Stage1_H1 : Dictionary
 
+# notice
+var notice : Dictionary
+
+# Stage 2 files
+var Stage2_end : Dictionary
+var Stage2_failure : Dictionary
+var Stage2_H1 : Dictionary
+var Stage2_H2 : Dictionary
+var Stage2_L : Dictionary
+var Stage2_R1 : Dictionary
+var Stage2_R2 : Dictionary
+var Stage2_S1 : Dictionary
+var Stage2_S2 : Dictionary
+var Stage2_T1 : Dictionary
+var Stage2_T2 : Dictionary
+
 # items
 var food_item : Dictionary
 var drink_item : Dictionary
 var health_item : Dictionary
 var extra_item : Dictionary
-
+var posts : Dictionary
 var access
+
+const posts_reset = {
+	"post1" : false,
+	"post2" : false,
+	"post3" : false
+}
 
 const cart_reset = {
 	"miojo" : 0,
@@ -112,7 +134,7 @@ var health : Dictionary
 var extra : Dictionary
 var record : Dictionary
 var illness : Dictionary
-var posts : Dictionary
+var posts_register : Dictionary
 var dialog : Dictionary
 
 func _ready() -> void:
@@ -224,6 +246,46 @@ func load_text_locale():
 	access = FileAccess.open("res://text/" + selected_language + "/Stage1_C_end.json", FileAccess.READ)
 	Stage1_C_end = JSON.parse_string(access.get_as_text())
 	access.close()
+	
+	# notice
+	access = FileAccess.open("res://text/" + selected_language + "/notice.json", FileAccess.READ)
+	notice = JSON.parse_string(access.get_as_text())
+	access.close()
+	
+	# Stage 2
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_End.json", FileAccess.READ)
+	Stage2_end = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_failure.json", FileAccess.READ)
+	Stage2_failure = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_H1.json", FileAccess.READ)
+	Stage2_H1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_H2.json", FileAccess.READ)
+	Stage2_H2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_L.json", FileAccess.READ)
+	Stage2_L = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_R1.json", FileAccess.READ)
+	Stage2_R1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_R2.json", FileAccess.READ)
+	Stage2_R2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_S1.json", FileAccess.READ)
+	Stage2_S1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_S2.json", FileAccess.READ)
+	Stage2_S2 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_T1.json", FileAccess.READ)
+	Stage2_T1 = JSON.parse_string(access.get_as_text())
+	access.close()
+	access = FileAccess.open("res://text/" + selected_language + "/Stage2_T2.json", FileAccess.READ)
+	Stage2_T2 = JSON.parse_string(access.get_as_text())
+	access.close()
 
 func reset_cart():
 	current_cart.assign(cart_reset)
@@ -231,3 +293,4 @@ func reset_cart():
 	drink.assign(drink_reset)
 	health.assign(health_reset)
 	extra.assign(extra_reset)
+	posts_register.assign(posts_reset)
