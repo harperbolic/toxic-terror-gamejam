@@ -75,7 +75,7 @@ func _ready() -> void:
 	
 	T.assign(CHAR.T)
 	T.dialog.assign(DEF.Stage7_T1)
-	T.item = {"miojo": 0, "chocolate": 1, "beer": 0, "milk": 0, "energy": 0}
+	T.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	T.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},

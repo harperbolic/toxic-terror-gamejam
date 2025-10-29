@@ -21,12 +21,12 @@ var language = {
 var selected_language = "en"
 
 var settings_save = {
-	"sfx_volume" : 0,
-	"mus_volume" : 0,
+	"sfx_volume" : 1.0,
+	"mus_volume" : 1.0,
 	"fullscreen" : true,
 	"resolution" : "1920 x 1080",
 	"language" : "en",
-	"debug" : true
+	"debug" : false
 }
 
 const game_boilerplate : Dictionary = {

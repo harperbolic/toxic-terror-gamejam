@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://e4u4x2tuksgl"]
+[gd_scene load_steps=21 format=3 uid="uid://e4u4x2tuksgl"]
 
 [ext_resource type="Script" uid="uid://dx1lnbbjagmmt" path="res://scripts/autoloads/AUDIO_MANAGER.gd" id="1_c3o4n"]
 [ext_resource type="AudioStream" uid="uid://oumnwl4od45l" path="res://assets/sfx/click.mp3" id="2_ed3sa"]
 [ext_resource type="AudioStream" uid="uid://b1b7bfd35j2qo" path="res://assets/soundtrack/main_menu.ogg" id="2_jkqk2"]
 [ext_resource type="AudioStream" uid="uid://cnhca86aoxi6l" path="res://assets/soundtrack/shift_track.ogg" id="3_jkqk2"]
 [ext_resource type="AudioStream" uid="uid://2abmaihipxs3" path="res://assets/sfx/click_game.ogg" id="4_403ts"]
+[ext_resource type="AudioStream" uid="uid://cbstwu421wxgr" path="res://assets/soundtrack/credits.ogg" id="4_jjva6"]
 [ext_resource type="AudioStream" uid="uid://putg8pgktn2l" path="res://assets/sfx/voice_clip_letter.ogg" id="4_qevod"]
 [ext_resource type="AudioStream" uid="uid://r6u8m2pj8eaf" path="res://assets/sfx/phone_ring.wav" id="4_tnqj2"]
 [ext_resource type="AudioStream" uid="uid://dw7w57omdbcxm" path="res://assets/sfx/voice_clip_letter_L.ogg" id="5_rqs6r"]
@@ -34,6 +35,11 @@ bus = &"Music"
 [node name="shift_theme" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_jkqk2")
 volume_db = 5.0
+bus = &"Music"
+
+[node name="credits" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("4_jjva6")
+volume_db = -3.0
 bus = &"Music"
 
 [node name="SFX" type="Node" parent="."]

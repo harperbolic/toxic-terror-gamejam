@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://cr6wp8m0kpq8g" path="res://assets/portraits/hobo.png" id="5_uc2f5"]
 [ext_resource type="Texture2D" uid="uid://dsf1hmhu4d7mr" path="res://assets/portraits/teenager.png" id="6_vulm3"]
 [ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="7_bpb2b"]
-[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="8_rbnm0"]
 [ext_resource type="Texture2D" uid="uid://dn2qjb6t2tr12" path="res://assets/portraits/biker.png" id="9_av6vf"]
+[ext_resource type="Texture2D" uid="uid://dkhl7ui204vxu" path="res://assets/portraits/hustler.png" id="9_nfjdr"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="10_d8ubv"]
 [ext_resource type="Texture2D" uid="uid://cnx44hagygswo" path="res://assets/goods/plasticbag.png" id="11_xu8o5"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="12_mpryr"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="13_eggci"]
-[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="14_qiptt"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/ActionButton.gd" id="14_qiptt"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="15_6kxai"]
 [ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="16_exkti"]
 [ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="17_4hp1a"]
@@ -726,7 +726,7 @@ layout_mode = 1
 offset_right = 2480.0
 offset_bottom = 3508.0
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("8_rbnm0")
+texture = ExtResource("9_nfjdr")
 stretch_mode = 4
 
 [node name="B" type="TextureRect" parent="Clients"]

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="11_eptew"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="12_r6jlm"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="13_u3u7w"]
-[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="14_r313t"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/ActionButton.gd" id="14_r313t"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="15_l1wec"]
 [ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="16_lv0ey"]
 [ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="17_vxgf4"]

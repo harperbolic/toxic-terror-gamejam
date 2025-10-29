@@ -1,7 +1,7 @@
 extends Control
 
 # Main Menu buttons
-@onready var buttons: VBoxContainer = $Buttons
+@onready var buttons: HBoxContainer = $Buttons
 @onready var start_game: Button = $Buttons/StartGame
 @onready var start_game_2: Button = $Buttons/StartGame2
 @onready var options: Button = $Buttons/Options

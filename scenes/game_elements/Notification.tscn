@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ca36nbs67txvt"]
 
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="1_ajjdd"]
-[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="1_el5u2"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/ActionButton.gd" id="1_el5u2"]
 
 [node name="Notification" type="Node"]
 script = ExtResource("1_el5u2")

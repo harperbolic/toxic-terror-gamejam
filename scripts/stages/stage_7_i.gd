@@ -11,6 +11,8 @@ func _ready() -> void:
 	
 	await DIALOG.dialog_ended
 	
-	await get_tree().create_timer(2.0).timeout
+	DEF.save["level"] = 0
+	DEF.save["balance"] = 200
+	DEF.save_game()
 	
 	SCENE.load_scene("credits")

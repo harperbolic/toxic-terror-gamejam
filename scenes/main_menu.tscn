@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dg7w725nhkuxk" path="res://assets/logo/wfcoverlogoless.png" id="2_rtw2f"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="3_8ln24"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="3_wu84c"]
-[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="6_oa1go"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/ActionButton.gd" id="6_oa1go"]
 [ext_resource type="Texture2D" uid="uid://cmycv6qvy4sv2" path="res://assets/logo/wflogo.png" id="6_rtw2f"]
 
 [sub_resource type="Animation" id="Animation_wu84c"]
@@ -91,20 +91,52 @@ texture = ExtResource("2_rtw2f")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="Poly" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 953.0
+offset_top = 701.0
+offset_right = 993.0
+offset_bottom = 741.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Poly"]
+position = Vector2(-989, -756)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(977, 836, 1034, 824, 1099, 839, 1154, 834, 1159, 859, 1155, 877, 1073, 882, 1014, 885, 973, 874)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Poly"]
+position = Vector2(-783, -753)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(977, 836, 1034, 824, 1098, 834, 1137, 834, 1140, 855, 1129, 872, 1073, 882, 1016, 880, 980, 875)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Poly"]
+position = Vector2(-604, -753)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(977, 836, 1034, 824, 1064, 830, 1119, 835, 1129, 872, 1016, 880, 980, 875)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Poly"]
+position = Vector2(-433, -754)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(985, 841, 1034, 824, 1064, 830, 1119, 835, 1129, 872, 1096, 879, 1018, 873, 1002, 881, 980, 862)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Poly"]
+position = Vector2(-270, -756)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(998, 837, 1064, 830, 1119, 835, 1153, 842, 1164, 857, 1151, 875, 1131, 873, 1086, 873, 1043, 879, 998, 873, 980, 862)
+
+[node name="Buttons" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -85.5
-offset_top = 104.0
-offset_right = 85.5
-offset_bottom = 334.0
+offset_left = -6.0
+offset_top = 107.0
+offset_right = 867.0
+offset_bottom = 412.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 55
 
 [node name="StartGame" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -157,6 +189,7 @@ grow_vertical = 0
 [node name="Label2" type="Label" parent="Version"]
 layout_mode = 2
 theme = ExtResource("3_wu84c")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "Jam version 1.0"
 horizontal_alignment = 1
@@ -183,10 +216,10 @@ horizontal_alignment = 1
 
 [node name="GameLogo" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 937.0
-offset_top = 148.0
-offset_right = 1813.0
-offset_bottom = 593.85376
+offset_left = 953.0
+offset_top = 229.0
+offset_right = 1829.0
+offset_bottom = 674.85376
 texture = ExtResource("6_rtw2f")
 expand_mode = 5
 stretch_mode = 4
@@ -252,8 +285,9 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 3
-theme = ExtResource("3_wu84c")
+theme = ExtResource("3_8ln24")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.18359026, 0.18359041, 0.18359092, 1)
 theme_override_font_sizes/font_size = 32
 text = "Back
 "

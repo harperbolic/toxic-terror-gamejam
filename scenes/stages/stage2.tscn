@@ -9,11 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://o25go8xdghp" path="res://assets/portraits/creep.png" id="5_bqda7"]
 [ext_resource type="Texture2D" uid="uid://d2eask85rw7io" path="res://assets/portraits/rando_m.png" id="6_8tiod"]
 [ext_resource type="Texture2D" uid="uid://crkgt1jecgpn0" path="res://assets/bg/isolado.PNG" id="7_bqda7"]
-[ext_resource type="Texture2D" uid="uid://blsk8b7v5jh78" path="res://assets/logo/logo.svg" id="8_8tiod"]
+[ext_resource type="Texture2D" uid="uid://dkhl7ui204vxu" path="res://assets/portraits/hustler.png" id="9_6ela2"]
 [ext_resource type="Script" uid="uid://cgsb3265cs1ia" path="res://scenes/stages/monitor.gd" id="9_svuq3"]
 [ext_resource type="Theme" uid="uid://cvjn0pgb6c2yi" path="res://themes/main_theme.tres" id="10_6ela2"]
 [ext_resource type="Texture2D" uid="uid://cnx44hagygswo" path="res://assets/goods/plasticbag.png" id="10_8tiod"]
-[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/UI/ActionButton.gd" id="11_l4low"]
+[ext_resource type="Script" uid="uid://m0eqeinltxs6" path="res://scripts/ActionButton.gd" id="11_l4low"]
 [ext_resource type="Theme" uid="uid://oyxk8q66566q" path="res://themes/action_theme.tres" id="12_cuo0w"]
 [ext_resource type="Texture2D" uid="uid://gi3bjwjnmur1" path="res://assets/ui/next.png" id="13_jnmru"]
 [ext_resource type="Texture2D" uid="uid://jet1gxu2v854" path="res://assets/ui/exit.png" id="14_5wfwf"]
@@ -751,7 +751,7 @@ layout_mode = 1
 offset_right = 2480.0
 offset_bottom = 3508.0
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("8_8tiod")
+texture = ExtResource("9_6ela2")
 stretch_mode = 4
 
 [node name="Control" type="Control" parent="."]

@@ -6,5 +6,6 @@
 	"4" : {"name" : "R", "expression" : "none", "text" : "Come on then, make me some coffee."},
 	"5" : {"name" : "R", "expression" : "none", "text" : "But not the same as the last time, oh no..."},
 	"6" : {"name" : "R", "expression" : "none", "text" : "Stagnation is worse than death, girl. Never stay at one single place for too long, I say."},
-	"7" : {"name" : "R", "expression" : "none", "text" : "Now, please, make me a milky drink which fuels the brain, but also foams creamy white deliciousness, much like an italian delicacy."},
+	"7" : {"name" : "R", "expression" : "none", "text" : "Now, please, make me a drink which fuels the brain, but also foams creamy white deliciousness, much like an italian delicacy."},
+	"8" : {"name" : "M", "expression" : "none", "text" : "Oh, a cappuccino..."},
 }

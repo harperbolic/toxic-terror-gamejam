@@ -79,7 +79,7 @@ func _ready() -> void:
 	T.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
-		"meds" : {"SleepingPills": 0, "Condom": 1, "Syrup": 0, "Razor": 0},
+		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
 		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
 	}
 	T.post1 = CHAR.gen_post()

@@ -87,7 +87,7 @@ func _ready() -> void:
 	T.post3 = CHAR.gen_post()
 	
 	R.assign(CHAR.R)
-	R.dialog.assign(DEF.Stage2_R1)
+	R.dialog.assign(DEF.Stage6_R1)
 	R.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	R.order = {
 		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 1, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
@@ -131,7 +131,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.8).timeout
 	await client_served
 	
-	DIALOG.start_dialog(DEF.Stage6_B2)
+	DIALOG.start_dialog(DEF.Stage6_R2)
 	await DIALOG.dialog_ended
 	
 	await get_tree().create_timer(0.8).timeout

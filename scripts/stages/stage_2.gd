@@ -77,7 +77,7 @@ func _ready() -> void:
 	R.dialog.assign(DEF.Stage2_R1)
 	R.item = {"miojo": 0, "chocolate": 0, "beer": 0, "milk": 0, "energy": 0}
 	R.order = {
-		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 0, "Cappuccino": 0, "Afogatto": 1, "Espresso": 0, "Pingado": 0},
+		"drinks" : {"Orange": 0, "Maracuja": 0, "HotChocolate": 0, "BlackCoffee": 1, "Cappuccino": 0, "Afogatto": 0, "Espresso": 0, "Pingado": 0},
 		"foods" : {"HotLunch": 0, "Tostex": 0, "Katsu": 0, "Bauru": 0, "Choripan": 0, "Sausage": 0, "Ham": 0, "Director": 0},
 		"meds" : {"SleepingPills": 0, "Condom": 0, "Syrup": 0, "Razor": 0},
 		"extra" : {"Camera": 0, "Cigarette": 0, "Gummy": 0}
@@ -242,7 +242,7 @@ func spawn_items() -> void:
 		x -= 1
 
 func end_order():
-	var is_posts_right = false
+	var is_posts_right = true
 	
 	print(DEF.posts_register)
 	if client != H:
@@ -260,17 +260,23 @@ func end_order():
 		print("right order")
 	else:
 		is_order_right = false
+		is_posts_right = true
 		print("wrong order")
-		#print(client)
-		#print(DEF.current_cart)
-		#print(DEF.drink)
-		#rint(DEF.food)
-		#print(DEF.health)
-		#print(DEF.extra)
+		print(client.dialog)
+		print(client.item)
+		print(client.order)
+		print(DEF.current_cart)
+		print(DEF.drink)
+		print(DEF.food)
+		print(DEF.health)
+		print(DEF.extra)
+		
+		print(DEF.posts_register)
 		
 		if client == H:
 			is_posts_right = true
 		elif DEF.posts_register.get("post1") == client["post1"].get("status") and DEF.posts_register.get("post2") == client["post2"].get("status") and DEF.posts_register.get("post3") == client["post3"].get("status"):
+			print("tested success for posts")
 			is_posts_right = true
 		else:
 			is_posts_right = false

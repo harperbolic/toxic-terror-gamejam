@@ -186,9 +186,10 @@ func gen_username() -> String:
 	return generated_username
 
 func gen_post() -> Dictionary:
+	
 	var post : Dictionary = {
 		"text" : "text",
-		"status" : false
+		"status" : null
 	}
 	
 	var key = DEF.posts.keys().pick_random()
@@ -211,13 +212,13 @@ func gen_order() -> Dictionary:
 		"extra" : null
 	}
 	var drinks : Dictionary
-	drinks.assign(DEF.drink_reset)
+	drinks = DEF.drink_reset.duplicate()
 	var foods : Dictionary
-	foods.assign(DEF.food_reset)
+	foods = DEF.food_reset.duplicate()
 	var meds : Dictionary
-	meds.assign(DEF.health_reset)
+	meds = DEF.health_reset.duplicate()
 	var extra : Dictionary
-	extra.assign(DEF.extra_reset)
+	extra = DEF.extra_reset.duplicate()
 	
 	var number = randi_range(0, 100)
 	if number < 90:
